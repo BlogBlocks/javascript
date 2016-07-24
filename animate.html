@@ -1,0 +1,102 @@
+<html>
+<style>
+.ani-screen{
+	margin:0 auto;
+width:80%;
+height:500px;
+border:1px solid black;
+background-image: url(back.png); 
+
+}
+
+
+</style>
+  <style>
+<!--
+.dragme{position:relative;}
+-->
+  </style>
+  <script language="JavaScript1.2">
+<!--
+
+var ie=document.all;
+var nn6=document.getElementById&&!document.all;
+
+var isdrag=false;
+var x,y;
+var dobj;
+
+function movemouse(e)
+{
+  if (isdrag)
+  {
+    dobj.style.left = nn6 ? tx + e.clientX - x : tx + event.clientX - x;
+    dobj.style.top  = nn6 ? ty + e.clientY - y : ty + event.clientY - y;
+    return false;
+  }
+}
+
+function selectmouse(e) 
+{
+  var fobj       = nn6 ? e.target : event.srcElement;
+  var topelement = nn6 ? "HTML" : "BODY";
+
+  while (fobj.tagName != topelement && fobj.className != "dragme")
+  {
+    fobj = nn6 ? fobj.parentNode : fobj.parentElement;
+  }
+
+  if (fobj.className=="dragme")
+  {
+    isdrag = true;
+    dobj = fobj;
+    tx = parseInt(dobj.style.left+0);
+    ty = parseInt(dobj.style.top+0);
+    x = nn6 ? e.clientX : event.clientX;
+    y = nn6 ? e.clientY : event.clientY;
+    document.onmousemove=movemouse;
+    return false;
+  }
+}
+
+document.onmousedown=selectmouse;
+document.onmouseup=new Function("isdrag=false");
+
+//-->
+  </script>
+<style>
+html {background-color:navy;}
+body{
+background-image: url(most-back.png); 
+background-repeat: no-repeat;
+ 
+ background: url('most-back.png') no-repeat; 
+  background-position: 0 20px;
+  background-size: contain;
+
+}
+</style>
+</head>
+<body>
+   
+   
+ 
+ <img class="dragme" style="width: 359px; height: 304px;" src="perfect-fish.png" alt=""><br />
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

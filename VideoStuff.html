@@ -1,0 +1,1838 @@
+<h1>So you want to Make Stop-Motion</h1>
+
+
+
+https://ffmpeg.org/
+http://www.xiph.org/oggz/
+
+
+
+
+<pre>
+jack@jack-desktop:~/vidEdit$ ls
+out.ogv
+jack@jack-desktop:~/vidEdit$ ffmpeg -i out.ogv -qscale 0 scene%05d.jpg
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+Input #0, ogg, from 'out.ogv':
+  Duration: 00:01:00.13, start: 0.000000, bitrate: 2936 kb/s
+    Stream #0:0: Data: none
+    Stream #0:1: Video: theora, yuv420p, 944x512 [SAR 1:1 DAR 59:32], 15 tbr, 15 tbn, 15 tbc
+    Metadata:
+      RECORDMYDESKTOP : 0.3.8.1
+Please use -q:a or -q:v, -qscale is ambiguous
+[swscaler @ 0x16e9280] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to 'scene%05d.jpg':
+  Metadata:
+    encoder         : Lavf56.36.100
+    Stream #0:0: Video: mjpeg, yuvj420p(pc), 944x512 [SAR 1:1 DAR 59:32], q=2-31, 200 kb/s, 15 fps, 15 tbn, 15 tbc
+    Metadata:
+      RECORDMYDESKTOP : 0.3.8.1
+      encoder         : Lavc56.41.100 mjpeg
+Stream mapping:
+  Stream #0:1 -> #0:0 (theora (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[ogg @ 0x1711a60] Broken file, keyframe not correctly marked./A dup=2 drop=0    
+    Last message repeated 1 times
+[ogg @ 0x1711a60] Broken file, keyframe not correctly marked./A dup=3 drop=0    
+[ogg @ 0x1711a60] Broken file, keyframe not correctly marked./A dup=5 drop=0    
+[ogg @ 0x1711a60] Broken file, keyframe not correctly marked./A dup=6 drop=0    
+    Last message repeated 2 times
+[ogg @ 0x1711a60] Broken file, keyframe not correctly marked./A dup=8 drop=0    
+frame=  315 fps= 77 q=0.0 size=N/A time=00:00:20.86 bitrate=N/A dup=10 drop=0   frame=  350 fps= 76 q=0.0 size=N/A time=00:00:23.20 bitrate=N/A dup=10 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+    Last message repeated 2 times
+frame=  391 fps= 77 q=0.0 size=N/A time=00:00:25.93 bitrate=N/A dup=13 drop=0   frame=  425 fps= 76 q=0.0 size=N/A time=00:00:28.20 bitrate=N/A dup=13 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+frame=  462 fps= 75 q=0.0 size=N/A time=00:00:30.66 bitrate=N/A dup=14 drop=0   frame=  486 fps= 73 q=0.0 size=N/A time=00:00:32.26 bitrate=N/A dup=14 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+frame=  518 fps= 72 q=0.0 size=N/A time=00:00:34.40 bitrate=N/A dup=15 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+    Last message repeated 1 times
+frame=  549 fps= 71 q=0.0 size=N/A time=00:00:36.46 bitrate=N/A dup=17 drop=0   frame=  584 fps= 71 q=0.0 size=N/A time=00:00:38.80 bitrate=N/A dup=17 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+frame=  621 fps= 71 q=0.0 size=N/A time=00:00:41.26 bitrate=N/A dup=18 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+frame=  661 fps= 72 q=0.0 size=N/A time=00:00:43.93 bitrate=N/A dup=18 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+    Last message repeated 1 times
+frame=  704 fps= 72 q=0.0 size=N/A time=00:00:46.80 bitrate=N/A dup=20 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+frame=  744 fps= 73 q=0.0 size=N/A time=00:00:49.46 bitrate=N/A dup=21 drop=0   frame=  780 fps= 73 q=0.0 size=N/A time=00:00:51.86 bitrate=N/A dup=21 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+    Last message repeated 2 times
+frame=  820 fps= 73 q=0.0 size=N/A time=00:00:54.53 bitrate=N/A dup=21 drop=0   frame=  861 fps= 73 q=0.0 size=N/A time=00:00:57.26 bitrate=N/A dup=23 drop=0   [ogg @ 0x1711a60] Broken file, keyframe not correctly marked.
+frame=  902 fps= 73 q=0.0 size=N/A time=00:01:00.00 bitrate=N/A dup=23 drop=0   frame=  902 fps= 73 q=0.0 Lsize=N/A time=00:01:00.13 bitrate=N/A dup=23 drop=0    
+video:115732kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+jack@jack-desktop:~/vidEdit$ ffmpeg -i out.ogv -vcodec libx264 -vpre medium -crf 24 -threads 0 -acodec copy out.mkv
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[ogg @ 0x18fec80] Broken file, keyframe not correctly marked.
+Input #0, ogg, from 'out.ogv':
+  Duration: 00:01:00.13, start: 0.000000, bitrate: 2936 kb/s
+    Stream #0:0: Data: none
+    Stream #0:1: Video: theora, yuv420p, 944x512 [SAR 1:1 DAR 59:32], 15 tbr, 15 tbn, 15 tbc
+    Metadata:
+      RECORDMYDESKTOP : 0.3.8.1
+File for preset 'medium' not found
+jack@jack-desktop:~/vidEdit$ ls
+out.ogv         scene00181.jpg  scene00362.jpg  scene00543.jpg  scene00724.jpg
+scene00001.jpg  scene00182.jpg  scene00363.jpg  scene00544.jpg  scene00725.jpg
+scene00002.jpg  scene00183.jpg  scene00364.jpg  scene00545.jpg  scene00726.jpg
+scene00003.jpg  scene00184.jpg  scene00365.jpg  scene00546.jpg  scene00727.jpg
+scene00004.jpg  scene00185.jpg  scene00366.jpg  scene00547.jpg  scene00728.jpg
+scene00005.jpg  scene00186.jpg  scene00367.jpg  scene00548.jpg  scene00729.jpg
+scene00006.jpg  scene00187.jpg  scene00368.jpg  scene00549.jpg  scene00730.jpg
+scene00007.jpg  scene00188.jpg  scene00369.jpg  scene00550.jpg  scene00731.jpg
+scene00008.jpg  scene00189.jpg  scene00370.jpg  scene00551.jpg  scene00732.jpg
+scene00009.jpg  scene00190.jpg  scene00371.jpg  scene00552.jpg  scene00733.jpg
+scene00010.jpg  scene00191.jpg  scene00372.jpg  scene00553.jpg  scene00734.jpg
+scene00011.jpg  scene00192.jpg  scene00373.jpg  scene00554.jpg  scene00735.jpg
+scene00012.jpg  scene00193.jpg  scene00374.jpg  scene00555.jpg  scene00736.jpg
+scene00013.jpg  scene00194.jpg  scene00375.jpg  scene00556.jpg  scene00737.jpg
+scene00014.jpg  scene00195.jpg  scene00376.jpg  scene00557.jpg  scene00738.jpg
+scene00015.jpg  scene00196.jpg  scene00377.jpg  scene00558.jpg  scene00739.jpg
+scene00016.jpg  scene00197.jpg  scene00378.jpg  scene00559.jpg  scene00740.jpg
+scene00017.jpg  scene00198.jpg  scene00379.jpg  scene00560.jpg  scene00741.jpg
+scene00018.jpg  scene00199.jpg  scene00380.jpg  scene00561.jpg  scene00742.jpg
+scene00019.jpg  scene00200.jpg  scene00381.jpg  scene00562.jpg  scene00743.jpg
+scene00020.jpg  scene00201.jpg  scene00382.jpg  scene00563.jpg  scene00744.jpg
+scene00021.jpg  scene00202.jpg  scene00383.jpg  scene00564.jpg  scene00745.jpg
+scene00022.jpg  scene00203.jpg  scene00384.jpg  scene00565.jpg  scene00746.jpg
+scene00023.jpg  scene00204.jpg  scene00385.jpg  scene00566.jpg  scene00747.jpg
+scene00024.jpg  scene00205.jpg  scene00386.jpg  scene00567.jpg  scene00748.jpg
+scene00025.jpg  scene00206.jpg  scene00387.jpg  scene00568.jpg  scene00749.jpg
+scene00026.jpg  scene00207.jpg  scene00388.jpg  scene00569.jpg  scene00750.jpg
+scene00027.jpg  scene00208.jpg  scene00389.jpg  scene00570.jpg  scene00751.jpg
+scene00028.jpg  scene00209.jpg  scene00390.jpg  scene00571.jpg  scene00752.jpg
+scene00029.jpg  scene00210.jpg  scene00391.jpg  scene00572.jpg  scene00753.jpg
+scene00030.jpg  scene00211.jpg  scene00392.jpg  scene00573.jpg  scene00754.jpg
+scene00031.jpg  scene00212.jpg  scene00393.jpg  scene00574.jpg  scene00755.jpg
+scene00032.jpg  scene00213.jpg  scene00394.jpg  scene00575.jpg  scene00756.jpg
+scene00033.jpg  scene00214.jpg  scene00395.jpg  scene00576.jpg  scene00757.jpg
+scene00034.jpg  scene00215.jpg  scene00396.jpg  scene00577.jpg  scene00758.jpg
+scene00035.jpg  scene00216.jpg  scene00397.jpg  scene00578.jpg  scene00759.jpg
+scene00036.jpg  scene00217.jpg  scene00398.jpg  scene00579.jpg  scene00760.jpg
+scene00037.jpg  scene00218.jpg  scene00399.jpg  scene00580.jpg  scene00761.jpg
+scene00038.jpg  scene00219.jpg  scene00400.jpg  scene00581.jpg  scene00762.jpg
+scene00039.jpg  scene00220.jpg  scene00401.jpg  scene00582.jpg  scene00763.jpg
+scene00040.jpg  scene00221.jpg  scene00402.jpg  scene00583.jpg  scene00764.jpg
+scene00041.jpg  scene00222.jpg  scene00403.jpg  scene00584.jpg  scene00765.jpg
+scene00042.jpg  scene00223.jpg  scene00404.jpg  scene00585.jpg  scene00766.jpg
+scene00043.jpg  scene00224.jpg  scene00405.jpg  scene00586.jpg  scene00767.jpg
+scene00044.jpg  scene00225.jpg  scene00406.jpg  scene00587.jpg  scene00768.jpg
+scene00045.jpg  scene00226.jpg  scene00407.jpg  scene00588.jpg  scene00769.jpg
+scene00046.jpg  scene00227.jpg  scene00408.jpg  scene00589.jpg  scene00770.jpg
+scene00047.jpg  scene00228.jpg  scene00409.jpg  scene00590.jpg  scene00771.jpg
+scene00048.jpg  scene00229.jpg  scene00410.jpg  scene00591.jpg  scene00772.jpg
+scene00049.jpg  scene00230.jpg  scene00411.jpg  scene00592.jpg  scene00773.jpg
+scene00050.jpg  scene00231.jpg  scene00412.jpg  scene00593.jpg  scene00774.jpg
+scene00051.jpg  scene00232.jpg  scene00413.jpg  scene00594.jpg  scene00775.jpg
+scene00052.jpg  scene00233.jpg  scene00414.jpg  scene00595.jpg  scene00776.jpg
+scene00053.jpg  scene00234.jpg  scene00415.jpg  scene00596.jpg  scene00777.jpg
+scene00054.jpg  scene00235.jpg  scene00416.jpg  scene00597.jpg  scene00778.jpg
+scene00055.jpg  scene00236.jpg  scene00417.jpg  scene00598.jpg  scene00779.jpg
+scene00056.jpg  scene00237.jpg  scene00418.jpg  scene00599.jpg  scene00780.jpg
+scene00057.jpg  scene00238.jpg  scene00419.jpg  scene00600.jpg  scene00781.jpg
+scene00058.jpg  scene00239.jpg  scene00420.jpg  scene00601.jpg  scene00782.jpg
+scene00059.jpg  scene00240.jpg  scene00421.jpg  scene00602.jpg  scene00783.jpg
+scene00060.jpg  scene00241.jpg  scene00422.jpg  scene00603.jpg  scene00784.jpg
+scene00061.jpg  scene00242.jpg  scene00423.jpg  scene00604.jpg  scene00785.jpg
+scene00062.jpg  scene00243.jpg  scene00424.jpg  scene00605.jpg  scene00786.jpg
+scene00063.jpg  scene00244.jpg  scene00425.jpg  scene00606.jpg  scene00787.jpg
+scene00064.jpg  scene00245.jpg  scene00426.jpg  scene00607.jpg  scene00788.jpg
+scene00065.jpg  scene00246.jpg  scene00427.jpg  scene00608.jpg  scene00789.jpg
+scene00066.jpg  scene00247.jpg  scene00428.jpg  scene00609.jpg  scene00790.jpg
+scene00067.jpg  scene00248.jpg  scene00429.jpg  scene00610.jpg  scene00791.jpg
+scene00068.jpg  scene00249.jpg  scene00430.jpg  scene00611.jpg  scene00792.jpg
+scene00069.jpg  scene00250.jpg  scene00431.jpg  scene00612.jpg  scene00793.jpg
+scene00070.jpg  scene00251.jpg  scene00432.jpg  scene00613.jpg  scene00794.jpg
+scene00071.jpg  scene00252.jpg  scene00433.jpg  scene00614.jpg  scene00795.jpg
+scene00072.jpg  scene00253.jpg  scene00434.jpg  scene00615.jpg  scene00796.jpg
+scene00073.jpg  scene00254.jpg  scene00435.jpg  scene00616.jpg  scene00797.jpg
+scene00074.jpg  scene00255.jpg  scene00436.jpg  scene00617.jpg  scene00798.jpg
+scene00075.jpg  scene00256.jpg  scene00437.jpg  scene00618.jpg  scene00799.jpg
+scene00076.jpg  scene00257.jpg  scene00438.jpg  scene00619.jpg  scene00800.jpg
+scene00077.jpg  scene00258.jpg  scene00439.jpg  scene00620.jpg  scene00801.jpg
+scene00078.jpg  scene00259.jpg  scene00440.jpg  scene00621.jpg  scene00802.jpg
+scene00079.jpg  scene00260.jpg  scene00441.jpg  scene00622.jpg  scene00803.jpg
+scene00080.jpg  scene00261.jpg  scene00442.jpg  scene00623.jpg  scene00804.jpg
+scene00081.jpg  scene00262.jpg  scene00443.jpg  scene00624.jpg  scene00805.jpg
+scene00082.jpg  scene00263.jpg  scene00444.jpg  scene00625.jpg  scene00806.jpg
+scene00083.jpg  scene00264.jpg  scene00445.jpg  scene00626.jpg  scene00807.jpg
+scene00084.jpg  scene00265.jpg  scene00446.jpg  scene00627.jpg  scene00808.jpg
+scene00085.jpg  scene00266.jpg  scene00447.jpg  scene00628.jpg  scene00809.jpg
+scene00086.jpg  scene00267.jpg  scene00448.jpg  scene00629.jpg  scene00810.jpg
+scene00087.jpg  scene00268.jpg  scene00449.jpg  scene00630.jpg  scene00811.jpg
+scene00088.jpg  scene00269.jpg  scene00450.jpg  scene00631.jpg  scene00812.jpg
+scene00089.jpg  scene00270.jpg  scene00451.jpg  scene00632.jpg  scene00813.jpg
+scene00090.jpg  scene00271.jpg  scene00452.jpg  scene00633.jpg  scene00814.jpg
+scene00091.jpg  scene00272.jpg  scene00453.jpg  scene00634.jpg  scene00815.jpg
+scene00092.jpg  scene00273.jpg  scene00454.jpg  scene00635.jpg  scene00816.jpg
+scene00093.jpg  scene00274.jpg  scene00455.jpg  scene00636.jpg  scene00817.jpg
+scene00094.jpg  scene00275.jpg  scene00456.jpg  scene00637.jpg  scene00818.jpg
+scene00095.jpg  scene00276.jpg  scene00457.jpg  scene00638.jpg  scene00819.jpg
+scene00096.jpg  scene00277.jpg  scene00458.jpg  scene00639.jpg  scene00820.jpg
+scene00097.jpg  scene00278.jpg  scene00459.jpg  scene00640.jpg  scene00821.jpg
+scene00098.jpg  scene00279.jpg  scene00460.jpg  scene00641.jpg  scene00822.jpg
+scene00099.jpg  scene00280.jpg  scene00461.jpg  scene00642.jpg  scene00823.jpg
+scene00100.jpg  scene00281.jpg  scene00462.jpg  scene00643.jpg  scene00824.jpg
+scene00101.jpg  scene00282.jpg  scene00463.jpg  scene00644.jpg  scene00825.jpg
+scene00102.jpg  scene00283.jpg  scene00464.jpg  scene00645.jpg  scene00826.jpg
+scene00103.jpg  scene00284.jpg  scene00465.jpg  scene00646.jpg  scene00827.jpg
+scene00104.jpg  scene00285.jpg  scene00466.jpg  scene00647.jpg  scene00828.jpg
+scene00105.jpg  scene00286.jpg  scene00467.jpg  scene00648.jpg  scene00829.jpg
+scene00106.jpg  scene00287.jpg  scene00468.jpg  scene00649.jpg  scene00830.jpg
+scene00107.jpg  scene00288.jpg  scene00469.jpg  scene00650.jpg  scene00831.jpg
+scene00108.jpg  scene00289.jpg  scene00470.jpg  scene00651.jpg  scene00832.jpg
+scene00109.jpg  scene00290.jpg  scene00471.jpg  scene00652.jpg  scene00833.jpg
+scene00110.jpg  scene00291.jpg  scene00472.jpg  scene00653.jpg  scene00834.jpg
+scene00111.jpg  scene00292.jpg  scene00473.jpg  scene00654.jpg  scene00835.jpg
+scene00112.jpg  scene00293.jpg  scene00474.jpg  scene00655.jpg  scene00836.jpg
+scene00113.jpg  scene00294.jpg  scene00475.jpg  scene00656.jpg  scene00837.jpg
+scene00114.jpg  scene00295.jpg  scene00476.jpg  scene00657.jpg  scene00838.jpg
+scene00115.jpg  scene00296.jpg  scene00477.jpg  scene00658.jpg  scene00839.jpg
+scene00116.jpg  scene00297.jpg  scene00478.jpg  scene00659.jpg  scene00840.jpg
+scene00117.jpg  scene00298.jpg  scene00479.jpg  scene00660.jpg  scene00841.jpg
+scene00118.jpg  scene00299.jpg  scene00480.jpg  scene00661.jpg  scene00842.jpg
+scene00119.jpg  scene00300.jpg  scene00481.jpg  scene00662.jpg  scene00843.jpg
+scene00120.jpg  scene00301.jpg  scene00482.jpg  scene00663.jpg  scene00844.jpg
+scene00121.jpg  scene00302.jpg  scene00483.jpg  scene00664.jpg  scene00845.jpg
+scene00122.jpg  scene00303.jpg  scene00484.jpg  scene00665.jpg  scene00846.jpg
+scene00123.jpg  scene00304.jpg  scene00485.jpg  scene00666.jpg  scene00847.jpg
+scene00124.jpg  scene00305.jpg  scene00486.jpg  scene00667.jpg  scene00848.jpg
+scene00125.jpg  scene00306.jpg  scene00487.jpg  scene00668.jpg  scene00849.jpg
+scene00126.jpg  scene00307.jpg  scene00488.jpg  scene00669.jpg  scene00850.jpg
+scene00127.jpg  scene00308.jpg  scene00489.jpg  scene00670.jpg  scene00851.jpg
+scene00128.jpg  scene00309.jpg  scene00490.jpg  scene00671.jpg  scene00852.jpg
+scene00129.jpg  scene00310.jpg  scene00491.jpg  scene00672.jpg  scene00853.jpg
+scene00130.jpg  scene00311.jpg  scene00492.jpg  scene00673.jpg  scene00854.jpg
+scene00131.jpg  scene00312.jpg  scene00493.jpg  scene00674.jpg  scene00855.jpg
+scene00132.jpg  scene00313.jpg  scene00494.jpg  scene00675.jpg  scene00856.jpg
+scene00133.jpg  scene00314.jpg  scene00495.jpg  scene00676.jpg  scene00857.jpg
+scene00134.jpg  scene00315.jpg  scene00496.jpg  scene00677.jpg  scene00858.jpg
+scene00135.jpg  scene00316.jpg  scene00497.jpg  scene00678.jpg  scene00859.jpg
+scene00136.jpg  scene00317.jpg  scene00498.jpg  scene00679.jpg  scene00860.jpg
+scene00137.jpg  scene00318.jpg  scene00499.jpg  scene00680.jpg  scene00861.jpg
+scene00138.jpg  scene00319.jpg  scene00500.jpg  scene00681.jpg  scene00862.jpg
+scene00139.jpg  scene00320.jpg  scene00501.jpg  scene00682.jpg  scene00863.jpg
+scene00140.jpg  scene00321.jpg  scene00502.jpg  scene00683.jpg  scene00864.jpg
+scene00141.jpg  scene00322.jpg  scene00503.jpg  scene00684.jpg  scene00865.jpg
+scene00142.jpg  scene00323.jpg  scene00504.jpg  scene00685.jpg  scene00866.jpg
+scene00143.jpg  scene00324.jpg  scene00505.jpg  scene00686.jpg  scene00867.jpg
+scene00144.jpg  scene00325.jpg  scene00506.jpg  scene00687.jpg  scene00868.jpg
+scene00145.jpg  scene00326.jpg  scene00507.jpg  scene00688.jpg  scene00869.jpg
+scene00146.jpg  scene00327.jpg  scene00508.jpg  scene00689.jpg  scene00870.jpg
+scene00147.jpg  scene00328.jpg  scene00509.jpg  scene00690.jpg  scene00871.jpg
+scene00148.jpg  scene00329.jpg  scene00510.jpg  scene00691.jpg  scene00872.jpg
+scene00149.jpg  scene00330.jpg  scene00511.jpg  scene00692.jpg  scene00873.jpg
+scene00150.jpg  scene00331.jpg  scene00512.jpg  scene00693.jpg  scene00874.jpg
+scene00151.jpg  scene00332.jpg  scene00513.jpg  scene00694.jpg  scene00875.jpg
+scene00152.jpg  scene00333.jpg  scene00514.jpg  scene00695.jpg  scene00876.jpg
+scene00153.jpg  scene00334.jpg  scene00515.jpg  scene00696.jpg  scene00877.jpg
+scene00154.jpg  scene00335.jpg  scene00516.jpg  scene00697.jpg  scene00878.jpg
+scene00155.jpg  scene00336.jpg  scene00517.jpg  scene00698.jpg  scene00879.jpg
+scene00156.jpg  scene00337.jpg  scene00518.jpg  scene00699.jpg  scene00880.jpg
+scene00157.jpg  scene00338.jpg  scene00519.jpg  scene00700.jpg  scene00881.jpg
+scene00158.jpg  scene00339.jpg  scene00520.jpg  scene00701.jpg  scene00882.jpg
+scene00159.jpg  scene00340.jpg  scene00521.jpg  scene00702.jpg  scene00883.jpg
+scene00160.jpg  scene00341.jpg  scene00522.jpg  scene00703.jpg  scene00884.jpg
+scene00161.jpg  scene00342.jpg  scene00523.jpg  scene00704.jpg  scene00885.jpg
+scene00162.jpg  scene00343.jpg  scene00524.jpg  scene00705.jpg  scene00886.jpg
+scene00163.jpg  scene00344.jpg  scene00525.jpg  scene00706.jpg  scene00887.jpg
+scene00164.jpg  scene00345.jpg  scene00526.jpg  scene00707.jpg  scene00888.jpg
+scene00165.jpg  scene00346.jpg  scene00527.jpg  scene00708.jpg  scene00889.jpg
+scene00166.jpg  scene00347.jpg  scene00528.jpg  scene00709.jpg  scene00890.jpg
+scene00167.jpg  scene00348.jpg  scene00529.jpg  scene00710.jpg  scene00891.jpg
+scene00168.jpg  scene00349.jpg  scene00530.jpg  scene00711.jpg  scene00892.jpg
+scene00169.jpg  scene00350.jpg  scene00531.jpg  scene00712.jpg  scene00893.jpg
+scene00170.jpg  scene00351.jpg  scene00532.jpg  scene00713.jpg  scene00894.jpg
+scene00171.jpg  scene00352.jpg  scene00533.jpg  scene00714.jpg  scene00895.jpg
+scene00172.jpg  scene00353.jpg  scene00534.jpg  scene00715.jpg  scene00896.jpg
+scene00173.jpg  scene00354.jpg  scene00535.jpg  scene00716.jpg  scene00897.jpg
+scene00174.jpg  scene00355.jpg  scene00536.jpg  scene00717.jpg  scene00898.jpg
+scene00175.jpg  scene00356.jpg  scene00537.jpg  scene00718.jpg  scene00899.jpg
+scene00176.jpg  scene00357.jpg  scene00538.jpg  scene00719.jpg  scene00900.jpg
+scene00177.jpg  scene00358.jpg  scene00539.jpg  scene00720.jpg  scene00901.jpg
+scene00178.jpg  scene00359.jpg  scene00540.jpg  scene00721.jpg  scene00902.jpg
+scene00179.jpg  scene00360.jpg  scene00541.jpg  scene00722.jpg
+scene00180.jpg  scene00361.jpg  scene00542.jpg  scene00723.jpg
+jack@jack-desktop:~/vidEdit$ ffmpeg -framerate 25 -i scene%05d.jpg -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p newvideo.mp4
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[mjpeg @ 0x7218e0] Changeing bps to 8
+Input #0, image2, from 'scene%05d.jpg':
+  Duration: 00:00:36.08, start: 0.000000, bitrate: N/A
+    Stream #0:0: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 944x512 [SAR 1:1 DAR 59:32], 25 fps, 25 tbr, 25 tbn, 25 tbc
+[swscaler @ 0x6f8280] deprecated pixel format used, make sure you did set range correctly
+[libx264 @ 0x72f900] using SAR=1/1
+[libx264 @ 0x72f900] using cpu capabilities: MMX2 SSE2Fast LZCNT
+[libx264 @ 0x72f900] profile High, level 3.1
+[libx264 @ 0x72f900] 264 - core 146 r2555 0c21480 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'newvideo.mp4':
+  Metadata:
+    encoder         : Lavf56.36.100
+    Stream #0:0: Video: h264 (libx264) ([33][0][0][0] / 0x0021), yuv420p, 944x512 [SAR 1:1 DAR 59:32], q=-1--1, 25 fps, 12800 tbn, 25 tbc
+    Metadata:
+      encoder         : Lavc56.41.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (mjpeg (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+frame=   51 fps= 49 q=25.0 size=     131kB time=00:00:00.08 bitrate=13408.6kbitsframe=   62 fps= 40 q=25.0 size=     194kB time=00:00:00.52 bitrate=3064.0kbits/frame=   71 fps= 34 q=25.0 size=     262kB time=00:00:00.88 bitrate=2443.2kbits/frame=   76 fps= 29 q=25.0 size=     320kB time=00:00:01.08 bitrate=2424.3kbits/[image2 @ 0x7207e0] Could not open file : scene00080.jpg
+scene%05d.jpg: Input/output error
+frame=   79 fps= 12 q=-1.0 Lsize=     754kB time=00:00:03.08 bitrate=2004.2kbits/s    
+video:752kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.226532%
+[libx264 @ 0x72f900] frame I:1     Avg QP:17.86  size:103078
+[libx264 @ 0x72f900] frame P:48    Avg QP:19.39  size: 13801
+[libx264 @ 0x72f900] frame B:30    Avg QP:23.32  size:   122
+[libx264 @ 0x72f900] consecutive B-frames: 31.6% 48.1% 15.2%  5.1%
+[libx264 @ 0x72f900] mb I  I16..4:  0.1% 89.3% 10.6%
+[libx264 @ 0x72f900] mb P  I16..4:  0.1%  4.6%  1.8%  P16..4: 12.2%  2.0%  2.9%  0.0%  0.0%    skip:76.4%
+[libx264 @ 0x72f900] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  5.5%  0.2%  0.0%  direct: 0.0%  skip:94.3%  L0:44.7% L1:54.4% BI: 0.9%
+[libx264 @ 0x72f900] 8x8 transform intra:76.0% inter:50.3%
+[libx264 @ 0x72f900] coded y,uvDC,uvAC intra: 97.6% 99.4% 92.6% inter: 3.0% 7.8% 5.4%
+[libx264 @ 0x72f900] i16 v,h,dc,p: 25% 59%  7%  8%
+[libx264 @ 0x72f900] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 14% 23%  6%  6%  6%  7%  8% 10%
+[libx264 @ 0x72f900] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 14% 14% 14%  8%  9%  8% 10%  9% 12%
+[libx264 @ 0x72f900] i8c dc,h,v,p: 46% 17% 23% 14%
+[libx264 @ 0x72f900] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x72f900] ref P L0: 61.1%  5.5% 10.8% 22.6%
+[libx264 @ 0x72f900] ref B L0: 59.8% 38.7%  1.5%
+[libx264 @ 0x72f900] ref B L1: 97.0%  3.0%
+[libx264 @ 0x72f900] kb/s:1947.29
+jack@jack-desktop:~/vidEdit$ ls
+newvideo.mp4    scene00180.jpg  scene00361.jpg  scene00545.jpg  scene00726.jpg
+out.ogv         scene00181.jpg  scene00362.jpg  scene00546.jpg  scene00727.jpg
+scene00001.jpg  scene00182.jpg  scene00363.jpg  scene00547.jpg  scene00728.jpg
+scene00002.jpg  scene00183.jpg  scene00364.jpg  scene00548.jpg  scene00729.jpg
+scene00003.jpg  scene00184.jpg  scene00365.jpg  scene00549.jpg  scene00730.jpg
+scene00004.jpg  scene00185.jpg  scene00366.jpg  scene00550.jpg  scene00731.jpg
+scene00005.jpg  scene00186.jpg  scene00367.jpg  scene00551.jpg  scene00732.jpg
+scene00006.jpg  scene00187.jpg  scene00368.jpg  scene00552.jpg  scene00733.jpg
+scene00007.jpg  scene00188.jpg  scene00369.jpg  scene00553.jpg  scene00734.jpg
+scene00008.jpg  scene00189.jpg  scene00370.jpg  scene00554.jpg  scene00735.jpg
+scene00009.jpg  scene00190.jpg  scene00371.jpg  scene00555.jpg  scene00736.jpg
+scene00010.jpg  scene00191.jpg  scene00372.jpg  scene00556.jpg  scene00737.jpg
+scene00011.jpg  scene00192.jpg  scene00373.jpg  scene00557.jpg  scene00738.jpg
+scene00012.jpg  scene00193.jpg  scene00374.jpg  scene00558.jpg  scene00739.jpg
+scene00013.jpg  scene00194.jpg  scene00378.jpg  scene00559.jpg  scene00740.jpg
+scene00014.jpg  scene00195.jpg  scene00379.jpg  scene00560.jpg  scene00741.jpg
+scene00015.jpg  scene00196.jpg  scene00380.jpg  scene00561.jpg  scene00742.jpg
+scene00016.jpg  scene00197.jpg  scene00381.jpg  scene00562.jpg  scene00743.jpg
+scene00017.jpg  scene00198.jpg  scene00382.jpg  scene00563.jpg  scene00744.jpg
+scene00018.jpg  scene00199.jpg  scene00383.jpg  scene00564.jpg  scene00745.jpg
+scene00019.jpg  scene00200.jpg  scene00384.jpg  scene00565.jpg  scene00746.jpg
+scene00020.jpg  scene00201.jpg  scene00385.jpg  scene00566.jpg  scene00747.jpg
+scene00021.jpg  scene00202.jpg  scene00386.jpg  scene00567.jpg  scene00748.jpg
+scene00022.jpg  scene00203.jpg  scene00387.jpg  scene00568.jpg  scene00749.jpg
+scene00023.jpg  scene00204.jpg  scene00388.jpg  scene00569.jpg  scene00750.jpg
+scene00024.jpg  scene00205.jpg  scene00389.jpg  scene00570.jpg  scene00751.jpg
+scene00025.jpg  scene00206.jpg  scene00390.jpg  scene00571.jpg  scene00752.jpg
+scene00026.jpg  scene00207.jpg  scene00391.jpg  scene00572.jpg  scene00753.jpg
+scene00027.jpg  scene00208.jpg  scene00392.jpg  scene00573.jpg  scene00754.jpg
+scene00028.jpg  scene00209.jpg  scene00393.jpg  scene00574.jpg  scene00755.jpg
+scene00029.jpg  scene00210.jpg  scene00394.jpg  scene00575.jpg  scene00756.jpg
+scene00030.jpg  scene00211.jpg  scene00395.jpg  scene00576.jpg  scene00757.jpg
+scene00031.jpg  scene00212.jpg  scene00396.jpg  scene00577.jpg  scene00758.jpg
+scene00032.jpg  scene00213.jpg  scene00397.jpg  scene00578.jpg  scene00759.jpg
+scene00033.jpg  scene00214.jpg  scene00398.jpg  scene00579.jpg  scene00760.jpg
+scene00034.jpg  scene00215.jpg  scene00399.jpg  scene00580.jpg  scene00761.jpg
+scene00035.jpg  scene00216.jpg  scene00400.jpg  scene00581.jpg  scene00762.jpg
+scene00036.jpg  scene00217.jpg  scene00401.jpg  scene00582.jpg  scene00763.jpg
+scene00037.jpg  scene00218.jpg  scene00402.jpg  scene00583.jpg  scene00764.jpg
+scene00038.jpg  scene00219.jpg  scene00403.jpg  scene00584.jpg  scene00765.jpg
+scene00039.jpg  scene00220.jpg  scene00404.jpg  scene00585.jpg  scene00766.jpg
+scene00040.jpg  scene00221.jpg  scene00405.jpg  scene00586.jpg  scene00767.jpg
+scene00041.jpg  scene00222.jpg  scene00406.jpg  scene00587.jpg  scene00768.jpg
+scene00042.jpg  scene00223.jpg  scene00407.jpg  scene00588.jpg  scene00769.jpg
+scene00043.jpg  scene00224.jpg  scene00408.jpg  scene00589.jpg  scene00770.jpg
+scene00044.jpg  scene00225.jpg  scene00409.jpg  scene00590.jpg  scene00771.jpg
+scene00045.jpg  scene00226.jpg  scene00410.jpg  scene00591.jpg  scene00772.jpg
+scene00046.jpg  scene00230.jpg  scene00411.jpg  scene00592.jpg  scene00773.jpg
+scene00047.jpg  scene00231.jpg  scene00412.jpg  scene00593.jpg  scene00774.jpg
+scene00048.jpg  scene00232.jpg  scene00413.jpg  scene00594.jpg  scene00775.jpg
+scene00049.jpg  scene00233.jpg  scene00414.jpg  scene00595.jpg  scene00776.jpg
+scene00050.jpg  scene00234.jpg  scene00415.jpg  scene00596.jpg  scene00777.jpg
+scene00051.jpg  scene00235.jpg  scene00416.jpg  scene00597.jpg  scene00778.jpg
+scene00052.jpg  scene00236.jpg  scene00417.jpg  scene00598.jpg  scene00779.jpg
+scene00053.jpg  scene00237.jpg  scene00418.jpg  scene00599.jpg  scene00780.jpg
+scene00054.jpg  scene00238.jpg  scene00419.jpg  scene00600.jpg  scene00781.jpg
+scene00055.jpg  scene00239.jpg  scene00420.jpg  scene00601.jpg  scene00782.jpg
+scene00056.jpg  scene00240.jpg  scene00421.jpg  scene00602.jpg  scene00783.jpg
+scene00057.jpg  scene00241.jpg  scene00422.jpg  scene00603.jpg  scene00784.jpg
+scene00058.jpg  scene00242.jpg  scene00423.jpg  scene00604.jpg  scene00785.jpg
+scene00059.jpg  scene00243.jpg  scene00424.jpg  scene00605.jpg  scene00786.jpg
+scene00060.jpg  scene00244.jpg  scene00425.jpg  scene00606.jpg  scene00787.jpg
+scene00061.jpg  scene00245.jpg  scene00426.jpg  scene00607.jpg  scene00788.jpg
+scene00062.jpg  scene00246.jpg  scene00427.jpg  scene00608.jpg  scene00789.jpg
+scene00063.jpg  scene00247.jpg  scene00428.jpg  scene00609.jpg  scene00790.jpg
+scene00064.jpg  scene00248.jpg  scene00429.jpg  scene00610.jpg  scene00791.jpg
+scene00065.jpg  scene00249.jpg  scene00430.jpg  scene00611.jpg  scene00792.jpg
+scene00066.jpg  scene00250.jpg  scene00431.jpg  scene00612.jpg  scene00793.jpg
+scene00067.jpg  scene00251.jpg  scene00432.jpg  scene00613.jpg  scene00794.jpg
+scene00068.jpg  scene00252.jpg  scene00433.jpg  scene00614.jpg  scene00795.jpg
+scene00069.jpg  scene00253.jpg  scene00434.jpg  scene00615.jpg  scene00796.jpg
+scene00070.jpg  scene00254.jpg  scene00435.jpg  scene00616.jpg  scene00797.jpg
+scene00071.jpg  scene00255.jpg  scene00436.jpg  scene00617.jpg  scene00798.jpg
+scene00072.jpg  scene00256.jpg  scene00437.jpg  scene00618.jpg  scene00799.jpg
+scene00073.jpg  scene00257.jpg  scene00438.jpg  scene00619.jpg  scene00800.jpg
+scene00074.jpg  scene00258.jpg  scene00439.jpg  scene00620.jpg  scene00801.jpg
+scene00075.jpg  scene00259.jpg  scene00440.jpg  scene00621.jpg  scene00802.jpg
+scene00076.jpg  scene00260.jpg  scene00441.jpg  scene00622.jpg  scene00803.jpg
+scene00077.jpg  scene00261.jpg  scene00442.jpg  scene00623.jpg  scene00804.jpg
+scene00078.jpg  scene00262.jpg  scene00443.jpg  scene00624.jpg  scene00805.jpg
+scene00079.jpg  scene00263.jpg  scene00444.jpg  scene00625.jpg  scene00806.jpg
+scene00083.jpg  scene00264.jpg  scene00445.jpg  scene00626.jpg  scene00807.jpg
+scene00084.jpg  scene00265.jpg  scene00446.jpg  scene00627.jpg  scene00808.jpg
+scene00085.jpg  scene00266.jpg  scene00447.jpg  scene00628.jpg  scene00809.jpg
+scene00086.jpg  scene00267.jpg  scene00448.jpg  scene00629.jpg  scene00810.jpg
+scene00087.jpg  scene00268.jpg  scene00449.jpg  scene00630.jpg  scene00811.jpg
+scene00088.jpg  scene00269.jpg  scene00450.jpg  scene00631.jpg  scene00812.jpg
+scene00089.jpg  scene00270.jpg  scene00451.jpg  scene00632.jpg  scene00813.jpg
+scene00090.jpg  scene00271.jpg  scene00452.jpg  scene00633.jpg  scene00814.jpg
+scene00091.jpg  scene00272.jpg  scene00453.jpg  scene00634.jpg  scene00815.jpg
+scene00092.jpg  scene00273.jpg  scene00454.jpg  scene00635.jpg  scene00816.jpg
+scene00093.jpg  scene00274.jpg  scene00455.jpg  scene00636.jpg  scene00817.jpg
+scene00094.jpg  scene00275.jpg  scene00456.jpg  scene00637.jpg  scene00821.jpg
+scene00095.jpg  scene00276.jpg  scene00457.jpg  scene00638.jpg  scene00822.jpg
+scene00096.jpg  scene00277.jpg  scene00458.jpg  scene00639.jpg  scene00823.jpg
+scene00097.jpg  scene00278.jpg  scene00459.jpg  scene00640.jpg  scene00824.jpg
+scene00098.jpg  scene00279.jpg  scene00460.jpg  scene00641.jpg  scene00825.jpg
+scene00099.jpg  scene00280.jpg  scene00461.jpg  scene00642.jpg  scene00826.jpg
+scene00100.jpg  scene00281.jpg  scene00462.jpg  scene00643.jpg  scene00827.jpg
+scene00101.jpg  scene00282.jpg  scene00463.jpg  scene00644.jpg  scene00828.jpg
+scene00102.jpg  scene00283.jpg  scene00464.jpg  scene00645.jpg  scene00829.jpg
+scene00103.jpg  scene00284.jpg  scene00465.jpg  scene00646.jpg  scene00830.jpg
+scene00104.jpg  scene00285.jpg  scene00466.jpg  scene00647.jpg  scene00831.jpg
+scene00105.jpg  scene00286.jpg  scene00467.jpg  scene00648.jpg  scene00832.jpg
+scene00106.jpg  scene00287.jpg  scene00468.jpg  scene00649.jpg  scene00833.jpg
+scene00107.jpg  scene00288.jpg  scene00469.jpg  scene00650.jpg  scene00834.jpg
+scene00108.jpg  scene00289.jpg  scene00470.jpg  scene00651.jpg  scene00835.jpg
+scene00109.jpg  scene00290.jpg  scene00471.jpg  scene00652.jpg  scene00836.jpg
+scene00110.jpg  scene00291.jpg  scene00472.jpg  scene00653.jpg  scene00837.jpg
+scene00111.jpg  scene00292.jpg  scene00473.jpg  scene00654.jpg  scene00838.jpg
+scene00112.jpg  scene00293.jpg  scene00474.jpg  scene00655.jpg  scene00839.jpg
+scene00113.jpg  scene00294.jpg  scene00475.jpg  scene00656.jpg  scene00840.jpg
+scene00114.jpg  scene00295.jpg  scene00476.jpg  scene00657.jpg  scene00841.jpg
+scene00115.jpg  scene00296.jpg  scene00477.jpg  scene00658.jpg  scene00842.jpg
+scene00116.jpg  scene00297.jpg  scene00478.jpg  scene00659.jpg  scene00843.jpg
+scene00117.jpg  scene00298.jpg  scene00479.jpg  scene00660.jpg  scene00844.jpg
+scene00118.jpg  scene00299.jpg  scene00480.jpg  scene00661.jpg  scene00845.jpg
+scene00119.jpg  scene00300.jpg  scene00481.jpg  scene00662.jpg  scene00846.jpg
+scene00120.jpg  scene00301.jpg  scene00482.jpg  scene00663.jpg  scene00847.jpg
+scene00121.jpg  scene00302.jpg  scene00483.jpg  scene00664.jpg  scene00848.jpg
+scene00122.jpg  scene00303.jpg  scene00484.jpg  scene00665.jpg  scene00849.jpg
+scene00123.jpg  scene00304.jpg  scene00485.jpg  scene00666.jpg  scene00850.jpg
+scene00124.jpg  scene00305.jpg  scene00486.jpg  scene00667.jpg  scene00851.jpg
+scene00125.jpg  scene00306.jpg  scene00487.jpg  scene00668.jpg  scene00852.jpg
+scene00126.jpg  scene00307.jpg  scene00488.jpg  scene00669.jpg  scene00853.jpg
+scene00127.jpg  scene00308.jpg  scene00489.jpg  scene00670.jpg  scene00854.jpg
+scene00128.jpg  scene00309.jpg  scene00490.jpg  scene00674.jpg  scene00855.jpg
+scene00129.jpg  scene00310.jpg  scene00491.jpg  scene00675.jpg  scene00856.jpg
+scene00130.jpg  scene00311.jpg  scene00492.jpg  scene00676.jpg  scene00857.jpg
+scene00131.jpg  scene00312.jpg  scene00493.jpg  scene00677.jpg  scene00858.jpg
+scene00132.jpg  scene00313.jpg  scene00494.jpg  scene00678.jpg  scene00859.jpg
+scene00133.jpg  scene00314.jpg  scene00495.jpg  scene00679.jpg  scene00860.jpg
+scene00134.jpg  scene00315.jpg  scene00496.jpg  scene00680.jpg  scene00861.jpg
+scene00135.jpg  scene00316.jpg  scene00497.jpg  scene00681.jpg  scene00862.jpg
+scene00136.jpg  scene00317.jpg  scene00498.jpg  scene00682.jpg  scene00863.jpg
+scene00137.jpg  scene00318.jpg  scene00499.jpg  scene00683.jpg  scene00864.jpg
+scene00138.jpg  scene00319.jpg  scene00500.jpg  scene00684.jpg  scene00865.jpg
+scene00139.jpg  scene00320.jpg  scene00501.jpg  scene00685.jpg  scene00866.jpg
+scene00140.jpg  scene00321.jpg  scene00502.jpg  scene00686.jpg  scene00867.jpg
+scene00141.jpg  scene00322.jpg  scene00503.jpg  scene00687.jpg  scene00868.jpg
+scene00142.jpg  scene00323.jpg  scene00504.jpg  scene00688.jpg  scene00869.jpg
+scene00143.jpg  scene00324.jpg  scene00505.jpg  scene00689.jpg  scene00870.jpg
+scene00144.jpg  scene00325.jpg  scene00506.jpg  scene00690.jpg  scene00871.jpg
+scene00145.jpg  scene00326.jpg  scene00507.jpg  scene00691.jpg  scene00872.jpg
+scene00146.jpg  scene00327.jpg  scene00508.jpg  scene00692.jpg  scene00873.jpg
+scene00147.jpg  scene00328.jpg  scene00509.jpg  scene00693.jpg  scene00874.jpg
+scene00148.jpg  scene00329.jpg  scene00510.jpg  scene00694.jpg  scene00875.jpg
+scene00149.jpg  scene00330.jpg  scene00511.jpg  scene00695.jpg  scene00876.jpg
+scene00150.jpg  scene00331.jpg  scene00512.jpg  scene00696.jpg  scene00877.jpg
+scene00151.jpg  scene00332.jpg  scene00513.jpg  scene00697.jpg  scene00878.jpg
+scene00152.jpg  scene00333.jpg  scene00514.jpg  scene00698.jpg  scene00879.jpg
+scene00153.jpg  scene00334.jpg  scene00515.jpg  scene00699.jpg  scene00880.jpg
+scene00154.jpg  scene00335.jpg  scene00516.jpg  scene00700.jpg  scene00881.jpg
+scene00155.jpg  scene00336.jpg  scene00517.jpg  scene00701.jpg  scene00882.jpg
+scene00156.jpg  scene00337.jpg  scene00518.jpg  scene00702.jpg  scene00883.jpg
+scene00157.jpg  scene00338.jpg  scene00519.jpg  scene00703.jpg  scene00884.jpg
+scene00158.jpg  scene00339.jpg  scene00520.jpg  scene00704.jpg  scene00885.jpg
+scene00159.jpg  scene00340.jpg  scene00521.jpg  scene00705.jpg  scene00886.jpg
+scene00160.jpg  scene00341.jpg  scene00522.jpg  scene00706.jpg  scene00887.jpg
+scene00161.jpg  scene00342.jpg  scene00526.jpg  scene00707.jpg  scene00888.jpg
+scene00162.jpg  scene00343.jpg  scene00527.jpg  scene00708.jpg  scene00889.jpg
+scene00163.jpg  scene00344.jpg  scene00528.jpg  scene00709.jpg  scene00890.jpg
+scene00164.jpg  scene00345.jpg  scene00529.jpg  scene00710.jpg  scene00891.jpg
+scene00165.jpg  scene00346.jpg  scene00530.jpg  scene00711.jpg  scene00892.jpg
+scene00166.jpg  scene00347.jpg  scene00531.jpg  scene00712.jpg  scene00893.jpg
+scene00167.jpg  scene00348.jpg  scene00532.jpg  scene00713.jpg  scene00894.jpg
+scene00168.jpg  scene00349.jpg  scene00533.jpg  scene00714.jpg  scene00895.jpg
+scene00169.jpg  scene00350.jpg  scene00534.jpg  scene00715.jpg  scene00896.jpg
+scene00170.jpg  scene00351.jpg  scene00535.jpg  scene00716.jpg  scene00897.jpg
+scene00171.jpg  scene00352.jpg  scene00536.jpg  scene00717.jpg  scene00898.jpg
+scene00172.jpg  scene00353.jpg  scene00537.jpg  scene00718.jpg  scene00899.jpg
+scene00173.jpg  scene00354.jpg  scene00538.jpg  scene00719.jpg  scene00900.jpg
+scene00174.jpg  scene00355.jpg  scene00539.jpg  scene00720.jpg  scene00901.jpg
+scene00175.jpg  scene00356.jpg  scene00540.jpg  scene00721.jpg  scene00902.jpg
+scene00176.jpg  scene00357.jpg  scene00541.jpg  scene00722.jpg
+scene00177.jpg  scene00358.jpg  scene00542.jpg  scene00723.jpg
+scene00178.jpg  scene00359.jpg  scene00543.jpg  scene00724.jpg
+scene00179.jpg  scene00360.jpg  scene00544.jpg  scene00725.jpg
+jack@jack-desktop:~/vidEdit$ ls *.mp4
+newvideo.mp4
+jack@jack-desktop:~/vidEdit$ gedit sequence.sh
+
+** (gedit:19661): WARNING **: Couldn't register with accessibility bus: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+^C
+jack@jack-desktop:~/vidEdit$ chmod a+x sequence.sh
+jack@jack-desktop:~/vidEdit$ ./sequence
+bash: ./sequence: No such file or directory
+jack@jack-desktop:~/vidEdit$ ./sequence.sh
+ls
+jack@jack-desktop:~/vidEdit$ ls
+0001.jpg  0128.jpg  0255.jpg  0382.jpg  0509.jpg  0636.jpg  0763.jpg
+0002.jpg  0129.jpg  0256.jpg  0383.jpg  0510.jpg  0637.jpg  0764.jpg
+0003.jpg  0130.jpg  0257.jpg  0384.jpg  0511.jpg  0638.jpg  0765.jpg
+0004.jpg  0131.jpg  0258.jpg  0385.jpg  0512.jpg  0639.jpg  0766.jpg
+0005.jpg  0132.jpg  0259.jpg  0386.jpg  0513.jpg  0640.jpg  0767.jpg
+0006.jpg  0133.jpg  0260.jpg  0387.jpg  0514.jpg  0641.jpg  0768.jpg
+0007.jpg  0134.jpg  0261.jpg  0388.jpg  0515.jpg  0642.jpg  0769.jpg
+0008.jpg  0135.jpg  0262.jpg  0389.jpg  0516.jpg  0643.jpg  0770.jpg
+0009.jpg  0136.jpg  0263.jpg  0390.jpg  0517.jpg  0644.jpg  0771.jpg
+0010.jpg  0137.jpg  0264.jpg  0391.jpg  0518.jpg  0645.jpg  0772.jpg
+0011.jpg  0138.jpg  0265.jpg  0392.jpg  0519.jpg  0646.jpg  0773.jpg
+0012.jpg  0139.jpg  0266.jpg  0393.jpg  0520.jpg  0647.jpg  0774.jpg
+0013.jpg  0140.jpg  0267.jpg  0394.jpg  0521.jpg  0648.jpg  0775.jpg
+0014.jpg  0141.jpg  0268.jpg  0395.jpg  0522.jpg  0649.jpg  0776.jpg
+0015.jpg  0142.jpg  0269.jpg  0396.jpg  0523.jpg  0650.jpg  0777.jpg
+0016.jpg  0143.jpg  0270.jpg  0397.jpg  0524.jpg  0651.jpg  0778.jpg
+0017.jpg  0144.jpg  0271.jpg  0398.jpg  0525.jpg  0652.jpg  0779.jpg
+0018.jpg  0145.jpg  0272.jpg  0399.jpg  0526.jpg  0653.jpg  0780.jpg
+0019.jpg  0146.jpg  0273.jpg  0400.jpg  0527.jpg  0654.jpg  0781.jpg
+0020.jpg  0147.jpg  0274.jpg  0401.jpg  0528.jpg  0655.jpg  0782.jpg
+0021.jpg  0148.jpg  0275.jpg  0402.jpg  0529.jpg  0656.jpg  0783.jpg
+0022.jpg  0149.jpg  0276.jpg  0403.jpg  0530.jpg  0657.jpg  0784.jpg
+0023.jpg  0150.jpg  0277.jpg  0404.jpg  0531.jpg  0658.jpg  0785.jpg
+0024.jpg  0151.jpg  0278.jpg  0405.jpg  0532.jpg  0659.jpg  0786.jpg
+0025.jpg  0152.jpg  0279.jpg  0406.jpg  0533.jpg  0660.jpg  0787.jpg
+0026.jpg  0153.jpg  0280.jpg  0407.jpg  0534.jpg  0661.jpg  0788.jpg
+0027.jpg  0154.jpg  0281.jpg  0408.jpg  0535.jpg  0662.jpg  0789.jpg
+0028.jpg  0155.jpg  0282.jpg  0409.jpg  0536.jpg  0663.jpg  0790.jpg
+0029.jpg  0156.jpg  0283.jpg  0410.jpg  0537.jpg  0664.jpg  0791.jpg
+0030.jpg  0157.jpg  0284.jpg  0411.jpg  0538.jpg  0665.jpg  0792.jpg
+0031.jpg  0158.jpg  0285.jpg  0412.jpg  0539.jpg  0666.jpg  0793.jpg
+0032.jpg  0159.jpg  0286.jpg  0413.jpg  0540.jpg  0667.jpg  0794.jpg
+0033.jpg  0160.jpg  0287.jpg  0414.jpg  0541.jpg  0668.jpg  0795.jpg
+0034.jpg  0161.jpg  0288.jpg  0415.jpg  0542.jpg  0669.jpg  0796.jpg
+0035.jpg  0162.jpg  0289.jpg  0416.jpg  0543.jpg  0670.jpg  0797.jpg
+0036.jpg  0163.jpg  0290.jpg  0417.jpg  0544.jpg  0671.jpg  0798.jpg
+0037.jpg  0164.jpg  0291.jpg  0418.jpg  0545.jpg  0672.jpg  0799.jpg
+0038.jpg  0165.jpg  0292.jpg  0419.jpg  0546.jpg  0673.jpg  0800.jpg
+0039.jpg  0166.jpg  0293.jpg  0420.jpg  0547.jpg  0674.jpg  0801.jpg
+0040.jpg  0167.jpg  0294.jpg  0421.jpg  0548.jpg  0675.jpg  0802.jpg
+0041.jpg  0168.jpg  0295.jpg  0422.jpg  0549.jpg  0676.jpg  0803.jpg
+0042.jpg  0169.jpg  0296.jpg  0423.jpg  0550.jpg  0677.jpg  0804.jpg
+0043.jpg  0170.jpg  0297.jpg  0424.jpg  0551.jpg  0678.jpg  0805.jpg
+0044.jpg  0171.jpg  0298.jpg  0425.jpg  0552.jpg  0679.jpg  0806.jpg
+0045.jpg  0172.jpg  0299.jpg  0426.jpg  0553.jpg  0680.jpg  0807.jpg
+0046.jpg  0173.jpg  0300.jpg  0427.jpg  0554.jpg  0681.jpg  0808.jpg
+0047.jpg  0174.jpg  0301.jpg  0428.jpg  0555.jpg  0682.jpg  0809.jpg
+0048.jpg  0175.jpg  0302.jpg  0429.jpg  0556.jpg  0683.jpg  0810.jpg
+0049.jpg  0176.jpg  0303.jpg  0430.jpg  0557.jpg  0684.jpg  0811.jpg
+0050.jpg  0177.jpg  0304.jpg  0431.jpg  0558.jpg  0685.jpg  0812.jpg
+0051.jpg  0178.jpg  0305.jpg  0432.jpg  0559.jpg  0686.jpg  0813.jpg
+0052.jpg  0179.jpg  0306.jpg  0433.jpg  0560.jpg  0687.jpg  0814.jpg
+0053.jpg  0180.jpg  0307.jpg  0434.jpg  0561.jpg  0688.jpg  0815.jpg
+0054.jpg  0181.jpg  0308.jpg  0435.jpg  0562.jpg  0689.jpg  0816.jpg
+0055.jpg  0182.jpg  0309.jpg  0436.jpg  0563.jpg  0690.jpg  0817.jpg
+0056.jpg  0183.jpg  0310.jpg  0437.jpg  0564.jpg  0691.jpg  0818.jpg
+0057.jpg  0184.jpg  0311.jpg  0438.jpg  0565.jpg  0692.jpg  0819.jpg
+0058.jpg  0185.jpg  0312.jpg  0439.jpg  0566.jpg  0693.jpg  0820.jpg
+0059.jpg  0186.jpg  0313.jpg  0440.jpg  0567.jpg  0694.jpg  0821.jpg
+0060.jpg  0187.jpg  0314.jpg  0441.jpg  0568.jpg  0695.jpg  0822.jpg
+0061.jpg  0188.jpg  0315.jpg  0442.jpg  0569.jpg  0696.jpg  0823.jpg
+0062.jpg  0189.jpg  0316.jpg  0443.jpg  0570.jpg  0697.jpg  0824.jpg
+0063.jpg  0190.jpg  0317.jpg  0444.jpg  0571.jpg  0698.jpg  0825.jpg
+0064.jpg  0191.jpg  0318.jpg  0445.jpg  0572.jpg  0699.jpg  0826.jpg
+0065.jpg  0192.jpg  0319.jpg  0446.jpg  0573.jpg  0700.jpg  0827.jpg
+0066.jpg  0193.jpg  0320.jpg  0447.jpg  0574.jpg  0701.jpg  0828.jpg
+0067.jpg  0194.jpg  0321.jpg  0448.jpg  0575.jpg  0702.jpg  0829.jpg
+0068.jpg  0195.jpg  0322.jpg  0449.jpg  0576.jpg  0703.jpg  0830.jpg
+0069.jpg  0196.jpg  0323.jpg  0450.jpg  0577.jpg  0704.jpg  0831.jpg
+0070.jpg  0197.jpg  0324.jpg  0451.jpg  0578.jpg  0705.jpg  0832.jpg
+0071.jpg  0198.jpg  0325.jpg  0452.jpg  0579.jpg  0706.jpg  0833.jpg
+0072.jpg  0199.jpg  0326.jpg  0453.jpg  0580.jpg  0707.jpg  0834.jpg
+0073.jpg  0200.jpg  0327.jpg  0454.jpg  0581.jpg  0708.jpg  0835.jpg
+0074.jpg  0201.jpg  0328.jpg  0455.jpg  0582.jpg  0709.jpg  0836.jpg
+0075.jpg  0202.jpg  0329.jpg  0456.jpg  0583.jpg  0710.jpg  0837.jpg
+0076.jpg  0203.jpg  0330.jpg  0457.jpg  0584.jpg  0711.jpg  0838.jpg
+0077.jpg  0204.jpg  0331.jpg  0458.jpg  0585.jpg  0712.jpg  0839.jpg
+0078.jpg  0205.jpg  0332.jpg  0459.jpg  0586.jpg  0713.jpg  0840.jpg
+0079.jpg  0206.jpg  0333.jpg  0460.jpg  0587.jpg  0714.jpg  0841.jpg
+0080.jpg  0207.jpg  0334.jpg  0461.jpg  0588.jpg  0715.jpg  0842.jpg
+0081.jpg  0208.jpg  0335.jpg  0462.jpg  0589.jpg  0716.jpg  0843.jpg
+0082.jpg  0209.jpg  0336.jpg  0463.jpg  0590.jpg  0717.jpg  0844.jpg
+0083.jpg  0210.jpg  0337.jpg  0464.jpg  0591.jpg  0718.jpg  0845.jpg
+0084.jpg  0211.jpg  0338.jpg  0465.jpg  0592.jpg  0719.jpg  0846.jpg
+0085.jpg  0212.jpg  0339.jpg  0466.jpg  0593.jpg  0720.jpg  0847.jpg
+0086.jpg  0213.jpg  0340.jpg  0467.jpg  0594.jpg  0721.jpg  0848.jpg
+0087.jpg  0214.jpg  0341.jpg  0468.jpg  0595.jpg  0722.jpg  0849.jpg
+0088.jpg  0215.jpg  0342.jpg  0469.jpg  0596.jpg  0723.jpg  0850.jpg
+0089.jpg  0216.jpg  0343.jpg  0470.jpg  0597.jpg  0724.jpg  0851.jpg
+0090.jpg  0217.jpg  0344.jpg  0471.jpg  0598.jpg  0725.jpg  0852.jpg
+0091.jpg  0218.jpg  0345.jpg  0472.jpg  0599.jpg  0726.jpg  0853.jpg
+0092.jpg  0219.jpg  0346.jpg  0473.jpg  0600.jpg  0727.jpg  0854.jpg
+0093.jpg  0220.jpg  0347.jpg  0474.jpg  0601.jpg  0728.jpg  0855.jpg
+0094.jpg  0221.jpg  0348.jpg  0475.jpg  0602.jpg  0729.jpg  0856.jpg
+0095.jpg  0222.jpg  0349.jpg  0476.jpg  0603.jpg  0730.jpg  0857.jpg
+0096.jpg  0223.jpg  0350.jpg  0477.jpg  0604.jpg  0731.jpg  0858.jpg
+0097.jpg  0224.jpg  0351.jpg  0478.jpg  0605.jpg  0732.jpg  0859.jpg
+0098.jpg  0225.jpg  0352.jpg  0479.jpg  0606.jpg  0733.jpg  0860.jpg
+0099.jpg  0226.jpg  0353.jpg  0480.jpg  0607.jpg  0734.jpg  0861.jpg
+0100.jpg  0227.jpg  0354.jpg  0481.jpg  0608.jpg  0735.jpg  0862.jpg
+0101.jpg  0228.jpg  0355.jpg  0482.jpg  0609.jpg  0736.jpg  0863.jpg
+0102.jpg  0229.jpg  0356.jpg  0483.jpg  0610.jpg  0737.jpg  0864.jpg
+0103.jpg  0230.jpg  0357.jpg  0484.jpg  0611.jpg  0738.jpg  0865.jpg
+0104.jpg  0231.jpg  0358.jpg  0485.jpg  0612.jpg  0739.jpg  0866.jpg
+0105.jpg  0232.jpg  0359.jpg  0486.jpg  0613.jpg  0740.jpg  0867.jpg
+0106.jpg  0233.jpg  0360.jpg  0487.jpg  0614.jpg  0741.jpg  0868.jpg
+0107.jpg  0234.jpg  0361.jpg  0488.jpg  0615.jpg  0742.jpg  0869.jpg
+0108.jpg  0235.jpg  0362.jpg  0489.jpg  0616.jpg  0743.jpg  0870.jpg
+0109.jpg  0236.jpg  0363.jpg  0490.jpg  0617.jpg  0744.jpg  0871.jpg
+0110.jpg  0237.jpg  0364.jpg  0491.jpg  0618.jpg  0745.jpg  0872.jpg
+0111.jpg  0238.jpg  0365.jpg  0492.jpg  0619.jpg  0746.jpg  0873.jpg
+0112.jpg  0239.jpg  0366.jpg  0493.jpg  0620.jpg  0747.jpg  0874.jpg
+0113.jpg  0240.jpg  0367.jpg  0494.jpg  0621.jpg  0748.jpg  0875.jpg
+0114.jpg  0241.jpg  0368.jpg  0495.jpg  0622.jpg  0749.jpg  0876.jpg
+0115.jpg  0242.jpg  0369.jpg  0496.jpg  0623.jpg  0750.jpg  0877.jpg
+0116.jpg  0243.jpg  0370.jpg  0497.jpg  0624.jpg  0751.jpg  0878.jpg
+0117.jpg  0244.jpg  0371.jpg  0498.jpg  0625.jpg  0752.jpg  0879.jpg
+0118.jpg  0245.jpg  0372.jpg  0499.jpg  0626.jpg  0753.jpg  0880.jpg
+0119.jpg  0246.jpg  0373.jpg  0500.jpg  0627.jpg  0754.jpg  0881.jpg
+0120.jpg  0247.jpg  0374.jpg  0501.jpg  0628.jpg  0755.jpg  0882.jpg
+0121.jpg  0248.jpg  0375.jpg  0502.jpg  0629.jpg  0756.jpg  0883.jpg
+0122.jpg  0249.jpg  0376.jpg  0503.jpg  0630.jpg  0757.jpg  0884.jpg
+0123.jpg  0250.jpg  0377.jpg  0504.jpg  0631.jpg  0758.jpg  newvideo.mp4
+0124.jpg  0251.jpg  0378.jpg  0505.jpg  0632.jpg  0759.jpg  out.ogv
+0125.jpg  0252.jpg  0379.jpg  0506.jpg  0633.jpg  0760.jpg  sequence.sh
+0126.jpg  0253.jpg  0380.jpg  0507.jpg  0634.jpg  0761.jpg
+0127.jpg  0254.jpg  0381.jpg  0508.jpg  0635.jpg  0762.jpg
+jack@jack-desktop:~/vidEdit$ ./^C
+jack@jack-desktop:~/vidEdit$ sudo ./sequence.sh
+[sudo] password for jack: 
+mv: ‘0001.jpg’ and ‘0001.jpg’ are the same file
+mv: ‘0002.jpg’ and ‘0002.jpg’ are the same file
+mv: ‘0003.jpg’ and ‘0003.jpg’ are the same file
+mv: ‘0004.jpg’ and ‘0004.jpg’ are the same file
+mv: ‘0005.jpg’ and ‘0005.jpg’ are the same file
+mv: ‘0006.jpg’ and ‘0006.jpg’ are the same file
+mv: ‘0007.jpg’ and ‘0007.jpg’ are the same file
+mv: ‘0008.jpg’ and ‘0008.jpg’ are the same file
+mv: ‘0009.jpg’ and ‘0009.jpg’ are the same file
+mv: ‘0010.jpg’ and ‘0010.jpg’ are the same file
+mv: ‘0011.jpg’ and ‘0011.jpg’ are the same file
+mv: ‘0012.jpg’ and ‘0012.jpg’ are the same file
+mv: ‘0013.jpg’ and ‘0013.jpg’ are the same file
+mv: ‘0014.jpg’ and ‘0014.jpg’ are the same file
+mv: ‘0015.jpg’ and ‘0015.jpg’ are the same file
+mv: ‘0016.jpg’ and ‘0016.jpg’ are the same file
+mv: ‘0017.jpg’ and ‘0017.jpg’ are the same file
+mv: ‘0018.jpg’ and ‘0018.jpg’ are the same file
+mv: ‘0019.jpg’ and ‘0019.jpg’ are the same file
+mv: ‘0020.jpg’ and ‘0020.jpg’ are the same file
+mv: ‘0021.jpg’ and ‘0021.jpg’ are the same file
+mv: ‘0022.jpg’ and ‘0022.jpg’ are the same file
+mv: ‘0023.jpg’ and ‘0023.jpg’ are the same file
+mv: ‘0024.jpg’ and ‘0024.jpg’ are the same file
+mv: ‘0025.jpg’ and ‘0025.jpg’ are the same file
+mv: ‘0026.jpg’ and ‘0026.jpg’ are the same file
+mv: ‘0027.jpg’ and ‘0027.jpg’ are the same file
+mv: ‘0028.jpg’ and ‘0028.jpg’ are the same file
+mv: ‘0029.jpg’ and ‘0029.jpg’ are the same file
+mv: ‘0030.jpg’ and ‘0030.jpg’ are the same file
+mv: ‘0031.jpg’ and ‘0031.jpg’ are the same file
+mv: ‘0032.jpg’ and ‘0032.jpg’ are the same file
+mv: ‘0033.jpg’ and ‘0033.jpg’ are the same file
+mv: ‘0034.jpg’ and ‘0034.jpg’ are the same file
+mv: ‘0035.jpg’ and ‘0035.jpg’ are the same file
+mv: ‘0036.jpg’ and ‘0036.jpg’ are the same file
+mv: ‘0037.jpg’ and ‘0037.jpg’ are the same file
+mv: ‘0038.jpg’ and ‘0038.jpg’ are the same file
+mv: ‘0039.jpg’ and ‘0039.jpg’ are the same file
+mv: ‘0040.jpg’ and ‘0040.jpg’ are the same file
+mv: ‘0041.jpg’ and ‘0041.jpg’ are the same file
+mv: ‘0042.jpg’ and ‘0042.jpg’ are the same file
+mv: ‘0043.jpg’ and ‘0043.jpg’ are the same file
+mv: ‘0044.jpg’ and ‘0044.jpg’ are the same file
+mv: ‘0045.jpg’ and ‘0045.jpg’ are the same file
+mv: ‘0046.jpg’ and ‘0046.jpg’ are the same file
+mv: ‘0047.jpg’ and ‘0047.jpg’ are the same file
+mv: ‘0048.jpg’ and ‘0048.jpg’ are the same file
+mv: ‘0049.jpg’ and ‘0049.jpg’ are the same file
+mv: ‘0050.jpg’ and ‘0050.jpg’ are the same file
+mv: ‘0051.jpg’ and ‘0051.jpg’ are the same file
+mv: ‘0052.jpg’ and ‘0052.jpg’ are the same file
+mv: ‘0053.jpg’ and ‘0053.jpg’ are the same file
+mv: ‘0054.jpg’ and ‘0054.jpg’ are the same file
+mv: ‘0055.jpg’ and ‘0055.jpg’ are the same file
+mv: ‘0056.jpg’ and ‘0056.jpg’ are the same file
+mv: ‘0057.jpg’ and ‘0057.jpg’ are the same file
+mv: ‘0058.jpg’ and ‘0058.jpg’ are the same file
+mv: ‘0059.jpg’ and ‘0059.jpg’ are the same file
+mv: ‘0060.jpg’ and ‘0060.jpg’ are the same file
+mv: ‘0061.jpg’ and ‘0061.jpg’ are the same file
+mv: ‘0062.jpg’ and ‘0062.jpg’ are the same file
+mv: ‘0063.jpg’ and ‘0063.jpg’ are the same file
+mv: ‘0064.jpg’ and ‘0064.jpg’ are the same file
+mv: ‘0065.jpg’ and ‘0065.jpg’ are the same file
+mv: ‘0066.jpg’ and ‘0066.jpg’ are the same file
+mv: ‘0067.jpg’ and ‘0067.jpg’ are the same file
+mv: ‘0068.jpg’ and ‘0068.jpg’ are the same file
+mv: ‘0069.jpg’ and ‘0069.jpg’ are the same file
+mv: ‘0070.jpg’ and ‘0070.jpg’ are the same file
+mv: ‘0071.jpg’ and ‘0071.jpg’ are the same file
+mv: ‘0072.jpg’ and ‘0072.jpg’ are the same file
+mv: ‘0073.jpg’ and ‘0073.jpg’ are the same file
+mv: ‘0074.jpg’ and ‘0074.jpg’ are the same file
+mv: ‘0075.jpg’ and ‘0075.jpg’ are the same file
+mv: ‘0076.jpg’ and ‘0076.jpg’ are the same file
+mv: ‘0077.jpg’ and ‘0077.jpg’ are the same file
+mv: ‘0078.jpg’ and ‘0078.jpg’ are the same file
+mv: ‘0079.jpg’ and ‘0079.jpg’ are the same file
+mv: ‘0080.jpg’ and ‘0080.jpg’ are the same file
+mv: ‘0081.jpg’ and ‘0081.jpg’ are the same file
+mv: ‘0082.jpg’ and ‘0082.jpg’ are the same file
+mv: ‘0083.jpg’ and ‘0083.jpg’ are the same file
+mv: ‘0084.jpg’ and ‘0084.jpg’ are the same file
+mv: ‘0085.jpg’ and ‘0085.jpg’ are the same file
+mv: ‘0086.jpg’ and ‘0086.jpg’ are the same file
+mv: ‘0087.jpg’ and ‘0087.jpg’ are the same file
+mv: ‘0088.jpg’ and ‘0088.jpg’ are the same file
+mv: ‘0089.jpg’ and ‘0089.jpg’ are the same file
+mv: ‘0090.jpg’ and ‘0090.jpg’ are the same file
+mv: ‘0091.jpg’ and ‘0091.jpg’ are the same file
+mv: ‘0092.jpg’ and ‘0092.jpg’ are the same file
+mv: ‘0093.jpg’ and ‘0093.jpg’ are the same file
+mv: ‘0094.jpg’ and ‘0094.jpg’ are the same file
+mv: ‘0095.jpg’ and ‘0095.jpg’ are the same file
+mv: ‘0096.jpg’ and ‘0096.jpg’ are the same file
+mv: ‘0097.jpg’ and ‘0097.jpg’ are the same file
+mv: ‘0098.jpg’ and ‘0098.jpg’ are the same file
+mv: ‘0099.jpg’ and ‘0099.jpg’ are the same file
+mv: ‘0100.jpg’ and ‘0100.jpg’ are the same file
+mv: ‘0101.jpg’ and ‘0101.jpg’ are the same file
+mv: ‘0102.jpg’ and ‘0102.jpg’ are the same file
+mv: ‘0103.jpg’ and ‘0103.jpg’ are the same file
+mv: ‘0104.jpg’ and ‘0104.jpg’ are the same file
+mv: ‘0105.jpg’ and ‘0105.jpg’ are the same file
+mv: ‘0106.jpg’ and ‘0106.jpg’ are the same file
+mv: ‘0107.jpg’ and ‘0107.jpg’ are the same file
+mv: ‘0108.jpg’ and ‘0108.jpg’ are the same file
+mv: ‘0109.jpg’ and ‘0109.jpg’ are the same file
+mv: ‘0110.jpg’ and ‘0110.jpg’ are the same file
+mv: ‘0111.jpg’ and ‘0111.jpg’ are the same file
+mv: ‘0112.jpg’ and ‘0112.jpg’ are the same file
+mv: ‘0113.jpg’ and ‘0113.jpg’ are the same file
+mv: ‘0114.jpg’ and ‘0114.jpg’ are the same file
+mv: ‘0115.jpg’ and ‘0115.jpg’ are the same file
+mv: ‘0116.jpg’ and ‘0116.jpg’ are the same file
+mv: ‘0117.jpg’ and ‘0117.jpg’ are the same file
+mv: ‘0118.jpg’ and ‘0118.jpg’ are the same file
+mv: ‘0119.jpg’ and ‘0119.jpg’ are the same file
+mv: ‘0120.jpg’ and ‘0120.jpg’ are the same file
+mv: ‘0121.jpg’ and ‘0121.jpg’ are the same file
+mv: ‘0122.jpg’ and ‘0122.jpg’ are the same file
+mv: ‘0123.jpg’ and ‘0123.jpg’ are the same file
+mv: ‘0124.jpg’ and ‘0124.jpg’ are the same file
+mv: ‘0125.jpg’ and ‘0125.jpg’ are the same file
+mv: ‘0126.jpg’ and ‘0126.jpg’ are the same file
+mv: ‘0127.jpg’ and ‘0127.jpg’ are the same file
+mv: ‘0128.jpg’ and ‘0128.jpg’ are the same file
+mv: ‘0129.jpg’ and ‘0129.jpg’ are the same file
+mv: ‘0130.jpg’ and ‘0130.jpg’ are the same file
+mv: ‘0131.jpg’ and ‘0131.jpg’ are the same file
+mv: ‘0132.jpg’ and ‘0132.jpg’ are the same file
+mv: ‘0133.jpg’ and ‘0133.jpg’ are the same file
+mv: ‘0134.jpg’ and ‘0134.jpg’ are the same file
+mv: ‘0135.jpg’ and ‘0135.jpg’ are the same file
+mv: ‘0136.jpg’ and ‘0136.jpg’ are the same file
+mv: ‘0137.jpg’ and ‘0137.jpg’ are the same file
+mv: ‘0138.jpg’ and ‘0138.jpg’ are the same file
+mv: ‘0139.jpg’ and ‘0139.jpg’ are the same file
+mv: ‘0140.jpg’ and ‘0140.jpg’ are the same file
+mv: ‘0141.jpg’ and ‘0141.jpg’ are the same file
+mv: ‘0142.jpg’ and ‘0142.jpg’ are the same file
+mv: ‘0143.jpg’ and ‘0143.jpg’ are the same file
+mv: ‘0144.jpg’ and ‘0144.jpg’ are the same file
+mv: ‘0145.jpg’ and ‘0145.jpg’ are the same file
+mv: ‘0146.jpg’ and ‘0146.jpg’ are the same file
+mv: ‘0147.jpg’ and ‘0147.jpg’ are the same file
+mv: ‘0148.jpg’ and ‘0148.jpg’ are the same file
+mv: ‘0149.jpg’ and ‘0149.jpg’ are the same file
+mv: ‘0150.jpg’ and ‘0150.jpg’ are the same file
+mv: ‘0151.jpg’ and ‘0151.jpg’ are the same file
+mv: ‘0152.jpg’ and ‘0152.jpg’ are the same file
+mv: ‘0153.jpg’ and ‘0153.jpg’ are the same file
+mv: ‘0154.jpg’ and ‘0154.jpg’ are the same file
+mv: ‘0155.jpg’ and ‘0155.jpg’ are the same file
+mv: ‘0156.jpg’ and ‘0156.jpg’ are the same file
+mv: ‘0157.jpg’ and ‘0157.jpg’ are the same file
+mv: ‘0158.jpg’ and ‘0158.jpg’ are the same file
+mv: ‘0159.jpg’ and ‘0159.jpg’ are the same file
+mv: ‘0160.jpg’ and ‘0160.jpg’ are the same file
+mv: ‘0161.jpg’ and ‘0161.jpg’ are the same file
+mv: ‘0162.jpg’ and ‘0162.jpg’ are the same file
+mv: ‘0163.jpg’ and ‘0163.jpg’ are the same file
+mv: ‘0164.jpg’ and ‘0164.jpg’ are the same file
+mv: ‘0165.jpg’ and ‘0165.jpg’ are the same file
+mv: ‘0166.jpg’ and ‘0166.jpg’ are the same file
+mv: ‘0167.jpg’ and ‘0167.jpg’ are the same file
+mv: ‘0168.jpg’ and ‘0168.jpg’ are the same file
+mv: ‘0169.jpg’ and ‘0169.jpg’ are the same file
+mv: ‘0170.jpg’ and ‘0170.jpg’ are the same file
+mv: ‘0171.jpg’ and ‘0171.jpg’ are the same file
+mv: ‘0172.jpg’ and ‘0172.jpg’ are the same file
+mv: ‘0173.jpg’ and ‘0173.jpg’ are the same file
+mv: ‘0174.jpg’ and ‘0174.jpg’ are the same file
+mv: ‘0175.jpg’ and ‘0175.jpg’ are the same file
+mv: ‘0176.jpg’ and ‘0176.jpg’ are the same file
+mv: ‘0177.jpg’ and ‘0177.jpg’ are the same file
+mv: ‘0178.jpg’ and ‘0178.jpg’ are the same file
+mv: ‘0179.jpg’ and ‘0179.jpg’ are the same file
+mv: ‘0180.jpg’ and ‘0180.jpg’ are the same file
+mv: ‘0181.jpg’ and ‘0181.jpg’ are the same file
+mv: ‘0182.jpg’ and ‘0182.jpg’ are the same file
+mv: ‘0183.jpg’ and ‘0183.jpg’ are the same file
+mv: ‘0184.jpg’ and ‘0184.jpg’ are the same file
+mv: ‘0185.jpg’ and ‘0185.jpg’ are the same file
+mv: ‘0186.jpg’ and ‘0186.jpg’ are the same file
+mv: ‘0187.jpg’ and ‘0187.jpg’ are the same file
+mv: ‘0188.jpg’ and ‘0188.jpg’ are the same file
+mv: ‘0189.jpg’ and ‘0189.jpg’ are the same file
+mv: ‘0190.jpg’ and ‘0190.jpg’ are the same file
+mv: ‘0191.jpg’ and ‘0191.jpg’ are the same file
+mv: ‘0192.jpg’ and ‘0192.jpg’ are the same file
+mv: ‘0193.jpg’ and ‘0193.jpg’ are the same file
+mv: ‘0194.jpg’ and ‘0194.jpg’ are the same file
+mv: ‘0195.jpg’ and ‘0195.jpg’ are the same file
+mv: ‘0196.jpg’ and ‘0196.jpg’ are the same file
+mv: ‘0197.jpg’ and ‘0197.jpg’ are the same file
+mv: ‘0198.jpg’ and ‘0198.jpg’ are the same file
+mv: ‘0199.jpg’ and ‘0199.jpg’ are the same file
+mv: ‘0200.jpg’ and ‘0200.jpg’ are the same file
+mv: ‘0201.jpg’ and ‘0201.jpg’ are the same file
+mv: ‘0202.jpg’ and ‘0202.jpg’ are the same file
+mv: ‘0203.jpg’ and ‘0203.jpg’ are the same file
+mv: ‘0204.jpg’ and ‘0204.jpg’ are the same file
+mv: ‘0205.jpg’ and ‘0205.jpg’ are the same file
+mv: ‘0206.jpg’ and ‘0206.jpg’ are the same file
+mv: ‘0207.jpg’ and ‘0207.jpg’ are the same file
+mv: ‘0208.jpg’ and ‘0208.jpg’ are the same file
+mv: ‘0209.jpg’ and ‘0209.jpg’ are the same file
+mv: ‘0210.jpg’ and ‘0210.jpg’ are the same file
+mv: ‘0211.jpg’ and ‘0211.jpg’ are the same file
+mv: ‘0212.jpg’ and ‘0212.jpg’ are the same file
+mv: ‘0213.jpg’ and ‘0213.jpg’ are the same file
+mv: ‘0214.jpg’ and ‘0214.jpg’ are the same file
+mv: ‘0215.jpg’ and ‘0215.jpg’ are the same file
+mv: ‘0216.jpg’ and ‘0216.jpg’ are the same file
+mv: ‘0217.jpg’ and ‘0217.jpg’ are the same file
+mv: ‘0218.jpg’ and ‘0218.jpg’ are the same file
+mv: ‘0219.jpg’ and ‘0219.jpg’ are the same file
+mv: ‘0220.jpg’ and ‘0220.jpg’ are the same file
+mv: ‘0221.jpg’ and ‘0221.jpg’ are the same file
+mv: ‘0222.jpg’ and ‘0222.jpg’ are the same file
+mv: ‘0223.jpg’ and ‘0223.jpg’ are the same file
+mv: ‘0224.jpg’ and ‘0224.jpg’ are the same file
+mv: ‘0225.jpg’ and ‘0225.jpg’ are the same file
+mv: ‘0226.jpg’ and ‘0226.jpg’ are the same file
+mv: ‘0227.jpg’ and ‘0227.jpg’ are the same file
+mv: ‘0228.jpg’ and ‘0228.jpg’ are the same file
+mv: ‘0229.jpg’ and ‘0229.jpg’ are the same file
+mv: ‘0230.jpg’ and ‘0230.jpg’ are the same file
+mv: ‘0231.jpg’ and ‘0231.jpg’ are the same file
+mv: ‘0232.jpg’ and ‘0232.jpg’ are the same file
+mv: ‘0233.jpg’ and ‘0233.jpg’ are the same file
+mv: ‘0234.jpg’ and ‘0234.jpg’ are the same file
+mv: ‘0235.jpg’ and ‘0235.jpg’ are the same file
+mv: ‘0236.jpg’ and ‘0236.jpg’ are the same file
+mv: ‘0237.jpg’ and ‘0237.jpg’ are the same file
+mv: ‘0238.jpg’ and ‘0238.jpg’ are the same file
+mv: ‘0239.jpg’ and ‘0239.jpg’ are the same file
+mv: ‘0240.jpg’ and ‘0240.jpg’ are the same file
+mv: ‘0241.jpg’ and ‘0241.jpg’ are the same file
+mv: ‘0242.jpg’ and ‘0242.jpg’ are the same file
+mv: ‘0243.jpg’ and ‘0243.jpg’ are the same file
+mv: ‘0244.jpg’ and ‘0244.jpg’ are the same file
+mv: ‘0245.jpg’ and ‘0245.jpg’ are the same file
+mv: ‘0246.jpg’ and ‘0246.jpg’ are the same file
+mv: ‘0247.jpg’ and ‘0247.jpg’ are the same file
+mv: ‘0248.jpg’ and ‘0248.jpg’ are the same file
+mv: ‘0249.jpg’ and ‘0249.jpg’ are the same file
+mv: ‘0250.jpg’ and ‘0250.jpg’ are the same file
+mv: ‘0251.jpg’ and ‘0251.jpg’ are the same file
+mv: ‘0252.jpg’ and ‘0252.jpg’ are the same file
+mv: ‘0253.jpg’ and ‘0253.jpg’ are the same file
+mv: ‘0254.jpg’ and ‘0254.jpg’ are the same file
+mv: ‘0255.jpg’ and ‘0255.jpg’ are the same file
+mv: ‘0256.jpg’ and ‘0256.jpg’ are the same file
+mv: ‘0257.jpg’ and ‘0257.jpg’ are the same file
+mv: ‘0258.jpg’ and ‘0258.jpg’ are the same file
+mv: ‘0259.jpg’ and ‘0259.jpg’ are the same file
+mv: ‘0260.jpg’ and ‘0260.jpg’ are the same file
+mv: ‘0261.jpg’ and ‘0261.jpg’ are the same file
+mv: ‘0262.jpg’ and ‘0262.jpg’ are the same file
+mv: ‘0263.jpg’ and ‘0263.jpg’ are the same file
+mv: ‘0264.jpg’ and ‘0264.jpg’ are the same file
+mv: ‘0265.jpg’ and ‘0265.jpg’ are the same file
+mv: ‘0266.jpg’ and ‘0266.jpg’ are the same file
+mv: ‘0267.jpg’ and ‘0267.jpg’ are the same file
+mv: ‘0268.jpg’ and ‘0268.jpg’ are the same file
+mv: ‘0269.jpg’ and ‘0269.jpg’ are the same file
+mv: ‘0270.jpg’ and ‘0270.jpg’ are the same file
+mv: ‘0271.jpg’ and ‘0271.jpg’ are the same file
+mv: ‘0272.jpg’ and ‘0272.jpg’ are the same file
+mv: ‘0273.jpg’ and ‘0273.jpg’ are the same file
+mv: ‘0274.jpg’ and ‘0274.jpg’ are the same file
+mv: ‘0275.jpg’ and ‘0275.jpg’ are the same file
+mv: ‘0276.jpg’ and ‘0276.jpg’ are the same file
+mv: ‘0277.jpg’ and ‘0277.jpg’ are the same file
+mv: ‘0278.jpg’ and ‘0278.jpg’ are the same file
+mv: ‘0279.jpg’ and ‘0279.jpg’ are the same file
+mv: ‘0280.jpg’ and ‘0280.jpg’ are the same file
+mv: ‘0281.jpg’ and ‘0281.jpg’ are the same file
+mv: ‘0282.jpg’ and ‘0282.jpg’ are the same file
+mv: ‘0283.jpg’ and ‘0283.jpg’ are the same file
+mv: ‘0284.jpg’ and ‘0284.jpg’ are the same file
+mv: ‘0285.jpg’ and ‘0285.jpg’ are the same file
+mv: ‘0286.jpg’ and ‘0286.jpg’ are the same file
+mv: ‘0287.jpg’ and ‘0287.jpg’ are the same file
+mv: ‘0288.jpg’ and ‘0288.jpg’ are the same file
+mv: ‘0289.jpg’ and ‘0289.jpg’ are the same file
+mv: ‘0290.jpg’ and ‘0290.jpg’ are the same file
+mv: ‘0291.jpg’ and ‘0291.jpg’ are the same file
+mv: ‘0292.jpg’ and ‘0292.jpg’ are the same file
+mv: ‘0293.jpg’ and ‘0293.jpg’ are the same file
+mv: ‘0294.jpg’ and ‘0294.jpg’ are the same file
+mv: ‘0295.jpg’ and ‘0295.jpg’ are the same file
+mv: ‘0296.jpg’ and ‘0296.jpg’ are the same file
+mv: ‘0297.jpg’ and ‘0297.jpg’ are the same file
+mv: ‘0298.jpg’ and ‘0298.jpg’ are the same file
+mv: ‘0299.jpg’ and ‘0299.jpg’ are the same file
+mv: ‘0300.jpg’ and ‘0300.jpg’ are the same file
+mv: ‘0301.jpg’ and ‘0301.jpg’ are the same file
+mv: ‘0302.jpg’ and ‘0302.jpg’ are the same file
+mv: ‘0303.jpg’ and ‘0303.jpg’ are the same file
+mv: ‘0304.jpg’ and ‘0304.jpg’ are the same file
+mv: ‘0305.jpg’ and ‘0305.jpg’ are the same file
+mv: ‘0306.jpg’ and ‘0306.jpg’ are the same file
+mv: ‘0307.jpg’ and ‘0307.jpg’ are the same file
+mv: ‘0308.jpg’ and ‘0308.jpg’ are the same file
+mv: ‘0309.jpg’ and ‘0309.jpg’ are the same file
+mv: ‘0310.jpg’ and ‘0310.jpg’ are the same file
+mv: ‘0311.jpg’ and ‘0311.jpg’ are the same file
+mv: ‘0312.jpg’ and ‘0312.jpg’ are the same file
+mv: ‘0313.jpg’ and ‘0313.jpg’ are the same file
+mv: ‘0314.jpg’ and ‘0314.jpg’ are the same file
+mv: ‘0315.jpg’ and ‘0315.jpg’ are the same file
+mv: ‘0316.jpg’ and ‘0316.jpg’ are the same file
+mv: ‘0317.jpg’ and ‘0317.jpg’ are the same file
+mv: ‘0318.jpg’ and ‘0318.jpg’ are the same file
+mv: ‘0319.jpg’ and ‘0319.jpg’ are the same file
+mv: ‘0320.jpg’ and ‘0320.jpg’ are the same file
+mv: ‘0321.jpg’ and ‘0321.jpg’ are the same file
+mv: ‘0322.jpg’ and ‘0322.jpg’ are the same file
+mv: ‘0323.jpg’ and ‘0323.jpg’ are the same file
+mv: ‘0324.jpg’ and ‘0324.jpg’ are the same file
+mv: ‘0325.jpg’ and ‘0325.jpg’ are the same file
+mv: ‘0326.jpg’ and ‘0326.jpg’ are the same file
+mv: ‘0327.jpg’ and ‘0327.jpg’ are the same file
+mv: ‘0328.jpg’ and ‘0328.jpg’ are the same file
+mv: ‘0329.jpg’ and ‘0329.jpg’ are the same file
+mv: ‘0330.jpg’ and ‘0330.jpg’ are the same file
+mv: ‘0331.jpg’ and ‘0331.jpg’ are the same file
+mv: ‘0332.jpg’ and ‘0332.jpg’ are the same file
+mv: ‘0333.jpg’ and ‘0333.jpg’ are the same file
+mv: ‘0334.jpg’ and ‘0334.jpg’ are the same file
+mv: ‘0335.jpg’ and ‘0335.jpg’ are the same file
+mv: ‘0336.jpg’ and ‘0336.jpg’ are the same file
+mv: ‘0337.jpg’ and ‘0337.jpg’ are the same file
+mv: ‘0338.jpg’ and ‘0338.jpg’ are the same file
+mv: ‘0339.jpg’ and ‘0339.jpg’ are the same file
+mv: ‘0340.jpg’ and ‘0340.jpg’ are the same file
+mv: ‘0341.jpg’ and ‘0341.jpg’ are the same file
+mv: ‘0342.jpg’ and ‘0342.jpg’ are the same file
+mv: ‘0343.jpg’ and ‘0343.jpg’ are the same file
+mv: ‘0344.jpg’ and ‘0344.jpg’ are the same file
+mv: ‘0345.jpg’ and ‘0345.jpg’ are the same file
+mv: ‘0346.jpg’ and ‘0346.jpg’ are the same file
+mv: ‘0347.jpg’ and ‘0347.jpg’ are the same file
+mv: ‘0348.jpg’ and ‘0348.jpg’ are the same file
+mv: ‘0349.jpg’ and ‘0349.jpg’ are the same file
+mv: ‘0350.jpg’ and ‘0350.jpg’ are the same file
+mv: ‘0351.jpg’ and ‘0351.jpg’ are the same file
+mv: ‘0352.jpg’ and ‘0352.jpg’ are the same file
+mv: ‘0353.jpg’ and ‘0353.jpg’ are the same file
+mv: ‘0354.jpg’ and ‘0354.jpg’ are the same file
+mv: ‘0355.jpg’ and ‘0355.jpg’ are the same file
+mv: ‘0356.jpg’ and ‘0356.jpg’ are the same file
+mv: ‘0357.jpg’ and ‘0357.jpg’ are the same file
+mv: ‘0358.jpg’ and ‘0358.jpg’ are the same file
+mv: ‘0359.jpg’ and ‘0359.jpg’ are the same file
+mv: ‘0360.jpg’ and ‘0360.jpg’ are the same file
+mv: ‘0361.jpg’ and ‘0361.jpg’ are the same file
+mv: ‘0362.jpg’ and ‘0362.jpg’ are the same file
+mv: ‘0363.jpg’ and ‘0363.jpg’ are the same file
+mv: ‘0364.jpg’ and ‘0364.jpg’ are the same file
+mv: ‘0365.jpg’ and ‘0365.jpg’ are the same file
+mv: ‘0366.jpg’ and ‘0366.jpg’ are the same file
+mv: ‘0367.jpg’ and ‘0367.jpg’ are the same file
+mv: ‘0368.jpg’ and ‘0368.jpg’ are the same file
+mv: ‘0369.jpg’ and ‘0369.jpg’ are the same file
+mv: ‘0370.jpg’ and ‘0370.jpg’ are the same file
+mv: ‘0371.jpg’ and ‘0371.jpg’ are the same file
+mv: ‘0372.jpg’ and ‘0372.jpg’ are the same file
+mv: ‘0373.jpg’ and ‘0373.jpg’ are the same file
+mv: ‘0374.jpg’ and ‘0374.jpg’ are the same file
+mv: ‘0375.jpg’ and ‘0375.jpg’ are the same file
+mv: ‘0376.jpg’ and ‘0376.jpg’ are the same file
+mv: ‘0377.jpg’ and ‘0377.jpg’ are the same file
+mv: ‘0378.jpg’ and ‘0378.jpg’ are the same file
+mv: ‘0379.jpg’ and ‘0379.jpg’ are the same file
+mv: ‘0380.jpg’ and ‘0380.jpg’ are the same file
+mv: ‘0381.jpg’ and ‘0381.jpg’ are the same file
+mv: ‘0382.jpg’ and ‘0382.jpg’ are the same file
+mv: ‘0383.jpg’ and ‘0383.jpg’ are the same file
+mv: ‘0384.jpg’ and ‘0384.jpg’ are the same file
+mv: ‘0385.jpg’ and ‘0385.jpg’ are the same file
+mv: ‘0386.jpg’ and ‘0386.jpg’ are the same file
+mv: ‘0387.jpg’ and ‘0387.jpg’ are the same file
+mv: ‘0388.jpg’ and ‘0388.jpg’ are the same file
+mv: ‘0389.jpg’ and ‘0389.jpg’ are the same file
+mv: ‘0390.jpg’ and ‘0390.jpg’ are the same file
+mv: ‘0391.jpg’ and ‘0391.jpg’ are the same file
+mv: ‘0392.jpg’ and ‘0392.jpg’ are the same file
+mv: ‘0393.jpg’ and ‘0393.jpg’ are the same file
+mv: ‘0394.jpg’ and ‘0394.jpg’ are the same file
+mv: ‘0395.jpg’ and ‘0395.jpg’ are the same file
+mv: ‘0396.jpg’ and ‘0396.jpg’ are the same file
+mv: ‘0397.jpg’ and ‘0397.jpg’ are the same file
+mv: ‘0398.jpg’ and ‘0398.jpg’ are the same file
+mv: ‘0399.jpg’ and ‘0399.jpg’ are the same file
+mv: ‘0400.jpg’ and ‘0400.jpg’ are the same file
+mv: ‘0401.jpg’ and ‘0401.jpg’ are the same file
+mv: ‘0402.jpg’ and ‘0402.jpg’ are the same file
+mv: ‘0403.jpg’ and ‘0403.jpg’ are the same file
+mv: ‘0404.jpg’ and ‘0404.jpg’ are the same file
+mv: ‘0405.jpg’ and ‘0405.jpg’ are the same file
+mv: ‘0406.jpg’ and ‘0406.jpg’ are the same file
+mv: ‘0407.jpg’ and ‘0407.jpg’ are the same file
+mv: ‘0408.jpg’ and ‘0408.jpg’ are the same file
+mv: ‘0409.jpg’ and ‘0409.jpg’ are the same file
+mv: ‘0410.jpg’ and ‘0410.jpg’ are the same file
+mv: ‘0411.jpg’ and ‘0411.jpg’ are the same file
+mv: ‘0412.jpg’ and ‘0412.jpg’ are the same file
+mv: ‘0413.jpg’ and ‘0413.jpg’ are the same file
+mv: ‘0414.jpg’ and ‘0414.jpg’ are the same file
+mv: ‘0415.jpg’ and ‘0415.jpg’ are the same file
+mv: ‘0416.jpg’ and ‘0416.jpg’ are the same file
+mv: ‘0417.jpg’ and ‘0417.jpg’ are the same file
+mv: ‘0418.jpg’ and ‘0418.jpg’ are the same file
+mv: ‘0419.jpg’ and ‘0419.jpg’ are the same file
+mv: ‘0420.jpg’ and ‘0420.jpg’ are the same file
+mv: ‘0421.jpg’ and ‘0421.jpg’ are the same file
+mv: ‘0422.jpg’ and ‘0422.jpg’ are the same file
+mv: ‘0423.jpg’ and ‘0423.jpg’ are the same file
+mv: ‘0424.jpg’ and ‘0424.jpg’ are the same file
+mv: ‘0425.jpg’ and ‘0425.jpg’ are the same file
+mv: ‘0426.jpg’ and ‘0426.jpg’ are the same file
+mv: ‘0427.jpg’ and ‘0427.jpg’ are the same file
+mv: ‘0428.jpg’ and ‘0428.jpg’ are the same file
+mv: ‘0429.jpg’ and ‘0429.jpg’ are the same file
+mv: ‘0430.jpg’ and ‘0430.jpg’ are the same file
+mv: ‘0431.jpg’ and ‘0431.jpg’ are the same file
+mv: ‘0432.jpg’ and ‘0432.jpg’ are the same file
+mv: ‘0433.jpg’ and ‘0433.jpg’ are the same file
+mv: ‘0434.jpg’ and ‘0434.jpg’ are the same file
+mv: ‘0435.jpg’ and ‘0435.jpg’ are the same file
+mv: ‘0436.jpg’ and ‘0436.jpg’ are the same file
+mv: ‘0437.jpg’ and ‘0437.jpg’ are the same file
+mv: ‘0438.jpg’ and ‘0438.jpg’ are the same file
+mv: ‘0439.jpg’ and ‘0439.jpg’ are the same file
+mv: ‘0440.jpg’ and ‘0440.jpg’ are the same file
+mv: ‘0441.jpg’ and ‘0441.jpg’ are the same file
+mv: ‘0442.jpg’ and ‘0442.jpg’ are the same file
+mv: ‘0443.jpg’ and ‘0443.jpg’ are the same file
+mv: ‘0444.jpg’ and ‘0444.jpg’ are the same file
+mv: ‘0445.jpg’ and ‘0445.jpg’ are the same file
+mv: ‘0446.jpg’ and ‘0446.jpg’ are the same file
+mv: ‘0447.jpg’ and ‘0447.jpg’ are the same file
+mv: ‘0448.jpg’ and ‘0448.jpg’ are the same file
+mv: ‘0449.jpg’ and ‘0449.jpg’ are the same file
+mv: ‘0450.jpg’ and ‘0450.jpg’ are the same file
+mv: ‘0451.jpg’ and ‘0451.jpg’ are the same file
+mv: ‘0452.jpg’ and ‘0452.jpg’ are the same file
+mv: ‘0453.jpg’ and ‘0453.jpg’ are the same file
+mv: ‘0454.jpg’ and ‘0454.jpg’ are the same file
+mv: ‘0455.jpg’ and ‘0455.jpg’ are the same file
+mv: ‘0456.jpg’ and ‘0456.jpg’ are the same file
+mv: ‘0457.jpg’ and ‘0457.jpg’ are the same file
+mv: ‘0458.jpg’ and ‘0458.jpg’ are the same file
+mv: ‘0459.jpg’ and ‘0459.jpg’ are the same file
+mv: ‘0460.jpg’ and ‘0460.jpg’ are the same file
+mv: ‘0461.jpg’ and ‘0461.jpg’ are the same file
+mv: ‘0462.jpg’ and ‘0462.jpg’ are the same file
+mv: ‘0463.jpg’ and ‘0463.jpg’ are the same file
+mv: ‘0464.jpg’ and ‘0464.jpg’ are the same file
+mv: ‘0465.jpg’ and ‘0465.jpg’ are the same file
+mv: ‘0466.jpg’ and ‘0466.jpg’ are the same file
+mv: ‘0467.jpg’ and ‘0467.jpg’ are the same file
+mv: ‘0468.jpg’ and ‘0468.jpg’ are the same file
+mv: ‘0469.jpg’ and ‘0469.jpg’ are the same file
+mv: ‘0470.jpg’ and ‘0470.jpg’ are the same file
+mv: ‘0471.jpg’ and ‘0471.jpg’ are the same file
+mv: ‘0472.jpg’ and ‘0472.jpg’ are the same file
+mv: ‘0473.jpg’ and ‘0473.jpg’ are the same file
+mv: ‘0474.jpg’ and ‘0474.jpg’ are the same file
+mv: ‘0475.jpg’ and ‘0475.jpg’ are the same file
+mv: ‘0476.jpg’ and ‘0476.jpg’ are the same file
+mv: ‘0477.jpg’ and ‘0477.jpg’ are the same file
+mv: ‘0478.jpg’ and ‘0478.jpg’ are the same file
+mv: ‘0479.jpg’ and ‘0479.jpg’ are the same file
+mv: ‘0480.jpg’ and ‘0480.jpg’ are the same file
+mv: ‘0481.jpg’ and ‘0481.jpg’ are the same file
+mv: ‘0482.jpg’ and ‘0482.jpg’ are the same file
+mv: ‘0483.jpg’ and ‘0483.jpg’ are the same file
+mv: ‘0484.jpg’ and ‘0484.jpg’ are the same file
+mv: ‘0485.jpg’ and ‘0485.jpg’ are the same file
+mv: ‘0486.jpg’ and ‘0486.jpg’ are the same file
+mv: ‘0487.jpg’ and ‘0487.jpg’ are the same file
+mv: ‘0488.jpg’ and ‘0488.jpg’ are the same file
+mv: ‘0489.jpg’ and ‘0489.jpg’ are the same file
+mv: ‘0490.jpg’ and ‘0490.jpg’ are the same file
+mv: ‘0491.jpg’ and ‘0491.jpg’ are the same file
+mv: ‘0492.jpg’ and ‘0492.jpg’ are the same file
+mv: ‘0493.jpg’ and ‘0493.jpg’ are the same file
+mv: ‘0494.jpg’ and ‘0494.jpg’ are the same file
+mv: ‘0495.jpg’ and ‘0495.jpg’ are the same file
+mv: ‘0496.jpg’ and ‘0496.jpg’ are the same file
+mv: ‘0497.jpg’ and ‘0497.jpg’ are the same file
+mv: ‘0498.jpg’ and ‘0498.jpg’ are the same file
+mv: ‘0499.jpg’ and ‘0499.jpg’ are the same file
+mv: ‘0500.jpg’ and ‘0500.jpg’ are the same file
+mv: ‘0501.jpg’ and ‘0501.jpg’ are the same file
+mv: ‘0502.jpg’ and ‘0502.jpg’ are the same file
+mv: ‘0503.jpg’ and ‘0503.jpg’ are the same file
+mv: ‘0504.jpg’ and ‘0504.jpg’ are the same file
+mv: ‘0505.jpg’ and ‘0505.jpg’ are the same file
+mv: ‘0506.jpg’ and ‘0506.jpg’ are the same file
+mv: ‘0507.jpg’ and ‘0507.jpg’ are the same file
+mv: ‘0508.jpg’ and ‘0508.jpg’ are the same file
+mv: ‘0509.jpg’ and ‘0509.jpg’ are the same file
+mv: ‘0510.jpg’ and ‘0510.jpg’ are the same file
+mv: ‘0511.jpg’ and ‘0511.jpg’ are the same file
+mv: ‘0512.jpg’ and ‘0512.jpg’ are the same file
+mv: ‘0513.jpg’ and ‘0513.jpg’ are the same file
+mv: ‘0514.jpg’ and ‘0514.jpg’ are the same file
+mv: ‘0515.jpg’ and ‘0515.jpg’ are the same file
+mv: ‘0516.jpg’ and ‘0516.jpg’ are the same file
+mv: ‘0517.jpg’ and ‘0517.jpg’ are the same file
+mv: ‘0518.jpg’ and ‘0518.jpg’ are the same file
+mv: ‘0519.jpg’ and ‘0519.jpg’ are the same file
+mv: ‘0520.jpg’ and ‘0520.jpg’ are the same file
+mv: ‘0521.jpg’ and ‘0521.jpg’ are the same file
+mv: ‘0522.jpg’ and ‘0522.jpg’ are the same file
+mv: ‘0523.jpg’ and ‘0523.jpg’ are the same file
+mv: ‘0524.jpg’ and ‘0524.jpg’ are the same file
+mv: ‘0525.jpg’ and ‘0525.jpg’ are the same file
+mv: ‘0526.jpg’ and ‘0526.jpg’ are the same file
+mv: ‘0527.jpg’ and ‘0527.jpg’ are the same file
+mv: ‘0528.jpg’ and ‘0528.jpg’ are the same file
+mv: ‘0529.jpg’ and ‘0529.jpg’ are the same file
+mv: ‘0530.jpg’ and ‘0530.jpg’ are the same file
+mv: ‘0531.jpg’ and ‘0531.jpg’ are the same file
+mv: ‘0532.jpg’ and ‘0532.jpg’ are the same file
+mv: ‘0533.jpg’ and ‘0533.jpg’ are the same file
+mv: ‘0534.jpg’ and ‘0534.jpg’ are the same file
+mv: ‘0535.jpg’ and ‘0535.jpg’ are the same file
+mv: ‘0536.jpg’ and ‘0536.jpg’ are the same file
+mv: ‘0537.jpg’ and ‘0537.jpg’ are the same file
+mv: ‘0538.jpg’ and ‘0538.jpg’ are the same file
+mv: ‘0539.jpg’ and ‘0539.jpg’ are the same file
+mv: ‘0540.jpg’ and ‘0540.jpg’ are the same file
+mv: ‘0541.jpg’ and ‘0541.jpg’ are the same file
+mv: ‘0542.jpg’ and ‘0542.jpg’ are the same file
+mv: ‘0543.jpg’ and ‘0543.jpg’ are the same file
+mv: ‘0544.jpg’ and ‘0544.jpg’ are the same file
+mv: ‘0545.jpg’ and ‘0545.jpg’ are the same file
+mv: ‘0546.jpg’ and ‘0546.jpg’ are the same file
+mv: ‘0547.jpg’ and ‘0547.jpg’ are the same file
+mv: ‘0548.jpg’ and ‘0548.jpg’ are the same file
+mv: ‘0549.jpg’ and ‘0549.jpg’ are the same file
+mv: ‘0550.jpg’ and ‘0550.jpg’ are the same file
+mv: ‘0551.jpg’ and ‘0551.jpg’ are the same file
+mv: ‘0552.jpg’ and ‘0552.jpg’ are the same file
+mv: ‘0553.jpg’ and ‘0553.jpg’ are the same file
+mv: ‘0554.jpg’ and ‘0554.jpg’ are the same file
+mv: ‘0555.jpg’ and ‘0555.jpg’ are the same file
+mv: ‘0556.jpg’ and ‘0556.jpg’ are the same file
+mv: ‘0557.jpg’ and ‘0557.jpg’ are the same file
+mv: ‘0558.jpg’ and ‘0558.jpg’ are the same file
+mv: ‘0559.jpg’ and ‘0559.jpg’ are the same file
+mv: ‘0560.jpg’ and ‘0560.jpg’ are the same file
+mv: ‘0561.jpg’ and ‘0561.jpg’ are the same file
+mv: ‘0562.jpg’ and ‘0562.jpg’ are the same file
+mv: ‘0563.jpg’ and ‘0563.jpg’ are the same file
+mv: ‘0564.jpg’ and ‘0564.jpg’ are the same file
+mv: ‘0565.jpg’ and ‘0565.jpg’ are the same file
+mv: ‘0566.jpg’ and ‘0566.jpg’ are the same file
+mv: ‘0567.jpg’ and ‘0567.jpg’ are the same file
+mv: ‘0568.jpg’ and ‘0568.jpg’ are the same file
+mv: ‘0569.jpg’ and ‘0569.jpg’ are the same file
+mv: ‘0570.jpg’ and ‘0570.jpg’ are the same file
+mv: ‘0571.jpg’ and ‘0571.jpg’ are the same file
+mv: ‘0572.jpg’ and ‘0572.jpg’ are the same file
+mv: ‘0573.jpg’ and ‘0573.jpg’ are the same file
+mv: ‘0574.jpg’ and ‘0574.jpg’ are the same file
+mv: ‘0575.jpg’ and ‘0575.jpg’ are the same file
+mv: ‘0576.jpg’ and ‘0576.jpg’ are the same file
+mv: ‘0577.jpg’ and ‘0577.jpg’ are the same file
+mv: ‘0578.jpg’ and ‘0578.jpg’ are the same file
+mv: ‘0579.jpg’ and ‘0579.jpg’ are the same file
+mv: ‘0580.jpg’ and ‘0580.jpg’ are the same file
+mv: ‘0581.jpg’ and ‘0581.jpg’ are the same file
+mv: ‘0582.jpg’ and ‘0582.jpg’ are the same file
+mv: ‘0583.jpg’ and ‘0583.jpg’ are the same file
+mv: ‘0584.jpg’ and ‘0584.jpg’ are the same file
+mv: ‘0585.jpg’ and ‘0585.jpg’ are the same file
+mv: ‘0586.jpg’ and ‘0586.jpg’ are the same file
+mv: ‘0587.jpg’ and ‘0587.jpg’ are the same file
+mv: ‘0588.jpg’ and ‘0588.jpg’ are the same file
+mv: ‘0589.jpg’ and ‘0589.jpg’ are the same file
+mv: ‘0590.jpg’ and ‘0590.jpg’ are the same file
+mv: ‘0591.jpg’ and ‘0591.jpg’ are the same file
+mv: ‘0592.jpg’ and ‘0592.jpg’ are the same file
+mv: ‘0593.jpg’ and ‘0593.jpg’ are the same file
+mv: ‘0594.jpg’ and ‘0594.jpg’ are the same file
+mv: ‘0595.jpg’ and ‘0595.jpg’ are the same file
+mv: ‘0596.jpg’ and ‘0596.jpg’ are the same file
+mv: ‘0597.jpg’ and ‘0597.jpg’ are the same file
+mv: ‘0598.jpg’ and ‘0598.jpg’ are the same file
+mv: ‘0599.jpg’ and ‘0599.jpg’ are the same file
+mv: ‘0600.jpg’ and ‘0600.jpg’ are the same file
+mv: ‘0601.jpg’ and ‘0601.jpg’ are the same file
+mv: ‘0602.jpg’ and ‘0602.jpg’ are the same file
+mv: ‘0603.jpg’ and ‘0603.jpg’ are the same file
+mv: ‘0604.jpg’ and ‘0604.jpg’ are the same file
+mv: ‘0605.jpg’ and ‘0605.jpg’ are the same file
+mv: ‘0606.jpg’ and ‘0606.jpg’ are the same file
+mv: ‘0607.jpg’ and ‘0607.jpg’ are the same file
+mv: ‘0608.jpg’ and ‘0608.jpg’ are the same file
+mv: ‘0609.jpg’ and ‘0609.jpg’ are the same file
+mv: ‘0610.jpg’ and ‘0610.jpg’ are the same file
+mv: ‘0611.jpg’ and ‘0611.jpg’ are the same file
+mv: ‘0612.jpg’ and ‘0612.jpg’ are the same file
+mv: ‘0613.jpg’ and ‘0613.jpg’ are the same file
+mv: ‘0614.jpg’ and ‘0614.jpg’ are the same file
+mv: ‘0615.jpg’ and ‘0615.jpg’ are the same file
+mv: ‘0616.jpg’ and ‘0616.jpg’ are the same file
+mv: ‘0617.jpg’ and ‘0617.jpg’ are the same file
+mv: ‘0618.jpg’ and ‘0618.jpg’ are the same file
+mv: ‘0619.jpg’ and ‘0619.jpg’ are the same file
+mv: ‘0620.jpg’ and ‘0620.jpg’ are the same file
+mv: ‘0621.jpg’ and ‘0621.jpg’ are the same file
+mv: ‘0622.jpg’ and ‘0622.jpg’ are the same file
+mv: ‘0623.jpg’ and ‘0623.jpg’ are the same file
+mv: ‘0624.jpg’ and ‘0624.jpg’ are the same file
+mv: ‘0625.jpg’ and ‘0625.jpg’ are the same file
+mv: ‘0626.jpg’ and ‘0626.jpg’ are the same file
+mv: ‘0627.jpg’ and ‘0627.jpg’ are the same file
+mv: ‘0628.jpg’ and ‘0628.jpg’ are the same file
+mv: ‘0629.jpg’ and ‘0629.jpg’ are the same file
+mv: ‘0630.jpg’ and ‘0630.jpg’ are the same file
+mv: ‘0631.jpg’ and ‘0631.jpg’ are the same file
+mv: ‘0632.jpg’ and ‘0632.jpg’ are the same file
+mv: ‘0633.jpg’ and ‘0633.jpg’ are the same file
+mv: ‘0634.jpg’ and ‘0634.jpg’ are the same file
+mv: ‘0635.jpg’ and ‘0635.jpg’ are the same file
+mv: ‘0636.jpg’ and ‘0636.jpg’ are the same file
+mv: ‘0637.jpg’ and ‘0637.jpg’ are the same file
+mv: ‘0638.jpg’ and ‘0638.jpg’ are the same file
+mv: ‘0639.jpg’ and ‘0639.jpg’ are the same file
+mv: ‘0640.jpg’ and ‘0640.jpg’ are the same file
+mv: ‘0641.jpg’ and ‘0641.jpg’ are the same file
+mv: ‘0642.jpg’ and ‘0642.jpg’ are the same file
+mv: ‘0643.jpg’ and ‘0643.jpg’ are the same file
+mv: ‘0644.jpg’ and ‘0644.jpg’ are the same file
+mv: ‘0645.jpg’ and ‘0645.jpg’ are the same file
+mv: ‘0646.jpg’ and ‘0646.jpg’ are the same file
+mv: ‘0647.jpg’ and ‘0647.jpg’ are the same file
+mv: ‘0648.jpg’ and ‘0648.jpg’ are the same file
+mv: ‘0649.jpg’ and ‘0649.jpg’ are the same file
+mv: ‘0650.jpg’ and ‘0650.jpg’ are the same file
+mv: ‘0651.jpg’ and ‘0651.jpg’ are the same file
+mv: ‘0652.jpg’ and ‘0652.jpg’ are the same file
+mv: ‘0653.jpg’ and ‘0653.jpg’ are the same file
+mv: ‘0654.jpg’ and ‘0654.jpg’ are the same file
+mv: ‘0655.jpg’ and ‘0655.jpg’ are the same file
+mv: ‘0656.jpg’ and ‘0656.jpg’ are the same file
+mv: ‘0657.jpg’ and ‘0657.jpg’ are the same file
+mv: ‘0658.jpg’ and ‘0658.jpg’ are the same file
+mv: ‘0659.jpg’ and ‘0659.jpg’ are the same file
+mv: ‘0660.jpg’ and ‘0660.jpg’ are the same file
+mv: ‘0661.jpg’ and ‘0661.jpg’ are the same file
+mv: ‘0662.jpg’ and ‘0662.jpg’ are the same file
+mv: ‘0663.jpg’ and ‘0663.jpg’ are the same file
+mv: ‘0664.jpg’ and ‘0664.jpg’ are the same file
+mv: ‘0665.jpg’ and ‘0665.jpg’ are the same file
+mv: ‘0666.jpg’ and ‘0666.jpg’ are the same file
+mv: ‘0667.jpg’ and ‘0667.jpg’ are the same file
+mv: ‘0668.jpg’ and ‘0668.jpg’ are the same file
+mv: ‘0669.jpg’ and ‘0669.jpg’ are the same file
+mv: ‘0670.jpg’ and ‘0670.jpg’ are the same file
+mv: ‘0671.jpg’ and ‘0671.jpg’ are the same file
+mv: ‘0672.jpg’ and ‘0672.jpg’ are the same file
+mv: ‘0673.jpg’ and ‘0673.jpg’ are the same file
+mv: ‘0674.jpg’ and ‘0674.jpg’ are the same file
+mv: ‘0675.jpg’ and ‘0675.jpg’ are the same file
+mv: ‘0676.jpg’ and ‘0676.jpg’ are the same file
+mv: ‘0677.jpg’ and ‘0677.jpg’ are the same file
+mv: ‘0678.jpg’ and ‘0678.jpg’ are the same file
+mv: ‘0679.jpg’ and ‘0679.jpg’ are the same file
+mv: ‘0680.jpg’ and ‘0680.jpg’ are the same file
+mv: ‘0681.jpg’ and ‘0681.jpg’ are the same file
+mv: ‘0682.jpg’ and ‘0682.jpg’ are the same file
+mv: ‘0683.jpg’ and ‘0683.jpg’ are the same file
+mv: ‘0684.jpg’ and ‘0684.jpg’ are the same file
+mv: ‘0685.jpg’ and ‘0685.jpg’ are the same file
+mv: ‘0686.jpg’ and ‘0686.jpg’ are the same file
+mv: ‘0687.jpg’ and ‘0687.jpg’ are the same file
+mv: ‘0688.jpg’ and ‘0688.jpg’ are the same file
+mv: ‘0689.jpg’ and ‘0689.jpg’ are the same file
+mv: ‘0690.jpg’ and ‘0690.jpg’ are the same file
+mv: ‘0691.jpg’ and ‘0691.jpg’ are the same file
+mv: ‘0692.jpg’ and ‘0692.jpg’ are the same file
+mv: ‘0693.jpg’ and ‘0693.jpg’ are the same file
+mv: ‘0694.jpg’ and ‘0694.jpg’ are the same file
+mv: ‘0695.jpg’ and ‘0695.jpg’ are the same file
+mv: ‘0696.jpg’ and ‘0696.jpg’ are the same file
+mv: ‘0697.jpg’ and ‘0697.jpg’ are the same file
+mv: ‘0698.jpg’ and ‘0698.jpg’ are the same file
+mv: ‘0699.jpg’ and ‘0699.jpg’ are the same file
+mv: ‘0700.jpg’ and ‘0700.jpg’ are the same file
+mv: ‘0701.jpg’ and ‘0701.jpg’ are the same file
+mv: ‘0702.jpg’ and ‘0702.jpg’ are the same file
+mv: ‘0703.jpg’ and ‘0703.jpg’ are the same file
+mv: ‘0704.jpg’ and ‘0704.jpg’ are the same file
+mv: ‘0705.jpg’ and ‘0705.jpg’ are the same file
+mv: ‘0706.jpg’ and ‘0706.jpg’ are the same file
+mv: ‘0707.jpg’ and ‘0707.jpg’ are the same file
+mv: ‘0708.jpg’ and ‘0708.jpg’ are the same file
+mv: ‘0709.jpg’ and ‘0709.jpg’ are the same file
+mv: ‘0710.jpg’ and ‘0710.jpg’ are the same file
+mv: ‘0711.jpg’ and ‘0711.jpg’ are the same file
+mv: ‘0712.jpg’ and ‘0712.jpg’ are the same file
+mv: ‘0713.jpg’ and ‘0713.jpg’ are the same file
+mv: ‘0714.jpg’ and ‘0714.jpg’ are the same file
+mv: ‘0715.jpg’ and ‘0715.jpg’ are the same file
+mv: ‘0716.jpg’ and ‘0716.jpg’ are the same file
+mv: ‘0717.jpg’ and ‘0717.jpg’ are the same file
+mv: ‘0718.jpg’ and ‘0718.jpg’ are the same file
+mv: ‘0719.jpg’ and ‘0719.jpg’ are the same file
+mv: ‘0720.jpg’ and ‘0720.jpg’ are the same file
+mv: ‘0721.jpg’ and ‘0721.jpg’ are the same file
+mv: ‘0722.jpg’ and ‘0722.jpg’ are the same file
+mv: ‘0723.jpg’ and ‘0723.jpg’ are the same file
+mv: ‘0724.jpg’ and ‘0724.jpg’ are the same file
+mv: ‘0725.jpg’ and ‘0725.jpg’ are the same file
+mv: ‘0726.jpg’ and ‘0726.jpg’ are the same file
+mv: ‘0727.jpg’ and ‘0727.jpg’ are the same file
+mv: ‘0728.jpg’ and ‘0728.jpg’ are the same file
+mv: ‘0729.jpg’ and ‘0729.jpg’ are the same file
+mv: ‘0730.jpg’ and ‘0730.jpg’ are the same file
+mv: ‘0731.jpg’ and ‘0731.jpg’ are the same file
+mv: ‘0732.jpg’ and ‘0732.jpg’ are the same file
+mv: ‘0733.jpg’ and ‘0733.jpg’ are the same file
+mv: ‘0734.jpg’ and ‘0734.jpg’ are the same file
+mv: ‘0735.jpg’ and ‘0735.jpg’ are the same file
+mv: ‘0736.jpg’ and ‘0736.jpg’ are the same file
+mv: ‘0737.jpg’ and ‘0737.jpg’ are the same file
+mv: ‘0738.jpg’ and ‘0738.jpg’ are the same file
+mv: ‘0739.jpg’ and ‘0739.jpg’ are the same file
+mv: ‘0740.jpg’ and ‘0740.jpg’ are the same file
+mv: ‘0741.jpg’ and ‘0741.jpg’ are the same file
+mv: ‘0742.jpg’ and ‘0742.jpg’ are the same file
+mv: ‘0743.jpg’ and ‘0743.jpg’ are the same file
+mv: ‘0744.jpg’ and ‘0744.jpg’ are the same file
+mv: ‘0745.jpg’ and ‘0745.jpg’ are the same file
+mv: ‘0746.jpg’ and ‘0746.jpg’ are the same file
+mv: ‘0747.jpg’ and ‘0747.jpg’ are the same file
+mv: ‘0748.jpg’ and ‘0748.jpg’ are the same file
+mv: ‘0749.jpg’ and ‘0749.jpg’ are the same file
+mv: ‘0750.jpg’ and ‘0750.jpg’ are the same file
+mv: ‘0751.jpg’ and ‘0751.jpg’ are the same file
+mv: ‘0752.jpg’ and ‘0752.jpg’ are the same file
+mv: ‘0753.jpg’ and ‘0753.jpg’ are the same file
+mv: ‘0754.jpg’ and ‘0754.jpg’ are the same file
+mv: ‘0755.jpg’ and ‘0755.jpg’ are the same file
+mv: ‘0756.jpg’ and ‘0756.jpg’ are the same file
+mv: ‘0757.jpg’ and ‘0757.jpg’ are the same file
+mv: ‘0758.jpg’ and ‘0758.jpg’ are the same file
+mv: ‘0759.jpg’ and ‘0759.jpg’ are the same file
+mv: ‘0760.jpg’ and ‘0760.jpg’ are the same file
+mv: ‘0761.jpg’ and ‘0761.jpg’ are the same file
+mv: ‘0762.jpg’ and ‘0762.jpg’ are the same file
+mv: ‘0763.jpg’ and ‘0763.jpg’ are the same file
+mv: ‘0764.jpg’ and ‘0764.jpg’ are the same file
+mv: ‘0765.jpg’ and ‘0765.jpg’ are the same file
+mv: ‘0766.jpg’ and ‘0766.jpg’ are the same file
+mv: ‘0767.jpg’ and ‘0767.jpg’ are the same file
+mv: ‘0768.jpg’ and ‘0768.jpg’ are the same file
+mv: ‘0769.jpg’ and ‘0769.jpg’ are the same file
+mv: ‘0770.jpg’ and ‘0770.jpg’ are the same file
+mv: ‘0771.jpg’ and ‘0771.jpg’ are the same file
+mv: ‘0772.jpg’ and ‘0772.jpg’ are the same file
+mv: ‘0773.jpg’ and ‘0773.jpg’ are the same file
+mv: ‘0774.jpg’ and ‘0774.jpg’ are the same file
+mv: ‘0775.jpg’ and ‘0775.jpg’ are the same file
+mv: ‘0776.jpg’ and ‘0776.jpg’ are the same file
+mv: ‘0777.jpg’ and ‘0777.jpg’ are the same file
+mv: ‘0778.jpg’ and ‘0778.jpg’ are the same file
+mv: ‘0779.jpg’ and ‘0779.jpg’ are the same file
+mv: ‘0780.jpg’ and ‘0780.jpg’ are the same file
+mv: ‘0781.jpg’ and ‘0781.jpg’ are the same file
+mv: ‘0782.jpg’ and ‘0782.jpg’ are the same file
+mv: ‘0783.jpg’ and ‘0783.jpg’ are the same file
+mv: ‘0784.jpg’ and ‘0784.jpg’ are the same file
+mv: ‘0785.jpg’ and ‘0785.jpg’ are the same file
+mv: ‘0786.jpg’ and ‘0786.jpg’ are the same file
+mv: ‘0787.jpg’ and ‘0787.jpg’ are the same file
+mv: ‘0788.jpg’ and ‘0788.jpg’ are the same file
+mv: ‘0789.jpg’ and ‘0789.jpg’ are the same file
+mv: ‘0790.jpg’ and ‘0790.jpg’ are the same file
+mv: ‘0791.jpg’ and ‘0791.jpg’ are the same file
+mv: ‘0792.jpg’ and ‘0792.jpg’ are the same file
+mv: ‘0793.jpg’ and ‘0793.jpg’ are the same file
+mv: ‘0794.jpg’ and ‘0794.jpg’ are the same file
+mv: ‘0795.jpg’ and ‘0795.jpg’ are the same file
+mv: ‘0796.jpg’ and ‘0796.jpg’ are the same file
+mv: ‘0797.jpg’ and ‘0797.jpg’ are the same file
+mv: ‘0798.jpg’ and ‘0798.jpg’ are the same file
+mv: ‘0799.jpg’ and ‘0799.jpg’ are the same file
+mv: ‘0800.jpg’ and ‘0800.jpg’ are the same file
+mv: ‘0801.jpg’ and ‘0801.jpg’ are the same file
+mv: ‘0802.jpg’ and ‘0802.jpg’ are the same file
+mv: ‘0803.jpg’ and ‘0803.jpg’ are the same file
+mv: ‘0804.jpg’ and ‘0804.jpg’ are the same file
+mv: ‘0805.jpg’ and ‘0805.jpg’ are the same file
+mv: ‘0806.jpg’ and ‘0806.jpg’ are the same file
+mv: ‘0807.jpg’ and ‘0807.jpg’ are the same file
+mv: ‘0808.jpg’ and ‘0808.jpg’ are the same file
+mv: ‘0809.jpg’ and ‘0809.jpg’ are the same file
+mv: ‘0810.jpg’ and ‘0810.jpg’ are the same file
+mv: ‘0811.jpg’ and ‘0811.jpg’ are the same file
+mv: ‘0812.jpg’ and ‘0812.jpg’ are the same file
+mv: ‘0813.jpg’ and ‘0813.jpg’ are the same file
+mv: ‘0814.jpg’ and ‘0814.jpg’ are the same file
+mv: ‘0815.jpg’ and ‘0815.jpg’ are the same file
+mv: ‘0816.jpg’ and ‘0816.jpg’ are the same file
+mv: ‘0817.jpg’ and ‘0817.jpg’ are the same file
+mv: ‘0818.jpg’ and ‘0818.jpg’ are the same file
+mv: ‘0819.jpg’ and ‘0819.jpg’ are the same file
+mv: ‘0820.jpg’ and ‘0820.jpg’ are the same file
+mv: ‘0821.jpg’ and ‘0821.jpg’ are the same file
+mv: ‘0822.jpg’ and ‘0822.jpg’ are the same file
+mv: ‘0823.jpg’ and ‘0823.jpg’ are the same file
+mv: ‘0824.jpg’ and ‘0824.jpg’ are the same file
+mv: ‘0825.jpg’ and ‘0825.jpg’ are the same file
+mv: ‘0826.jpg’ and ‘0826.jpg’ are the same file
+mv: ‘0827.jpg’ and ‘0827.jpg’ are the same file
+mv: ‘0828.jpg’ and ‘0828.jpg’ are the same file
+mv: ‘0829.jpg’ and ‘0829.jpg’ are the same file
+mv: ‘0830.jpg’ and ‘0830.jpg’ are the same file
+mv: ‘0831.jpg’ and ‘0831.jpg’ are the same file
+mv: ‘0832.jpg’ and ‘0832.jpg’ are the same file
+mv: ‘0833.jpg’ and ‘0833.jpg’ are the same file
+mv: ‘0834.jpg’ and ‘0834.jpg’ are the same file
+mv: ‘0835.jpg’ and ‘0835.jpg’ are the same file
+mv: ‘0836.jpg’ and ‘0836.jpg’ are the same file
+mv: ‘0837.jpg’ and ‘0837.jpg’ are the same file
+mv: ‘0838.jpg’ and ‘0838.jpg’ are the same file
+mv: ‘0839.jpg’ and ‘0839.jpg’ are the same file
+mv: ‘0840.jpg’ and ‘0840.jpg’ are the same file
+mv: ‘0841.jpg’ and ‘0841.jpg’ are the same file
+mv: ‘0842.jpg’ and ‘0842.jpg’ are the same file
+mv: ‘0843.jpg’ and ‘0843.jpg’ are the same file
+mv: ‘0844.jpg’ and ‘0844.jpg’ are the same file
+mv: ‘0845.jpg’ and ‘0845.jpg’ are the same file
+mv: ‘0846.jpg’ and ‘0846.jpg’ are the same file
+mv: ‘0847.jpg’ and ‘0847.jpg’ are the same file
+mv: ‘0848.jpg’ and ‘0848.jpg’ are the same file
+mv: ‘0849.jpg’ and ‘0849.jpg’ are the same file
+mv: ‘0850.jpg’ and ‘0850.jpg’ are the same file
+mv: ‘0851.jpg’ and ‘0851.jpg’ are the same file
+mv: ‘0852.jpg’ and ‘0852.jpg’ are the same file
+mv: ‘0853.jpg’ and ‘0853.jpg’ are the same file
+mv: ‘0854.jpg’ and ‘0854.jpg’ are the same file
+mv: ‘0855.jpg’ and ‘0855.jpg’ are the same file
+mv: ‘0856.jpg’ and ‘0856.jpg’ are the same file
+mv: ‘0857.jpg’ and ‘0857.jpg’ are the same file
+mv: ‘0858.jpg’ and ‘0858.jpg’ are the same file
+mv: ‘0859.jpg’ and ‘0859.jpg’ are the same file
+mv: ‘0860.jpg’ and ‘0860.jpg’ are the same file
+mv: ‘0861.jpg’ and ‘0861.jpg’ are the same file
+mv: ‘0862.jpg’ and ‘0862.jpg’ are the same file
+mv: ‘0863.jpg’ and ‘0863.jpg’ are the same file
+mv: ‘0864.jpg’ and ‘0864.jpg’ are the same file
+mv: ‘0865.jpg’ and ‘0865.jpg’ are the same file
+mv: ‘0866.jpg’ and ‘0866.jpg’ are the same file
+mv: ‘0867.jpg’ and ‘0867.jpg’ are the same file
+mv: ‘0868.jpg’ and ‘0868.jpg’ are the same file
+mv: ‘0869.jpg’ and ‘0869.jpg’ are the same file
+mv: ‘0870.jpg’ and ‘0870.jpg’ are the same file
+mv: ‘0871.jpg’ and ‘0871.jpg’ are the same file
+mv: ‘0872.jpg’ and ‘0872.jpg’ are the same file
+mv: ‘0873.jpg’ and ‘0873.jpg’ are the same file
+mv: ‘0874.jpg’ and ‘0874.jpg’ are the same file
+mv: ‘0875.jpg’ and ‘0875.jpg’ are the same file
+mv: ‘0876.jpg’ and ‘0876.jpg’ are the same file
+mv: ‘0877.jpg’ and ‘0877.jpg’ are the same file
+mv: ‘0878.jpg’ and ‘0878.jpg’ are the same file
+mv: ‘0879.jpg’ and ‘0879.jpg’ are the same file
+mv: ‘0880.jpg’ and ‘0880.jpg’ are the same file
+mv: ‘0881.jpg’ and ‘0881.jpg’ are the same file
+mv: ‘0882.jpg’ and ‘0882.jpg’ are the same file
+mv: ‘0883.jpg’ and ‘0883.jpg’ are the same file
+mv: ‘0884.jpg’ and ‘0884.jpg’ are the same file
+jack@jack-desktop:~/vidEdit$ ffmpeg -framerate 25 -i scene%05d.jpg -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p newvideo.mp4
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[image2 @ 0xd3a7e0] Could find no file with path 'scene%05d.jpg' and index in the range 0-4
+scene%05d.jpg: No such file or directory
+jack@jack-desktop:~/vidEdit$ ffmpeg -framerate 25 -i %05d.jpg -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p newvideo.mp4
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[image2 @ 0xbe57e0] Could find no file with path '%05d.jpg' and index in the range 0-4
+%05d.jpg: No such file or directory
+jack@jack-desktop:~/vidEdit$ ffmpeg -framerate 25 -i 0001.jpg -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p newvideo.mp4
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[mjpeg @ 0x1371ae0] Changeing bps to 8
+Input #0, image2, from '0001.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 24585 kb/s
+    Stream #0:0: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 944x512 [SAR 1:1 DAR 59:32], 25 tbr, 25 tbn, 25 tbc
+File 'newvideo.mp4' already exists. Overwrite ? [y/N] y
+[swscaler @ 0x1348280] deprecated pixel format used, make sure you did set range correctly
+[libx264 @ 0x13742a0] using SAR=1/1
+[libx264 @ 0x13742a0] using cpu capabilities: MMX2 SSE2Fast LZCNT
+[libx264 @ 0x13742a0] profile High, level 3.1
+[libx264 @ 0x13742a0] 264 - core 146 r2555 0c21480 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'newvideo.mp4':
+  Metadata:
+    encoder         : Lavf56.36.100
+    Stream #0:0: Video: h264 (libx264) ([33][0][0][0] / 0x0021), yuv420p, 944x512 [SAR 1:1 DAR 59:32], q=-1--1, 25 fps, 12800 tbn, 25 tbc
+    Metadata:
+      encoder         : Lavc56.41.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (mjpeg (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+frame=    1 fps=0.0 q=25.0 Lsize=      54kB time=00:00:00.04 bitrate=11041.6kbits/s    
+video:53kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 1.470372%
+[libx264 @ 0x13742a0] frame I:1     Avg QP:24.91  size: 53719
+[libx264 @ 0x13742a0] mb I  I16..4:  1.5% 76.4% 22.1%
+[libx264 @ 0x13742a0] 8x8 transform intra:76.4%
+[libx264 @ 0x13742a0] coded y,uvDC,uvAC intra: 91.2% 98.0% 76.2%
+[libx264 @ 0x13742a0] i16 v,h,dc,p: 32% 18%  4% 46%
+[libx264 @ 0x13742a0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 20% 16% 25%  6%  5%  6%  6%  7%  8%
+[libx264 @ 0x13742a0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 15% 14%  7%  9%  8%  8%  6%  9%
+[libx264 @ 0x13742a0] i8c dc,h,v,p: 45% 17% 26% 11%
+[libx264 @ 0x13742a0] kb/s:10743.80
+jack@jack-desktop:~/vidEdit$ ffmpeg -f image2 -i %*.jpg out.mp4
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[image2 @ 0x21b1a60] Pattern type 'glob_sequence' is deprecated: use pattern_type 'glob' instead
+[mjpeg @ 0x21b2880] Changeing bps to 8
+Input #0, image2, from '%*.jpg':
+  Duration: 00:00:35.36, start: 0.000000, bitrate: N/A
+    Stream #0:0: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 944x512 [SAR 1:1 DAR 59:32], 25 fps, 25 tbr, 25 tbn, 25 tbc
+No pixel format specified, yuvj420p for H.264 encoding chosen.
+Use -pix_fmt yuv420p for compatibility with outdated media players.
+[libx264 @ 0x21b8800] using SAR=1/1
+[libx264 @ 0x21b8800] using cpu capabilities: MMX2 SSE2Fast LZCNT
+[libx264 @ 0x21b8800] profile High, level 3.1
+[libx264 @ 0x21b8800] 264 - core 146 r2555 0c21480 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'out.mp4':
+  Metadata:
+    encoder         : Lavf56.36.100
+    Stream #0:0: Video: h264 (libx264) ([33][0][0][0] / 0x0021), yuvj420p(pc), 944x512 [SAR 1:1 DAR 59:32], q=-1--1, 25 fps, 12800 tbn, 25 tbc
+    Metadata:
+      encoder         : Lavc56.41.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (mjpeg (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+frame=   54 fps= 48 q=28.0 size=     123kB time=00:00:00.20 bitrate=5050.8kbits/frame=   62 fps= 38 q=28.0 size=     159kB time=00:00:00.52 bitrate=2505.7kbits/frame=   70 fps= 31 q=28.0 size=     207kB time=00:00:00.84 bitrate=2020.7kbits/frame=   73 fps= 26 q=28.0 size=     229kB time=00:00:00.96 bitrate=1955.1kbits/frame=   78 fps= 23 q=28.0 size=     275kB time=00:00:01.16 bitrate=1939.5kbits/frame=   84 fps= 21 q=28.0 size=     310kB time=00:00:01.40 bitrate=1815.6kbits/frame=   88 fps= 19 q=28.0 size=     342kB time=00:00:01.56 bitrate=1795.9kbits/frame=   96 fps= 19 q=28.0 size=     422kB time=00:00:01.88 bitrate=1839.2kbits/frame=  102 fps= 18 q=28.0 size=     474kB time=00:00:02.12 bitrate=1830.1kbits/frame=  111 fps= 18 q=28.0 size=     525kB time=00:00:02.48 bitrate=1734.7kbits/frame=  122 fps= 18 q=28.0 size=     575kB time=00:00:02.92 bitrate=1611.8kbits/frame=  133 fps= 18 q=28.0 size=     664kB time=00:00:03.36 bitrate=1619.7kbits/frame=  143 fps= 18 q=28.0 size=     738kB time=00:00:03.76 bitrate=1607.8kbits/frame=  152 fps= 18 q=28.0 size=     819kB time=00:00:04.12 bitrate=1628.9kbits/frame=  161 fps= 18 q=28.0 size=     892kB time=00:00:04.48 bitrate=1631.2kbits/frame=  172 fps= 18 q=28.0 size=    1001kB time=00:00:04.92 bitrate=1666.2kbits/frame=  178 fps= 18 q=28.0 size=    1049kB time=00:00:05.16 bitrate=1665.7kbits/frame=  185 fps= 17 q=28.0 size=    1079kB time=00:00:05.44 bitrate=1624.6kbits/frame=  191 fps= 17 q=28.0 size=    1122kB time=00:00:05.68 bitrate=1618.4kbits/frame=  195 fps= 16 q=28.0 size=    1149kB time=00:00:05.84 bitrate=1611.2kbits/frame=  201 fps= 16 q=28.0 size=    1179kB time=00:00:06.08 bitrate=1588.3kbits/frame=  208 fps= 16 q=28.0 size=    1233kB time=00:00:06.36 bitrate=1588.4kbits/frame=  218 fps= 16 q=28.0 size=    1288kB time=00:00:06.76 bitrate=1561.2kbits/frame=  226 fps= 16 q=28.0 size=    1350kB time=00:00:07.08 bitrate=1562.0kbits/frame=  235 fps= 16 q=28.0 size=    1431kB time=00:00:07.44 bitrate=1575.8kbits/frame=  244 fps= 16 q=28.0 size=    1513kB time=00:00:07.80 bitrate=1589.0kbits/frame=  254 fps= 16 q=28.0 size=    1580kB time=00:00:08.20 bitrate=1578.6kbits/frame=  263 fps= 16 q=28.0 size=    1634kB time=00:00:08.56 bitrate=1563.8kbits/frame=  275 fps= 16 q=28.0 size=    1705kB time=00:00:09.04 bitrate=1544.6kbits/frame=  285 fps= 16 q=28.0 size=    1786kB time=00:00:09.44 bitrate=1549.5kbits/frame=  292 fps= 16 q=28.0 size=    1843kB time=00:00:09.72 bitrate=1553.5kbits/frame=  299 fps= 16 q=28.0 size=    2032kB time=00:00:10.00 bitrate=1664.6kbits/frame=  308 fps= 16 q=28.0 size=    2114kB time=00:00:10.36 bitrate=1671.3kbits/frame=  315 fps= 16 q=28.0 size=    2159kB time=00:00:10.64 bitrate=1661.9kbits/frame=  321 fps= 16 q=28.0 size=    2211kB time=00:00:10.88 bitrate=1665.0kbits/frame=  324 fps= 16 q=28.0 size=    2252kB time=00:00:11.00 bitrate=1677.3kbits/frame=  330 fps= 16 q=28.0 size=    2270kB time=00:00:11.24 bitrate=1654.5kbits/frame=  336 fps= 15 q=28.0 size=    2314kB time=00:00:11.48 bitrate=1651.4kbits/frame=  341 fps= 15 q=28.0 size=    2356kB time=00:00:11.68 bitrate=1652.4kbits/frame=  346 fps= 15 q=28.0 size=    2370kB time=00:00:11.88 bitrate=1634.0kbits/frame=  351 fps= 15 q=28.0 size=    2407kB time=00:00:12.08 bitrate=1632.2kbits/frame=  363 fps= 15 q=28.0 size=    2475kB time=00:00:12.56 bitrate=1614.0kbits/frame=  372 fps= 15 q=28.0 size=    2534kB time=00:00:12.92 bitrate=1606.4kbits/frame=  381 fps= 15 q=28.0 size=    2612kB time=00:00:13.28 bitrate=1611.1kbits/frame=  390 fps= 15 q=28.0 size=    2695kB time=00:00:13.64 bitrate=1618.6kbits/frame=  397 fps= 15 q=28.0 size=    2744kB time=00:00:13.92 bitrate=1615.0kbits/frame=  404 fps= 15 q=28.0 size=    2798kB time=00:00:14.20 bitrate=1613.9kbits/frame=  413 fps= 15 q=28.0 size=    2840kB time=00:00:14.56 bitrate=1597.8kbits/frame=  426 fps= 15 q=28.0 size=    2940kB time=00:00:15.08 bitrate=1596.9kbits/frame=  435 fps= 15 q=28.0 size=    3019kB time=00:00:15.44 bitrate=1601.6kbits/frame=  442 fps= 15 q=28.0 size=    3072kB time=00:00:15.72 bitrate=1600.7kbits/frame=  450 fps= 15 q=28.0 size=    3149kB time=00:00:16.04 bitrate=1608.2kbits/frame=  456 fps= 15 q=28.0 size=    3202kB time=00:00:16.28 bitrate=1611.3kbits/frame=  462 fps= 15 q=28.0 size=    3259kB time=00:00:16.52 bitrate=1616.1kbits/frame=  467 fps= 15 q=28.0 size=    3306kB time=00:00:16.72 bitrate=1619.6kbits/frame=  474 fps= 15 q=28.0 size=    3333kB time=00:00:17.00 bitrate=1606.1kbits/frame=  481 fps= 15 q=28.0 size=    3401kB time=00:00:17.28 bitrate=1612.5kbits/frame=  487 fps= 15 q=28.0 size=    3419kB time=00:00:17.52 bitrate=1598.8kbits/frame=  497 fps= 15 q=28.0 size=    3490kB time=00:00:17.92 bitrate=1595.5kbits/frame=  503 fps= 15 q=28.0 size=    3515kB time=00:00:18.16 bitrate=1585.5kbits/frame=  511 fps= 15 q=28.0 size=    3569kB time=00:00:18.48 bitrate=1582.2kbits/frame=  520 fps= 15 q=28.0 size=    3633kB time=00:00:18.84 bitrate=1579.5kbits/frame=  530 fps= 15 q=28.0 size=    3804kB time=00:00:19.24 bitrate=1619.5kbits/frame=  540 fps= 15 q=28.0 size=    3906kB time=00:00:19.64 bitrate=1629.3kbits/frame=  550 fps= 15 q=28.0 size=    3959kB time=00:00:20.04 bitrate=1618.6kbits/frame=  562 fps= 15 q=28.0 size=    4032kB time=00:00:20.52 bitrate=1609.7kbits/frame=  571 fps= 15 q=28.0 size=    4100kB time=00:00:20.88 bitrate=1608.5kbits/frame=  578 fps= 15 q=28.0 size=    4151kB time=00:00:21.16 bitrate=1607.0kbits/frame=  583 fps= 15 q=28.0 size=    4206kB time=00:00:21.36 bitrate=1613.2kbits/frame=  589 fps= 15 q=28.0 size=    4255kB time=00:00:21.60 bitrate=1613.6kbits/frame=  595 fps= 14 q=28.0 size=    4309kB time=00:00:21.84 bitrate=1616.2kbits/frame=  604 fps= 15 q=28.0 size=    4382kB time=00:00:22.20 bitrate=1616.8kbits/frame=  612 fps= 15 q=28.0 size=    4465kB time=00:00:22.52 bitrate=1624.2kbits/frame=  622 fps= 15 q=28.0 size=    4514kB time=00:00:22.92 bitrate=1613.5kbits/frame=  633 fps= 15 q=28.0 size=    4594kB time=00:00:23.36 bitrate=1611.1kbits/frame=  646 fps= 15 q=28.0 size=    4670kB time=00:00:23.88 bitrate=1601.9kbits/frame=  655 fps= 15 q=28.0 size=    4723kB time=00:00:24.24 bitrate=1596.0kbits/frame=  666 fps= 15 q=28.0 size=    4813kB time=00:00:24.68 bitrate=1597.6kbits/frame=  676 fps= 15 q=28.0 size=    4902kB time=00:00:25.08 bitrate=1601.3kbits/frame=  688 fps= 15 q=28.0 size=    4996kB time=00:00:25.56 bitrate=1601.2kbits/frame=  698 fps= 15 q=28.0 size=    5051kB time=00:00:25.96 bitrate=1594.0kbits/frame=  709 fps= 15 q=28.0 size=    5121kB time=00:00:26.40 bitrate=1589.2kbits/frame=  719 fps= 15 q=28.0 size=    5197kB time=00:00:26.80 bitrate=1588.7kbits/frame=  728 fps= 15 q=28.0 size=    5281kB time=00:00:27.16 bitrate=1592.7kbits/frame=  738 fps= 15 q=28.0 size=    5355kB time=00:00:27.56 bitrate=1591.8kbits/frame=  748 fps= 15 q=28.0 size=    5451kB time=00:00:27.96 bitrate=1597.1kbits/frame=  756 fps= 15 q=28.0 size=    5504kB time=00:00:28.28 bitrate=1594.3kbits/frame=  765 fps= 15 q=28.0 size=    5564kB time=00:00:28.64 bitrate=1591.5kbits/frame=  774 fps= 15 q=28.0 size=    5633kB time=00:00:29.00 bitrate=1591.3kbits/frame=  785 fps= 15 q=28.0 size=    5797kB time=00:00:29.44 bitrate=1613.1kbits/frame=  797 fps= 15 q=28.0 size=    5866kB time=00:00:29.92 bitrate=1606.2kbits/frame=  806 fps= 15 q=28.0 size=    5928kB time=00:00:30.28 bitrate=1603.7kbits/frame=  814 fps= 15 q=28.0 size=    6012kB time=00:00:30.60 bitrate=1609.4kbits/frame=  824 fps= 15 q=28.0 size=    6098kB time=00:00:31.00 bitrate=1611.4kbits/frame=  835 fps= 15 q=28.0 size=    6182kB time=00:00:31.44 bitrate=1610.8kbits/frame=  846 fps= 15 q=28.0 size=    6230kB time=00:00:31.88 bitrate=1600.9kbits/frame=  857 fps= 15 q=28.0 size=    6322kB time=00:00:32.32 bitrate=1602.4kbits/frame=  869 fps= 16 q=28.0 size=    6424kB time=00:00:32.80 bitrate=1604.5kbits/frame=  879 fps= 16 q=28.0 size=    6502kB time=00:00:33.20 bitrate=1604.3kbits/frame=  884 fps= 15 q=-1.0 Lsize=    6861kB time=00:00:35.28 bitrate=1593.0kbits/s    
+video:6850kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.160381%
+[libx264 @ 0x21b8800] frame I:4     Avg QP:19.86  size:105772
+[libx264 @ 0x21b8800] frame P:569   Avg QP:21.97  size: 11532
+[libx264 @ 0x21b8800] frame B:311   Avg QP:27.28  size:    92
+[libx264 @ 0x21b8800] consecutive B-frames: 33.9% 55.0%  7.5%  3.6%
+[libx264 @ 0x21b8800] mb I  I16..4:  0.1% 88.3% 11.6%
+[libx264 @ 0x21b8800] mb P  I16..4:  0.0%  4.6%  2.0%  P16..4: 11.7%  2.0%  2.8%  0.0%  0.0%    skip:76.8%
+[libx264 @ 0x21b8800] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  4.0%  0.0%  0.0%  direct: 0.0%  skip:95.9%  L0:34.1% L1:65.6% BI: 0.3%
+[libx264 @ 0x21b8800] 8x8 transform intra:71.3% inter:53.3%
+[libx264 @ 0x21b8800] coded y,uvDC,uvAC intra: 96.8% 99.3% 91.5% inter: 2.9% 7.9% 4.5%
+[libx264 @ 0x21b8800] i16 v,h,dc,p: 36% 29% 12% 22%
+[libx264 @ 0x21b8800] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 18% 14% 23%  6%  6%  6%  8%  8% 10%
+[libx264 @ 0x21b8800] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 14% 15% 15%  8%  9%  8% 10%  8% 12%
+[libx264 @ 0x21b8800] i8c dc,h,v,p: 46% 18% 21% 14%
+[libx264 @ 0x21b8800] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x21b8800] ref P L0: 63.8%  6.7%  9.1% 20.4%
+[libx264 @ 0x21b8800] ref B L0: 38.1% 60.6%  1.2%
+[libx264 @ 0x21b8800] ref B L1: 96.0%  4.0%
+[libx264 @ 0x21b8800] kb/s:1586.71
+jack@jack-desktop:~/vidEdit$ ffmpeg -f image2 -i %*.j^C out2.mp4
+jack@jack-desktop:~/vidEdit$ ffmpeg -f image2 -framerate 17 -i %*.jpg out.mp4ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[image2 @ 0xaa9c20] Pattern type 'glob_sequence' is deprecated: use pattern_type 'glob' instead
+[mjpeg @ 0xaaaa40] Changeing bps to 8
+Input #0, image2, from '%*.jpg':
+  Duration: 00:00:52.00, start: 0.000000, bitrate: N/A
+    Stream #0:0: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 944x512 [SAR 1:1 DAR 59:32], 17 fps, 17 tbr, 17 tbn, 17 tbc
+File 'out.mp4' already exists. Overwrite ? [y/N] n
+Not overwriting - exiting
+jack@jack-desktop:~/vidEdit$ ffmpeg -f image2 -framerate 17 -i %*.jpg out2.mp4
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[image2 @ 0xb11c20] Pattern type 'glob_sequence' is deprecated: use pattern_type 'glob' instead
+[mjpeg @ 0xb12a40] Changeing bps to 8
+Input #0, image2, from '%*.jpg':
+  Duration: 00:00:52.00, start: 0.000000, bitrate: N/A
+    Stream #0:0: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 944x512 [SAR 1:1 DAR 59:32], 17 fps, 17 tbr, 17 tbn, 17 tbc
+No pixel format specified, yuvj420p for H.264 encoding chosen.
+Use -pix_fmt yuv420p for compatibility with outdated media players.
+[libx264 @ 0xb189c0] using SAR=1/1
+[libx264 @ 0xb189c0] using cpu capabilities: MMX2 SSE2Fast LZCNT
+[libx264 @ 0xb189c0] profile High, level 3.1
+[libx264 @ 0xb189c0] 264 - core 146 r2555 0c21480 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=17 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'out2.mp4':
+  Metadata:
+    encoder         : Lavf56.36.100
+    Stream #0:0: Video: h264 (libx264) ([33][0][0][0] / 0x0021), yuvj420p(pc), 944x512 [SAR 1:1 DAR 59:32], q=-1--1, 17 fps, 17408 tbn, 17 tbc
+    Metadata:
+      encoder         : Lavc56.41.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (mjpeg (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+frame=   55 fps= 47 q=27.0 size=     155kB time=00:00:00.35 bitrate=3598.2kbits/frame=   66 fps= 38 q=27.0 size=     220kB time=00:00:01.00 bitrate=1802.7kbits/frame=   76 fps= 33 q=27.0 size=     289kB time=00:00:01.58 bitrate=1489.5kbits/frame=   85 fps= 30 q=27.0 size=     357kB time=00:00:02.11 bitrate=1382.4kbits/frame=   94 fps= 27 q=27.0 size=     457kB time=00:00:02.64 bitrate=1412.9kbits/frame=  103 fps= 26 q=27.0 size=     542kB time=00:00:03.17 bitrate=1398.5kbits/frame=  112 fps= 25 q=27.0 size=     602kB time=00:00:03.70 bitrate=1330.4kbits/frame=  117 fps= 23 q=27.0 size=     624kB time=00:00:04.00 bitrate=1278.9kbits/frame=  125 fps= 21 q=27.0 size=     674kB time=00:00:04.47 bitrate=1235.5kbits/frame=  132 fps= 21 q=27.0 size=     729kB time=00:00:04.88 bitrate=1222.7kbits/frame=  137 fps= 20 q=27.0 size=     791kB time=00:00:05.17 bitrate=1251.6kbits/frame=  140 fps= 19 q=27.0 size=     818kB time=00:00:05.35 bitrate=1251.2kbits/frame=  146 fps= 18 q=27.0 size=     881kB time=00:00:05.70 bitrate=1265.4kbits/frame=  152 fps= 18 q=27.0 size=     942kB time=00:00:06.05 bitrate=1274.3kbits/frame=  158 fps= 17 q=27.0 size=    1001kB time=00:00:06.41 bitrate=1279.2kbits/frame=  164 fps= 17 q=27.0 size=    1061kB time=00:00:06.76 bitrate=1284.7kbits/frame=  173 fps= 16 q=27.0 size=    1160kB time=00:00:07.29 bitrate=1302.3kbits/frame=  180 fps= 16 q=27.0 size=    1230kB time=00:00:07.70 bitrate=1308.0kbits/frame=  191 fps= 16 q=27.0 size=    1299kB time=00:00:08.35 bitrate=1274.3kbits/frame=  201 fps= 17 q=27.0 size=    1364kB time=00:00:08.94 bitrate=1249.8kbits/frame=  212 fps= 17 q=27.0 size=    1452kB time=00:00:09.58 bitrate=1240.7kbits/frame=  220 fps= 17 q=27.0 size=    1521kB time=00:00:10.05 bitrate=1238.4kbits/frame=  229 fps= 17 q=27.0 size=    1593kB time=00:00:10.58 bitrate=1232.7kbits/frame=  236 fps= 17 q=27.0 size=    1659kB time=00:00:11.00 bitrate=1235.3kbits/frame=  245 fps= 17 q=27.0 size=    1754kB time=00:00:11.52 bitrate=1246.2kbits/frame=  254 fps= 16 q=27.0 size=    1834kB time=00:00:12.05 bitrate=1245.9kbits/frame=  263 fps= 16 q=27.0 size=    1897kB time=00:00:12.58 bitrate=1234.4kbits/frame=  269 fps= 16 q=27.0 size=    1925kB time=00:00:12.94 bitrate=1218.6kbits/frame=  273 fps= 16 q=27.0 size=    1978kB time=00:00:13.17 bitrate=1229.6kbits/frame=  278 fps= 16 q=27.0 size=    2016kB time=00:00:13.47 bitrate=1225.8kbits/frame=  284 fps= 16 q=27.0 size=    2069kB time=00:00:13.82 bitrate=1226.0kbits/frame=  290 fps= 15 q=27.0 size=    2137kB time=00:00:14.17 bitrate=1234.8kbits/frame=  297 fps= 15 q=27.0 size=    2201kB time=00:00:14.58 bitrate=1235.8kbits/frame=  306 fps= 15 q=27.0 size=    2413kB time=00:00:15.11 bitrate=1307.3kbits/frame=  314 fps= 15 q=27.0 size=    2496kB time=00:00:15.58 bitrate=1311.6kbits/frame=  321 fps= 15 q=27.0 size=    2560kB time=00:00:16.00 bitrate=1310.9kbits/frame=  329 fps= 15 q=27.0 size=    2631kB time=00:00:16.47 bitrate=1308.6kbits/frame=  337 fps= 15 q=27.0 size=    2712kB time=00:00:16.94 bitrate=1311.4kbits/frame=  345 fps= 15 q=27.0 size=    2747kB time=00:00:17.41 bitrate=1292.5kbits/frame=  352 fps= 15 q=27.0 size=    2791kB time=00:00:17.82 bitrate=1283.0kbits/frame=  360 fps= 15 q=27.0 size=    2848kB time=00:00:18.29 bitrate=1275.4kbits/frame=  366 fps= 15 q=27.0 size=    2903kB time=00:00:18.64 bitrate=1275.2kbits/frame=  375 fps= 15 q=27.0 size=    2972kB time=00:00:19.17 bitrate=1269.5kbits/frame=  384 fps= 15 q=27.0 size=    3074kB time=00:00:19.70 bitrate=1277.9kbits/frame=  393 fps= 15 q=27.0 size=    3168kB time=00:00:20.23 bitrate=1282.5kbits/frame=  402 fps= 15 q=27.0 size=    3232kB time=00:00:20.76 bitrate=1275.0kbits/frame=  414 fps= 15 q=27.0 size=    3300kB time=00:00:21.47 bitrate=1259.1kbits/frame=  423 fps= 15 q=27.0 size=    3391kB time=00:00:22.00 bitrate=1262.6kbits/frame=  433 fps= 15 q=27.0 size=    3475kB time=00:00:22.58 bitrate=1260.4kbits/frame=  442 fps= 15 q=27.0 size=    3571kB time=00:00:23.11 bitrate=1265.3kbits/frame=  450 fps= 15 q=27.0 size=    3658kB time=00:00:23.58 bitrate=1270.4kbits/frame=  456 fps= 15 q=27.0 size=    3719kB time=00:00:23.94 bitrate=1272.5kbits/frame=  463 fps= 15 q=27.0 size=    3787kB time=00:00:24.35 bitrate=1273.8kbits/frame=  466 fps= 15 q=27.0 size=    3805kB time=00:00:24.52 bitrate=1270.7kbits/frame=  472 fps= 15 q=27.0 size=    3857kB time=00:00:24.88 bitrate=1270.0kbits/frame=  480 fps= 15 q=27.0 size=    3927kB time=00:00:25.35 bitrate=1268.8kbits/frame=  490 fps= 15 q=27.0 size=    3992kB time=00:00:25.94 bitrate=1260.5kbits/frame=  499 fps= 15 q=27.0 size=    4055kB time=00:00:26.47 bitrate=1254.9kbits/frame=  508 fps= 15 q=27.0 size=    4124kB time=00:00:27.00 bitrate=1251.3kbits/frame=  518 fps= 15 q=27.0 size=    4197kB time=00:00:27.58 bitrate=1246.1kbits/frame=  526 fps= 15 q=24.0 size=    4291kB time=00:00:28.05 bitrate=1252.8kbits/frame=  538 fps= 15 q=27.0 size=    4507kB time=00:00:28.76 bitrate=1283.5kbits/frame=  548 fps= 15 q=27.0 size=    4569kB time=00:00:29.35 bitrate=1275.3kbits/frame=  558 fps= 15 q=27.0 size=    4639kB time=00:00:29.94 bitrate=1269.2kbits/frame=  568 fps= 15 q=27.0 size=    4729kB time=00:00:30.52 bitrate=1269.0kbits/frame=  577 fps= 15 q=27.0 size=    4812kB time=00:00:31.05 bitrate=1269.3kbits/frame=  586 fps= 15 q=27.0 size=    4907kB time=00:00:31.58 bitrate=1272.6kbits/frame=  592 fps= 15 q=27.0 size=    4969kB time=00:00:31.94 bitrate=1274.5kbits/frame=  598 fps= 15 q=27.0 size=    5032kB time=00:00:32.29 bitrate=1276.4kbits/frame=  602 fps= 15 q=27.0 size=    5060kB time=00:00:32.52 bitrate=1274.3kbits/frame=  607 fps= 15 q=27.0 size=    5129kB time=00:00:32.82 bitrate=1280.0kbits/frame=  613 fps= 15 q=27.0 size=    5200kB time=00:00:33.17 bitrate=1283.9kbits/frame=  619 fps= 15 q=27.0 size=    5220kB time=00:00:33.52 bitrate=1275.3kbits/frame=  625 fps= 15 q=27.0 size=    5271kB time=00:00:33.88 bitrate=1274.5kbits/frame=  630 fps= 15 q=27.0 size=    5320kB time=00:00:34.17 bitrate=1275.1kbits/frame=  639 fps= 15 q=27.0 size=    5378kB time=00:00:34.70 bitrate=1269.4kbits/frame=  645 fps= 15 q=27.0 size=    5425kB time=00:00:35.05 bitrate=1267.5kbits/frame=  650 fps= 15 q=27.0 size=    5437kB time=00:00:35.35 bitrate=1259.9kbits/frame=  655 fps= 15 q=27.0 size=    5491kB time=00:00:35.64 bitrate=1262.0kbits/frame=  661 fps= 15 q=27.0 size=    5540kB time=00:00:36.00 bitrate=1260.6kbits/frame=  668 fps= 15 q=27.0 size=    5597kB time=00:00:36.41 bitrate=1259.3kbits/frame=  677 fps= 15 q=27.0 size=    5699kB time=00:00:36.94 bitrate=1263.9kbits/frame=  687 fps= 15 q=27.0 size=    5801kB time=00:00:37.52 bitrate=1266.3kbits/frame=  696 fps= 15 q=27.0 size=    5853kB time=00:00:38.05 bitrate=1259.8kbits/frame=  707 fps= 15 q=27.0 size=    5937kB time=00:00:38.70 bitrate=1256.5kbits/frame=  715 fps= 15 q=27.0 size=    6017kB time=00:00:39.17 bitrate=1258.1kbits/frame=  725 fps= 15 q=27.0 size=    6110kB time=00:00:39.76 bitrate=1258.7kbits/frame=  730 fps= 15 q=27.0 size=    6171kB time=00:00:40.05 bitrate=1262.0kbits/frame=  736 fps= 15 q=27.0 size=    6229kB time=00:00:40.41 bitrate=1262.7kbits/frame=  740 fps= 14 q=27.0 size=    6257kB time=00:00:40.64 bitrate=1261.1kbits/frame=  745 fps= 14 q=27.0 size=    6317kB time=00:00:40.94 bitrate=1264.0kbits/frame=  750 fps= 14 q=27.0 size=    6340kB time=00:00:41.23 bitrate=1259.6kbits/frame=  755 fps= 14 q=27.0 size=    6403kB time=00:00:41.52 bitrate=1263.1kbits/frame=  761 fps= 14 q=27.0 size=    6455kB time=00:00:41.88 bitrate=1262.7kbits/frame=  767 fps= 14 q=27.0 size=    6493kB time=00:00:42.23 bitrate=1259.4kbits/frame=  775 fps= 14 q=27.0 size=    6570kB time=00:00:42.70 bitrate=1260.3kbits/frame=  785 fps= 14 q=27.0 size=    6732kB time=00:00:43.29 bitrate=1273.9kbits/frame=  795 fps= 14 q=27.0 size=    6790kB time=00:00:43.88 bitrate=1267.6kbits/frame=  803 fps= 14 q=27.0 size=    6876kB time=00:00:44.35 bitrate=1270.0kbits/frame=  812 fps= 14 q=27.0 size=    6952kB time=00:00:44.88 bitrate=1268.8kbits/frame=  823 fps= 14 q=27.0 size=    7077kB time=00:00:45.52 bitrate=1273.3kbits/frame=  828 fps= 14 q=27.0 size=    7109kB time=00:00:45.82 bitrate=1270.9kbits/frame=  837 fps= 14 q=27.0 size=    7180kB time=00:00:46.35 bitrate=1268.9kbits/frame=  849 fps= 15 q=27.0 size=    7251kB time=00:00:47.05 bitrate=1262.2kbits/frame=  857 fps= 15 q=27.0 size=    7342kB time=00:00:47.52 bitrate=1265.4kbits/frame=  862 fps= 14 q=27.0 size=    7394kB time=00:00:47.82 bitrate=1266.5kbits/frame=  868 fps= 14 q=27.0 size=    7460kB time=00:00:48.17 bitrate=1268.6kbits/frame=  871 fps= 14 q=27.0 size=    7495kB time=00:00:48.35 bitrate=1269.7kbits/frame=  876 fps= 14 q=27.0 size=    7527kB time=00:00:48.64 bitrate=1267.4kbits/frame=  883 fps= 14 q=27.0 size=    7585kB time=00:00:49.05 bitrate=1266.6kbits/frame=  884 fps= 14 q=-1.0 Lsize=    7969kB time=00:00:51.88 bitrate=1258.3kbits/s    
+video:7958kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.138237%
+[libx264 @ 0xb189c0] frame I:4     Avg QP:18.53  size:115616
+[libx264 @ 0xb189c0] frame P:569   Avg QP:20.85  size: 13449
+[libx264 @ 0xb189c0] frame B:311   Avg QP:25.18  size:   107
+[libx264 @ 0xb189c0] consecutive B-frames: 33.9% 55.0%  7.5%  3.6%
+[libx264 @ 0xb189c0] mb I  I16..4:  0.2% 88.7% 11.1%
+[libx264 @ 0xb189c0] mb P  I16..4:  0.0%  4.7%  1.9%  P16..4: 12.7%  2.1%  3.2%  0.0%  0.0%    skip:75.3%
+[libx264 @ 0xb189c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  5.1%  0.0%  0.0%  direct: 0.0%  skip:94.9%  L0:35.3% L1:64.3% BI: 0.3%
+[libx264 @ 0xb189c0] 8x8 transform intra:72.7% inter:52.8%
+[libx264 @ 0xb189c0] coded y,uvDC,uvAC intra: 97.5% 99.5% 92.7% inter: 3.4% 8.5% 5.4%
+[libx264 @ 0xb189c0] i16 v,h,dc,p: 31% 31% 25% 14%
+[libx264 @ 0xb189c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 18% 14% 23%  6%  6%  6%  8%  8% 10%
+[libx264 @ 0xb189c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 13% 15% 15%  8%  9%  9% 11%  8% 12%
+[libx264 @ 0xb189c0] i8c dc,h,v,p: 47% 18% 21% 15%
+[libx264 @ 0xb189c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0xb189c0] ref P L0: 62.9%  6.2% 10.4% 20.5%
+[libx264 @ 0xb189c0] ref B L0: 40.3% 58.2%  1.5%
+[libx264 @ 0xb189c0] ref B L1: 96.9%  3.1%
+[libx264 @ 0xb189c0] kb/s:1253.59
+
+</pre>
+<h2>KeyCodes</h2>
+
+Key Code
+backspace 8
+tab 9
+enter 13
+shift 16
+ctrl  17
+alt 18
+pause/break 19
+caps lock 20
+escape  27
+page up 33
+page down 34
+end 35
+home  36
+left arrow  37
+up arrow  38
+right arrow 39
+down arrow  40
+insert  45
+delete  46
+0 48
+1 49
+2 50
+3 51
+4 52
+5 53
+6 54
+7 55
+8 56
+9 57
+a 65
+b 66
+c 67
+d 68
+  
+Key Code
+e 69
+f 70
+g 71
+h 72
+i 73
+j 74
+k 75
+l 76
+m 77
+n 78
+o 79
+p 80
+q 81
+r 82
+s 83
+t 84
+u 85
+v 86
+w 87
+x 88
+y 89
+z 90
+left window key 91
+right window key  92
+select key  93
+numpad 0  96
+numpad 1  97
+numpad 2  98
+numpad 3  99
+numpad 4  100
+numpad 5  101
+numpad 6  102
+numpad 7  103
+  
+Key Code
+numpad 8  104
+numpad 9  105
+multiply  106
+add 107
+subtract  109
+decimal point 110
+divide  111
+f1  112
+f2  113
+f3  114
+f4  115
+f5  116
+f6  117
+f7  118
+f8  119
+f9  120
+f10 121
+f11 122
+f12 123
+num lock  144
+scroll lock 145
+semi-colon  186
+equal sign  187
+comma 188
+dash  189
+period  190
+forward slash 191
+grave accent  192
+open bracket  219
+back slash  220
+close braket  221
+single quote  222
+
+
+

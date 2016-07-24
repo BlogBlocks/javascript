@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>JavaScript Float</title>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+
+<style>
+div.a {
+width: 250px;
+height:250px;
+position:fixed;
+    
+}
+</style>
+
+<script>
+    $(document).ready(function(){
+    animateDiv();
+ });
+function float(){
+    // if you wish  Window - viewport dimensions
+ //   var h = $(window).height() - 35;
+//    var w = $(window).width() - 35;  
+
+    var h = 100;
+    var w = 200;
+
+
+
+    
+    var nh = Math.floor(Math.random() * h+200);
+    var nw = Math.floor(Math.random() * w +500);
+    
+    return [nh,nw];    
+    
+}
+
+function animateDiv(){
+    var newq = float();
+    var oldq = $('.a').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+    
+};
+
+function calcSpeed(prev, next) {
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    var greatest = x > y ? x : y;
+    var speedModifier = .03;
+    var speed = Math.ceil(greatest/speedModifier);
+    return speed;
+}
+  </script>
+<style>
+    html { 
+  background: url(img/back.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+</style>
+
+  </head>
+  <body>
+  <!-- The whole window size -->
+ <div style="width:98%;height:500px;">
+
+ <!-- makes a relative starting point for the class='a'  it will drift to the area 
+  var nh = Math.floor(Math.random() * h+200);
+  var nw = Math.floor(Math.random() * w +500);    -->
+   <div style ="margin-left:70%;width:35%;height:500px;border:1px solid black;">
+ 
+<div class='a'><img src="img/perfect-fish.png" style="width:200px;height:175px;"></div>
+
+</div>
+</div>
+</body>
+</html>

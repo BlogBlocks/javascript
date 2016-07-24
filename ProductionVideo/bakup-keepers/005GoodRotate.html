@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jQueryRotate.js"></script>
+
+<style>
+   #super{
+    width:200px;
+    height:200px;
+       } 
+ 
+</style>
+
+
+
+</head>
+
+
+
+
+<script>
+
+$(function () {
+
+    var rotateAnimation = function (props) {
+        // init animation props
+        var rotateEl = props.el,
+            curAngle = props.startAngle,
+            endAngle = props.endAngle;
+        // scope angle to parent function
+        var angleValue = 'rotate(' + curAngle + 'deg)';
+
+        // define worker function
+        var rotate = function () {
+            // increment the angle
+            curAngle += props.increment;
+
+            // see if we are done animating
+            if (curAngle >= endAngle) {
+                curAngle = endAngle;
+                clearInterval(timer);//stop looping
+
+            }
+            // create css value 
+            angleValue = 'rotate(' + curAngle + 'deg)';
+            rotateEl.css({
+                '-moz-transform': angleValue,
+                '-webkit-transform': angleValue,
+                '-o-transform': angleValue,
+                '-ms-transform':angleValue
+            });
+        };
+
+        var timer = setInterval(rotate, props.delay);//let the fun begin
+    };
+
+    
+
+var plane =0
+    $('#super').on('click', function () {
+        rotateAnimation({
+            el: $(this),
+            startAngle: plane,
+            endAngle: plane +=6,
+            delay: 100,
+            increment: 1
+        });
+    });
+
+});
+</script>
+
+
+
+
+<body>
+
+<div id="super"><img src="img/perfect-fish.png" style="width:250px;height:225px;"></div>
+
+</body>
+</html>

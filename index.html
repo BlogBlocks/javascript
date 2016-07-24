@@ -1,0 +1,91 @@
+<html>
+
+
+<style>
+.ani-screen{
+margin:0 auto;
+width:80%;
+height:500px;
+border:1px solid black;
+background-image: url(img/back.png); 
+}
+</style>
+<style>
+<!--
+.dragme{position:relative;}
+-->
+</style>
+<script language="JavaScript1.2">
+<!--
+
+var ie=document.all;
+var nn6=document.getElementById&&!document.all;
+
+var isdrag=false;
+var x,y;
+var dobj;
+
+function movemouse(e)
+{
+  if (isdrag)
+  {
+    dobj.style.left = nn6 ? tx + e.clientX - x : tx + event.clientX - x;
+    dobj.style.top  = nn6 ? ty + e.clientY - y : ty + event.clientY - y;
+    return false;
+  }
+}
+
+function selectmouse(e) 
+{
+  var fobj       = nn6 ? e.target : event.srcElement;
+  var topelement = nn6 ? "HTML" : "BODY";
+
+  while (fobj.tagName != topelement && fobj.className != "dragme")
+  {
+    fobj = nn6 ? fobj.parentNode : fobj.parentElement;
+  }
+
+  if (fobj.className=="dragme")
+  {
+    isdrag = true;
+    dobj = fobj;
+    tx = parseInt(dobj.style.left+0);
+    ty = parseInt(dobj.style.top+0);
+    x = nn6 ? e.clientX : event.clientX;
+    y = nn6 ? e.clientY : event.clientY;
+    document.onmousemove=movemouse;
+    return false;
+  }
+}
+
+document.onmousedown=selectmouse;
+document.onmouseup=new Function("isdrag=false");
+
+//-->
+ </script>
+ <p>I have informatopn on three types of movement. Below if you click the image you will see an example using the Mouse(drag and drop).<br />
+ <p>Using Buttons on the screen: <a  style="color:navy;" href="Stop-Motion-Maker.html">Button Example</a><br />
+ Last is movement by the keys example: <a  style="color:navy;" href="each-key-press.html">HERE</a>
+ AutoSlideshow: <a  style="color:navy;" href="slide">Slideshow</a>
+
+ <div class="ani-screen">
+ 
+ <img class="dragme" style="width: 359px; height: 304px;" src="img/perfect-fish.png" alt=""><br />
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

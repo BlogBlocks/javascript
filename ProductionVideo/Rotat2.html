@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jQueryRotate.js"></script>
+
+<style>
+#img{
+width:300px;
+height:300px;
+margin-top:100px:
+margin-left:100px;
+}
+
+#myra{
+width:300px;
+height:300px;
+margin-top:100px:
+margin-left:400px;
+}
+</style>
+
+
+
+</head>
+<body>
+<div id="myra">
+<img src="img/myraright.png" style="width:300px;height:200px;">
+</div>
+
+
+
+
+
+<div id="img">
+<img src="img/perfect-fish.png" style="width:300px;height:200px;">
+</div>
+<script>
+
+
+var value = 0
+$("#img").rotate({
+  bind:
+  {
+    click: function(){
+      value +=10;
+      $(this).rotate({ animateTo:value})
+    }
+  }
+});
+
+
+var valuem = 0
+$("#myra").rotate({
+  bind:
+  {
+    click: function(){
+      valuem +=10;
+      $(this).rotate({ animateTo:valuem})
+    }
+  }
+});
+
+
+
+
+
+</script>
+
+</body>
+</html>

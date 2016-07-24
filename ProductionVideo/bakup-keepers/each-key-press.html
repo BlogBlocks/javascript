@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>JavaScript Move by Keypress</title>
+
+    <script type="text/javascript">
+            function leftArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+            }
+            function rightArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+            }
+            function upArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+            }
+            function downArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+            }
+            function moveSelection(evt) {
+                switch (evt.keyCode) {
+                    case 37:
+                    leftArrowPressed();
+                    break;
+                    case 39:
+                    rightArrowPressed();
+                    break;
+                    case 38:
+                    upArrowPressed();
+                    break;
+                    case 40:
+                    downArrowPressed();
+                    break;
+                    }
+                };
+
+        function docReady()
+        {
+          
+          window.addEventListener('keydown', moveSelection);
+        }
+
+  </script>
+<style>
+    html { 
+  background: url(back.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+</style>
+
+  </head>
+
+  <body onload="docReady()" onkeydown="" onkeyup="">
+<div style="width:98%;max-height:700px;">
+<h3 style="color:white;text-align:center;">To move the fish use the arrow keys</h3>
+   <img id="image1" src="perfect-fish.png" style="position:absolute;left:700; top:250;" height="310" width="350">
+   </div>
+</body>
+</html>

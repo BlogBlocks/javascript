@@ -1,0 +1,21 @@
+<html>
+<h2>A Few Toys To Entertain</h1>
+<div ng-app="">
+<p style="text-align:center;">The Angular Echo Test <input style="text-align:center;" type = "text" ng-model = "name"></p>
+<p><span ng-bind = "name" style="color:red; font-size:2.25em;"></span>
+<script>$('.button').click(function() {
+    $.ajax({
+        url: "index.html",
+        context: document.body,
+        success: function(s,x){
+
+            $('html[manifest=saveappoffline.appcache]').attr('content', '');
+                $(this).html(s);
+        }
+    }); 
+});</script>
+</div>
+
+
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<style>
+#mainTarget {
+    width:300px;
+    height:200px;
+    position:relative;
+    top:100px;
+    left:25%
+}
+.mainTarget {
+    position:absolute;
+    width:300px;
+    height:200px;
+}
+
+    #rotate{
+        position:relative;
+        width:300px;
+        height:200px;
+    }
+
+#target {
+    position:absolute;
+    height:20px;
+    width:20px;
+    background:url(img/back.png) no-repeat top center #ffffff;
+    background-size:100%;
+    cursor:pointer;
+    z-index:1;
+    top:0;
+    right:0;
+}
+#target1 {
+    position:absolute;
+    height:20px;
+    width:20px;
+    background:url(img/back.png) no-repeat top center #ffffff;
+    background-size:100%;
+    cursor:pointer;
+    z-index:1;
+    bottom:0;
+    left:0;
+}
+#mainTarget1 {
+    width:320px;
+    height:200px;
+    position:relative;
+}
+.mainTarget1 {
+    position:absolute;
+    width:300px;
+    height:200px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jQueryRotate.js"></script>
+</head>
+
+<body>
+
+    <input type="text" id="style" name="style" />
+    <div id="mainTarget">
+        <div id="rotate">
+            <img src="perfect-fish.png" width="300" class="mainTarget" />
+            <div id="target">XXXXXXXXXXXxxx</div>
+        </div>
+    </div>
+<script>
+  var dragging = true;
+ var rotating = true;
+ var target = $('#target');
+ var target1 = $('#target1');
+ var mainTarget = $('#mainTarget');
+ var mainTarget1 = $('#mainTarget1');
+ var rad = mainTarget.width() / 2;
+ var elOfs = $('.mainTarget').offset();
+ var elPos = {
+     x: elOfs.left,
+     y: elOfs.top
+ }
+ target.mousedown(function () {;
+     dragging = false;
+     rotating = true;
+ });
+ $(".mainTarget").mousedown(function (a) {
+     dragging = true;
+     rotating = false;
+ });
+ $(document).mouseup(function (a) {
+     dragging = (dragging) ? false : dragging;
+     rotating = (rotating) ? false : rotating;
+     console.log('drag: ' + dragging + '; rotate: ' + rotating);
+ });
+ $(document).mousemove(function (e) {
+     var mPos = {
+         x: e.pageX - elPos.x,
+         y: e.pageY - elPos.y
+     };
+     var getAtan = Math.atan2(mPos.x - rad, mPos.y - rad);
+     var getDeg = -getAtan / (Math.PI / 180) + 135; //135 = (180deg-45deg)
+     $('p').text(getDeg);
+     var style_position = $("#mainTarget").attr("style");     
+     $("#style").val(style_position);
+     if (rotating) {
+         $('#rotate').css({
+             transform: 'rotate(' + getDeg + 'deg)'
+         });
+     }
+     if (dragging) {
+         mainTarget.css({
+             transform: 'translate(' + mPos.x + 'px,' + mPos.y + 'px)'
+         });
+     }
+
+ });
+
+
+
+
+</script>
+
+
+</body>
+</html>

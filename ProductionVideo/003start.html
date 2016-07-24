@@ -1,0 +1,188 @@
+<html>
+<script>
+  window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
+
+
+</script>
+
+<style>
+
+.frame{
+	margin:30 auto;
+	 width:980;
+	height:560;
+border: 2px solid black;
+padding:20px;	
+}
+.ani-screen{
+	margin:0 auto;
+      width:960;
+	height:540;
+border:1px solid black;
+background-image: url(img/back.png); 
+}
+
+
+
+</style>
+<style>
+<!--
+.dragme{position:relative;}
+-->
+</style>
+<script language="JavaScript1.2">
+var ie=document.all;
+var nn6=document.getElementById&&!document.all;
+var isdrag=false;
+var x,y;
+var dobj;
+function movemouse(e)
+{
+  if (isdrag)
+  {
+    dobj.style.left = nn6 ? tx + e.clientX - x : tx + event.clientX - x;
+    dobj.style.top  = nn6 ? ty + e.clientY - y : ty + event.clientY - y;
+    return false;
+  }
+}
+
+function selectmouse(e) 
+{
+  var fobj       = nn6 ? e.target : event.srcElement;
+  var topelement = nn6 ? "HTML" : "BODY";
+
+  while (fobj.tagName != topelement && fobj.className != "dragme")
+  {
+    fobj = nn6 ? fobj.parentNode : fobj.parentElement;
+  }
+
+  if (fobj.className=="dragme")
+  {
+    isdrag = true;
+    dobj = fobj;
+    tx = parseInt(dobj.style.left+0);
+    ty = parseInt(dobj.style.top+0);
+    x = nn6 ? e.clientX : event.clientX;
+    y = nn6 ? e.clientY : event.clientY;
+    document.onmousemove=movemouse;
+    return false;
+  }
+}
+
+document.onmousedown=selectmouse;
+document.onmouseup=new Function("isdrag=false");
+
+//-->
+ </script>
+
+
+
+<body onload="docReady()" onkeydown="" onkeyup="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="frame">
+ <div class="ani-screen">
+<img id="image1" src="perfect-fish.png" style="position:absolute;left:1000; top:250;" height="310" width="350">
+   
+ <img class="dragme" style="width: 280px; height: 240px;" src="img/jackleft.png" alt=""><br />
+ <img class="dragme" style="width: 280px; height: 240px;" src="img/jackright.png" alt=""> 
+<img class="dragme" style="width: 260px; height: 120px;" src="img/myraleft.png" alt="">
+<img class="dragme" style="width: 260px; height: 120px;" src="img/myraright.png" alt="">
+<img class="dragme" style="width: 100px; height: 109px;" src="img/hearts.png" alt="">
+<img class="dragme" style="width: 280px; height: 169px;" src="img/heartshandle.png" alt="">
+<img class="dragme" style="width: 310px; height: 240px;" src="img/jackheart.png" alt="">
+<img class="dragme" style="width: 30px; height: 30px;" src="img/heart.png" alt="">
+<img class="dragme" style="width: 30px; height: 30px;" src="img/heart2.png" alt="">
+
+<img class="dragme" style="width: 77px; height: 362px;" src="img/hanger286x354.png" alt="">
+<img class="dragme" style="width: 580px; height:490px;" src="img/leftbubble2.png" alt="">
+<img class="dragme" style="width: 86px; height: 354px;" src="img/hanger.png" alt="">
+<img class="dragme" style="width: 50px; height: 525px;" src="img/rightedge.png" alt="">
+<img class="dragme" style="width: 56px; height: 448px;" src="img/leftedge.png" alt="">
+
+
+
+
+</div>
+
+
+</div>
+
+    <script type="text/javascript">
+            function leftArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+            }
+            function rightArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+            }
+            function upArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+            }
+            function downArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+            }
+            function moveSelection(evt) {
+                switch (evt.keyCode) {
+                    case 37:
+                    leftArrowPressed();
+                    break;
+                    case 39:
+                    rightArrowPressed();
+                    break;
+                    case 38:
+                    upArrowPressed();
+                    break;
+                    case 40:
+                    downArrowPressed();
+                    break;
+                    }
+                };
+
+        function docReady()
+        {
+          
+          window.addEventListener('keydown', moveSelection);
+        }
+
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="imgWrapper">
+    <img src="perfect-fish.png" id="image" onclick="rotateBy10Deg(this)">  
+</div>
+
+<script>
+    var delta =0;
+    function rotateBy10Deg(ele){
+        ele.style.webkitTransform="rotate("+delta+"deg)";
+        delta+=10;
+    }
+</script>
+</body>
+</html>

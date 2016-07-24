@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script src="js/jQueryRotate.js"></script>
+ <script src="js/jquery.ui.rotatable.js"></script>
+<style>
+  #rotate {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+.over {
+    transform: rotate( -180deg );            
+    transition: transform 150ms ease;
+}
+.out {
+    transform: rotate( -360deg );            
+    transition: transform 150ms ease;
+}
+​</style>
+<script>
+  var rotate = document.getElementById( 'rotate' );
+rotate.addEventListener( 'mouseover', function () {
+    this.className = 'over';
+}, false );
+rotate.addEventListener( 'mouseout', function () {
+    var rotate = this;
+    rotate.className = 'out';
+    window.setTimeout( function () { rotate.className = '' }, 150 );
+}, false );
+</script>
+</head>
+<body>
+
+<div id="rotate">hover me</div>
+<div class="drop">
+    <div>
+        <img class="className" src="perfect-fish.png "/>
+    </div>
+</div>​
+
+< script>
+
+$(document).ready(function() {
+  // the same as yours.
+  function rotateOnMouse(e, pw) {
+      var offset = pw.offset();
+      var center_x = (offset.left) + ($(pw).width() / 2);
+      var center_y = (offset.top) + ($(pw).height() / 2);
+      var mouse_x = e.pageX;
+      var mouse_y = e.pageY;
+      var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+      var degree = (radians * (180 / Math.PI) * -1) + 100;
+      //            window.console.log("de="+degree+","+radians);
+      $(pw).css('-moz-transform', 'rotate(' + degree + 'deg)');
+      $(pw).css('-webkit-transform', 'rotate(' + degree + 'deg)');
+      $(pw).css('-o-transform', 'rotate(' + degree + 'deg)');
+      $(pw).css('-ms-transform', 'rotate(' + degree + 'deg)');
+  }
+
+  $('.drop div img').mousedown(function(e) {
+    e.preventDefault(); // prevents the dragging of the image.
+    $(document).bind('mousemove.rotateImg', function(e2) {
+      rotateOnMouse(e2, $('.drop div img'));
+    });
+  });
+
+  $(document).mouseup(function(e) {
+    $(document).unbind('mousemove.rotateImg');
+  });
+});
+
+< /script>
+
+
+</body>
+</html>

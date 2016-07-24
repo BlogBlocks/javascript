@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Fish Friends</title>
+<meta name="description" content="Memory Assistant to the Installation information, and how to start jack-install-starter-node-angular. ">
+<meta name="Jack" content="Local Computer Install Info for jack-install-starter-node-angular">
+<script src="js/jscolor.min.js"></script>
+<link rel="stylesheet" href="styles.css?v=1.0">
+
+
+
+
+<!-- Startup configuration -->
+<link rel="manifest" href="manifest.webmanifest">
+
+<!-- Fallback application metadata for legacy browsers -->
+<meta name="application-name" content="FishFriends">
+<link rel="icon" sizes="16x16 32x32 48x48" href="lo_def.ico">
+<link rel="icon" sizes="512x512" href="hi_def.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jQueryRotate.js"></script>
+<script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<style>
+    html { 
+  background: url(img/back.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#image {
+  margin: 50px 200px;
+}
+
+</style>
+</head>
+ 
+
+<!--             this was original      $("#image").rotate({   -->
+
+
+  <body onload="docReady()" onkeydown="" onkeyup="">
+<div style="width:98%;max-height:700px;">
+ <img src="img/perfect-fish.png" style="width:200px;height:176px;" id="image" onclick="" /><br /><br /><br /><br /><br /><br />
+ <img src="img/perfect-fish.png" style="width:200px;height:176px;" id="img" onclick="" />
+     
+   </div>
+<script>
+var value = 0
+$("#image").rotate({  
+  bind: {
+    click: function() {
+      value += 5;
+      $(this).rotate({
+        animateTo: value
+      })
+    }
+  }
+});
+</script>
+
+
+   
+<script>
+$("#img").rotate({
+  bind:
+  {
+    click: function(){
+      $(this).rotate({ angle:0,animateTo:18,easing: $.easing.easeInOutExpo })
+    }
+  }
+
+});
+
+</script>
+
+
+
+<a href="http://jqueryrotate.com/ ">jquery rotate Com/</a>
+</body>
+</html>

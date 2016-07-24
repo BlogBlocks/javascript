@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jQueryRotate.js"></script>
+
+<style>
+
+.frame{
+  margin:30 auto;
+   width:980;
+  height:560;
+border: 2px solid black;
+padding:20px; 
+}
+.ani-screen{
+  margin:0 auto;
+      width:960;
+  height:540;
+border:1px solid black;
+background-image: url(img/back.png); 
+}
+
+
+
+<style>
+#img{
+width:300px;
+height:300px;
+margin-top:100px:
+margin-left:100px;
+}
+
+#myra{
+width:300px;
+height:300px;
+margin-top:100px:
+margin-left:400px;
+}
+</style>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("img").css("width", "600px");
+    });
+});
+</script>
+</head>
+
+<body onload="docReady()" onkeydown="" onkeyup="">
+
+
+<div class="frame ani-screen">
+<button>Big Picture</button>
+<div id="myra">
+<img class="dragme" src="img/myraright.png" style="width:300px;height:200px;">
+</div>
+
+
+</body>
+</html>

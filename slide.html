@@ -1,0 +1,70 @@
+
+
+<img class="motionStudio" src="movie/Selection_004.png">
+<img class="motionStudio" src="movie/Selection_005.png">
+<img class="motionStudio" src="movie/Selection_006.png">
+<img class="motionStudio" src="movie/Selection_007.png">
+<img class="motionStudio" src="movie/Selection_008.png">
+<img class="motionStudio" src="movie/Selection_009.png">
+<img class="motionStudio" src="movie/Selection_010.png">
+<img class="motionStudio" src="movie/Selection_011.png">
+<img class="motionStudio" src="movie/Selection_012.png">
+<img class="motionStudio" src="movie/Selection_013.png">
+<img class="motionStudio" src="movie/Selection_014.png">
+<img class="motionStudio" src="movie/Selection_015.png">
+<img class="motionStudio" src="movie/Selection_016.png">
+<img class="motionStudio" src="movie/Selection_017.png">
+<img class="motionStudio" src="movie/Selection_018.png">
+<img class="motionStudio" src="movie/Selection_019.png">
+<img class="motionStudio" src="movie/Selection_020.png">
+<img class="motionStudio" src="movie/Selection_021.png">
+<img class="motionStudio" src="movie/Selection_022.png">
+<img class="motionStudio" src="movie/Selection_023.png">
+<img class="motionStudio" src="movie/Selection_024.png">
+<img class="motionStudio" src="movie/Selection_025.png">
+<img class="motionStudio" src="movie/Selection_026.png">
+<img class="motionStudio" src="movie/Selection_027.png">
+<img class="motionStudio" src="movie/Selection_028.png">
+<img class="motionStudio" src="movie/Selection_029.png">
+<img class="motionStudio" src="movie/Selection_030.png">
+<img class="motionStudio" src="movie/Selection_031.png">
+<img class="motionStudio" src="movie/Selection_032.png">
+<img class="motionStudio" src="movie/Selection_033.png">
+<img class="motionStudio" src="movie/Selection_034.png">
+<img class="motionStudio" src="movie/Selection_035.png">
+<img class="motionStudio" src="movie/Selection_036.png">
+<img class="motionStudio" src="movie/Selection_037.png">
+<img class="motionStudio" src="movie/Selection_038.png">
+<img class="motionStudio" src="movie/Selection_039.png">
+<img class="motionStudio" src="movie/Selection_040.png">
+<img class="motionStudio" src="movie/Selection_041.png">
+<img class="motionStudio" src="movie/Selection_042.png">
+<img class="motionStudio" src="movie/Selection_043.png">
+<img class="motionStudio" src="movie/Selection_044.png">
+<img class="motionStudio" src="movie/Selection_045.png">
+<img class="motionStudio" src="movie/Selection_046.png">
+<img class="motionStudio" src="movie/Selection_047.png">
+<img class="motionStudio" src="movie/Selection_048.png">
+<img class="motionStudio" src="movie/Selection_049.png">
+<img class="motionStudio" src="movie/Selection_050.png">
+<img class="motionStudio" src="movie/Selection_051.png">
+<img class="motionStudio" src="movie/Selection_052.png">
+
+<script>
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("motionStudio");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 200); // Change image every 2 seconds
+}
+
+</script>
