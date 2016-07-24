@@ -1,37 +1,31 @@
 <html>
-
-
 <style>
-
-.frame{
-	margin:30 auto;
-	 width:980;
-	height:560;
-border: 2px solid black;
-padding:20px;	
-}
 .ani-screen{
 	margin:0 auto;
-      width:960;
-	height:540;
+width:80%;
+height:500px;
 border:1px solid black;
-background-image: url(img/back.png); 
-}
+background-image: url(../img/back.png); 
 
+}
 
 
 </style>
-<style>
+  <style>
 <!--
 .dragme{position:relative;}
 -->
-</style>
-<script language="JavaScript1.2">
+  </style>
+  <script language="JavaScript1.2">
+<!--
+
 var ie=document.all;
 var nn6=document.getElementById&&!document.all;
+
 var isdrag=false;
 var x,y;
 var dobj;
+
 function movemouse(e)
 {
   if (isdrag)
@@ -69,23 +63,30 @@ document.onmousedown=selectmouse;
 document.onmouseup=new Function("isdrag=false");
 
 //-->
- </script>
- <div class="frame">
-   <div class="ani-screen">
-<p style="color:lightgreen;padding:0px;margin: 0px; ">Use mouse for drag n drop</p>
+  </script>
+<style>
+html {background-color:navy;}
+body{
+background-image: url(../img/most-back.png); 
+background-repeat: no-repeat;
+ 
+ background: url('../img/most-back.png') no-repeat; 
+  background-position: 0 20px;
+  background-size: contain;
 
- <img class="dragme" style="width: 260px; height: 180px;" src="img/sfish1b.png" alt=""><br />
- <img class="dragme" style="width: 260px; height: 150px;" src="img/fishpaperhead2l.png" alt=""> 
-<img class="dragme" style="width: 260px; height: 190px;" src="img/fishyellowhead2rs.png" alt="">
-<img class="dragme" style="width: 260px; height: 120px;" src="img/fishyellowstripe2ls.png" alt="">
-<img class="dragme" style="width: 260px; height: 140px;" src="img/longfish2s.png" alt="">
-<img class="dragme" style="width: 260px; height: 160px;" src="img/sfish1r.png" alt="">
-<img class="dragme" style="width: 260px; height: 140px;" src="img/longfish1s.png" alt="">
-
+}
+</style>
+</head>
+<body>
+   
+   
+ 
+ <img class="dragme" style="width: 359px; height: 304px;" src="../img/perfect-fish.png" alt=""><br />
+  
 </div>
 
 
-</div>
+
 
 
 

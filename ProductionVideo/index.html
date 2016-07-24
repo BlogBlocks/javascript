@@ -71,6 +71,9 @@ really hope to make a few bucks doing it and you are not a seasoned developer, i
 in the Philippines. I have a goal. I would like to buy a house for my Filipina wife. I want the App to do that. So, if it 
 takes six months, so what. I do not need the income to survive. It is a bonus. I am lucky and think that is the best 
 situation to be in. Not to require, but to desire.</p>
+<p>An important consideration is even a half decent APP, with the right promotion could make $50,000 -$100,000.
+If it takes a year, and your App is a success, you just made some nice pocket change. If it did not, you just got some 
+excellant home-schooling and lessons in self disipline. Take youself serious.</p>  
 
 <h2>Keep A TODO list</h2>
 <p>As you think of things you need TODO, list them. Use dates. When completed Mark them, and date them when done.
@@ -85,21 +88,22 @@ DO NOT get rid of items on your <a href="004TODO-list.html">TODO list</a>. </p><
 
 <h2>Some neat ideas and resources</h2>
 <p><a href="http://www.kryogenix.org/code/browser/custom-drag-image.html"> kryogenix.org</a></p>
-<p>The second entry is Ghost Image -- Fantisic ( for the right moment ) . Imagine my ' FishKiss' 
+<p>Drag the fish below -- Fantisic ( for the right moment ) . Imagine my ' FishKiss' 
 App you click the 'opposition' It responds with " Hey, You shouldn't grab me !"
 this can be a neat toy:<br /></p>
-Broken code:
+Broken code ( intentional space after all the < ):
 <pre>
-< div id="drag-with-image" class="dragdemo" draggable="true">drag me</div>
+< /style>
+< div id="dont-drag" draggable="true">< img src="img/perfect-fish.png" style="width:120px;height:100px;">< /div>
 < script>
-document.getElementById("drag-with-image").addEventListener("dragstart", function(e) {
-    var img = document.createElement("img");
-    img.src = "http://kryogenix.org/images/hackergotchi-simpler.png";
-    e.dataTransfer.setDragImage(img, 0, 0);
+document.getElementById("dont-drag").addEventListener("dragstart", function(e) {
+    var grabgrab = document.createElement("img");
+    grabgrab.src = "img/dont.png";
+    e.dataTransfer.setDragImage(grabgrab, 0, 0);
 }, false);
 < /script>
 </pre>
-<p>Example:</p>
+<p>Example:</p><br />
 <style>
 #drag-with-image{
 	width:100px;
@@ -112,17 +116,15 @@ width:100%;
 	border-color: navy;	
 }
 </style>
-<div id="drag-with-image" draggable="true"><img src="img/perfect-fish.png" style="width:120px;height:100px;"></div>
+<div id="dont-drag" draggable="true"><img src="img/perfect-fish.png" style="width:120px;height:100px;"></div>
 <script>
-document.getElementById("drag-with-image").addEventListener("dragstart", function(e) {
-    var img = document.createElement("img");
-    img.src = "img/dont.png";
-    e.dataTransfer.setDragImage(img, 0, 0);
+document.getElementById("dont-drag").addEventListener("dragstart", function(e) {
+    var grabgrab = document.createElement("img");
+    grabgrab.src = "img/dont.png";
+    e.dataTransfer.setDragImage(grabgrab, 0, 0);
 }, false);
 </script>
-<p> I am having somewhat a  problem HUSTON</p>
-<p> I am having a problem HUSTON</p>
-
+<br /><br /><br /><br />
 </div>
-</body><p> I am having a BIG BIG problem HUSTON</p>
+</body>
 </html>

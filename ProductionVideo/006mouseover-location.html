@@ -11,24 +11,27 @@
     position:relative;
     top:100px;
     left:25%
+    border:2px solid red;
 }
 .mainTarget {
     position:absolute;
     width:300px;
     height:200px;
+    border:2px solid green;
 }
 
     #rotate{
         position:relative;
         width:300px;
         height:200px;
+        border:2px solid black;
     }
 
 #target {
     position:absolute;
     height:20px;
     width:20px;
-    background:url(img/back.png) no-repeat top center #ffffff;
+    background:url(img/star2.png) no-repeat top center #ffffff;
     background-size:100%;
     cursor:pointer;
     z-index:1;
@@ -39,7 +42,7 @@
     position:absolute;
     height:20px;
     width:20px;
-    background:url(img/back.png) no-repeat top center #ffffff;
+    background:url(img/star.png) no-repeat top center #ffffff;
     background-size:100%;
     cursor:pointer;
     z-index:1;
@@ -63,11 +66,11 @@
 
 <body>
 
-    <input type="text" id="style" name="style" />
+    <input type="text" id="style" name="style" style="width:210px;"/>
     <div id="mainTarget">
         <div id="rotate">
             <img src="perfect-fish.png" width="300" class="mainTarget" />
-            <div id="target">XXXXXXXXXXXxxx</div>
+            <div id="target"></div>
         </div>
     </div>
 <script>
