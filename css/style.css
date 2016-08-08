@@ -1,0 +1,33 @@
+
+ #gwrap {
+  background-image: url(../img/back.png); 
+  width: 100%;
+  min-width: 970px;
+  margin:0 auto;
+  height:650px;
+}
+
+
+#left-control-box {
+  float: left;
+  max-width: 5%;
+   height:600px;
+   
+}
+
+#stage-area {
+  margin-left: 6%;
+  margin-right: 6%;
+  width:84%;
+  height:600px;
+   
+}
+
+#right-control-box {
+  float: right;
+  max-width: 5%;
+   
+  height:600px;
+} 
+
+

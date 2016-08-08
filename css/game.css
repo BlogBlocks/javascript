@@ -1,0 +1,134 @@
+
+#gwrap {
+  background-image: url(img/back.png); 
+  width: 100%;
+  min-width: 970px;
+  margin:0 auto;
+  height:650px;
+
+}
+
+#left-control-box {
+  float: left;
+  max-width: 5%;
+   height:600px;
+   
+}
+
+#stage-area {
+  margin-left: 6%;
+  margin-right: 6%;
+  width:84%;
+  height:600px;
+   
+}
+
+#right-control-box {
+  float: right;
+  max-width: 5%;
+   
+  height:600px;
+} 
+
+
+
+
+#button3{
+
+padding:10px;
+color:white;
+text-align: center;
+width:50px;
+height:70px;
+background-color:#43A151;
+border:4px solid gray;
+border-radius:50%;
+display: inline-block;
+-webkit-box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+-moz-box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+}
+
+#button2{
+ 
+width:50px;
+height:70px;
+padding:10px;
+text-align: center;
+color:white;
+display: inline-block;
+float:right;
+background-color:#43A151;
+border:4px solid gray;
+border-radius:50%;
+border
+display: inline-block;
+-webkit-box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+-moz-box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+}
+#button1{
+ 
+padding:10px;
+color:white;
+margin-top:30px;
+text-align: center;
+width:50px;
+height:70px;
+background-color:#43A151;
+border:4px solid gray;
+border-radius:50%;
+display: inline-block;
+-webkit-box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+-moz-box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+}
+
+#button4{
+width:50px;
+height:70px;
+padding:10px;
+margin-top:30px;
+text-align: center;
+color:white;
+display: inline-block;
+float:right;
+background-color:#43A151;
+border:4px solid gray;
+border-radius:50%;
+border
+display: inline-block;
+-webkit-box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+-moz-box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+box-shadow: -11px 16px 23px -6px rgba(0,0,0,1);
+}
+#button5:hover{
+position:absolute;
+left:10px;
+top:50px;
+width:50px;
+height:50px;
+display: inline-block;
+margin-top:49px;
+margin-left:6px;
+background-color:red;
+border:4px solid gray;
+border-radius:50%;
+display: inline-block;
+}
+#button5:hover{
+position:absolute;
+right:11px;
+top:21px;
+width:50px;
+height:50px;
+display: inline-block;
+background-color:red;
+border:4px solid gray;
+border-radius:50%;
+display: inline-block;
+}
+
+body {
+background-color:black;
+}

@@ -1,0 +1,18 @@
+
+.dragme{position:relative;
+}
+div.a {
+width: 250px;
+height:250px;
+position:fixed;
+ }
+div.b {
+width: 250px;
+height:250px;
+position:fixed;
+}
+html, body { height: 100%; width: 100%;}
+body {
+    background-image: url('../img/newlongest.jpg');
+    background-repeat: repeat-x;
+}
