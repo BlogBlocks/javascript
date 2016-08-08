@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   
+<script>
+document.onkeyup=function(event) {
+ event = event || window.event;
+
+ var e = event.keyCode;
+
+ if (e==72 /*h*/){
+confirm("Confirm to leave this page for help.");
+  up = false;
+  down = true;
+  throw(document.write("Possible can be used as a help page. The cancel does not work yet")); 
+ }
+}
+</script>
+
+<style>
+#this{
+margin:100px auto;
+width:100px;
+height:500px:
+border:2px solid red;
+}
+</style>
+
+<script>
+function changeBackground(color) {
+   document.body.style.background = color;
+}
+</script>
+
+<body onload="changeBackground('red');">
+
+      <div id="this">
+                <h2 style="text-align:center;">Open a New Document</h2><br />
+                <p>Press h for Help</p>
+                <a href="keyup-keydown-events.txt">THE CODE (new tab)</a>
+     </div>
+
+
+
+</body>
+</html>

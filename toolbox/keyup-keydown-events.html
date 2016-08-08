@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript">
+
+document.onkeyup=function(event) {
+ event = event || window.event;
+
+ var e = event.keyCode;
+
+ if (e==87 /*w*/){
+alert("You entered w");
+  up = false;
+  throw('up'); 
+ }
+
+ if (e==65 /*a*/){
+alert("You entered a");
+  left = false;
+ }
+
+ if (e==83 /*s*/){
+alert("You entered s");
+  down = false;
+ }
+
+ if (e==68 /*d*/){
+alert("You entered d");
+  right = false;
+ }
+}
+</script>
+</head>
+
+<body>
+    <center>
+<h2 style="text-align:center;">The Code</h2><br />
+<a href="keyup-keydown-events.txt">THE CODE (new tab)</a>
+<p> Press an    a , w , s , or  d </p>
+    </div>
+
+    </center>
+</body>
+
+</html>

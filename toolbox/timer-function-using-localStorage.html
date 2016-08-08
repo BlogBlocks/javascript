@@ -1,0 +1,29 @@
+<html>
+
+<center>
+<h1>A No Pester One Time Alert</h1>
+<p>GREAT NO PESTER - As quoted by W3Schools "HTML local storage, better than cookies." So good you will think it is broken. You get alerted one time and no more pop-ups from it. 
+Not even a browser refresh brings it back. Clear cache history still no.</p> 
+<p>Closing a browser and reopening it will not clear the storage.</p><br />
+Reference: <a href="http://www.w3schools.com/html/html5_webstorage.asp">w3schools</a>
+Example: <a href="http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_webstorage_local_clickcount">Click Counter</a>
+
+</center>
+
+
+<script type="text/javascript">
+    var alerted = localStorage.getItem('alerted') || '';
+
+    if (alerted != 'yes') {
+
+         alert("My alert.");
+     localStorage.setItem('alerted','yes');
+    }
+</script>
+
+
+
+
+
+
+</html>

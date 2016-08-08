@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>coordinates</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #measure { width: 225px; height: 50px; padding: 0.5em; border:1px solid black;}
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#measure" ).draggable();
+  } );
+  </script>
+</head>
+<body>
+
+ <h1>Drag get the Start Coordinates and Stop Coordinate. </h1>
+ <p> Not sure what it is good for maybe getting measurements</p>
+<div id="measure" class="ui-widget-content">
+<img class="ui-widget-content" src="duck.png" style="width: 50px; height: 50px; padding: 0.5em; ">
+</div>
+
+
+
+
+<script>
+// Make images draggable.
+$(".ui-widget-content").draggable({
+
+    // Find original position of dragged image.
+    start: function(event, ui) {
+
+      // Show start dragged position of image.
+      var Startpos = $(this).position();
+      $("div#measure").text("START: \nLeft: "+ Startpos.left + "\nTop: " + Math.round(Startpos.top));
+    },
+
+    // Find position where image is dropped.
+    stop: function(event, ui) {
+
+      // Show dropped position.
+      var Stoppos = $(this).position();
+
+      $("div#measure").text("STOP: \nLeft: "+ Stoppos.left + "\nTop: " + Math.round(Stoppos.top));
+    }
+});
+</script>
+
+
+</body>
+</html>
